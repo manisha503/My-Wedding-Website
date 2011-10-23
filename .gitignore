@@ -1,0 +1,10 @@
+# pyramid env
+env/bin/*
+env/lib/*
+env/include/*
+
+# build noise
+env/WeddingWebsite/build/*
+
+# local db
+env/WeddingWebsite/WeddingWebsite.db
