@@ -13,6 +13,6 @@ def main(global_config, **settings):
     config.add_route('home', '/')
     config.add_view('weddingwebsite.views.my_view',
                     route_name='home',
-                    renderer='templates/mytemplate.pt')
+                    renderer='templates/index.pt')
     return config.make_wsgi_app()
 

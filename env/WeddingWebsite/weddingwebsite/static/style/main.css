@@ -1,0 +1,724 @@
+
+/*
+Theme Name: EXPOSLIDE - Version: 1.2
+Description: Designed by <a href="http://themeforest.net/user/josweb">josweb</a>.
+Author: <a href="http://www.spiralpixel.com">Jo</a>
+
+01. GENERAL 
+		1. Reset
+		2. Font Face
+		3. General Styling
+		4. Typography	
+		
+		
+02. SECTIONS
+		1. Name
+		2. Menu
+		3. Column Styling
+		4. Image Zoom
+		5. Revolving Quotes
+		6. Tabs
+		7. Toggle
+		8. Portfoilo
+		9. Contact Page Styling
+	
+*/
+
+
+
+/*  1. GENERAL
+    ........................................................................................................................................ */
+
+/* 1: RESET */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {margin:0; padding:0; border:0; outline:0; font-size:100%; vertical-align:baseline; background:transparent }
+
+/* 2: FONT FACE */
+@font-face {
+	font-family: 'LeagueGothicRegular';
+	src: url('fonts/League_Gothic-webfont.eot');
+	src: url('fonts/League_Gothic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/League_Gothic-webfont.woff') format('woff'),
+         url('fonts/League_Gothic-webfont.ttf') format('truetype'),
+         url('fonts/League_Gothic-webfont.svg#LeagueGothicRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'BebasNeueRegular';
+    src: url('fonts/BebasNeue-webfont.eot');
+    src: url('fonts/BebasNeue-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/BebasNeue-webfont.woff') format('woff'),
+         url('fonts/BebasNeue-webfont.ttf') format('truetype'),
+         url('fonts/BebasNeue-webfont.svg#BebasNeueRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* 3. GENERAL STYLING ++++++++++++++++++++++++++++++++++++++++++++ */
+
+/* BODY ++++++++++++++++++++++++++++++++++++++++++++ */
+/* Change your background pattern and colour here */
+body {
+	background-color: #E2E2E2;
+	background-image: url(images/bg/bright_squares.png); background-repeat: repeat;
+	margin-top: 0; padding: 0;
+	overflow-x: hidden;
+	padding: 0px 0px 40px 0px;height:100%;
+	font: 13px/20px 'Helvetica Neue', Helvetica, Arial; color: #bbb;
+}
+
+/* LINKS ++++++++++++++++++++++++++++++++++++++++++++ */
+a { outline:0; color: #FFFFFF; text-decoration: none; }
+a:hover {color: #f9f8cc; }
+
+
+/* LISTS ++++++++++++++++++++++++++++++++++++++++++++ */
+/* Bullet List */
+ul.bullet {
+	float: left; padding-bottom: 10px; 
+	display: block; overflow: hidden; 
+	margin: 0px -10px 0px 0px;
+}
+
+ul.bullet li { 
+	line-height: 20px; list-style: none; 
+	display: block; 
+	background: transparent url(images/bullet.jpg) no-repeat;
+	background-position: 0px 8px; 
+	padding: 0px 0px 10px 18px; 
+}
+
+/* Arrows List */
+ul.pointer { 
+	padding: 0; display: block; overflow: hidden; margin: 0;
+}
+
+ul.pointer li {
+	line-height: 20px; list-style: none; display: block; 
+	background: transparent url(images/pointer.png) no-repeat; 
+	background-position: -4px 2px;  padding: 0px 0px 10px 18px;
+}
+
+
+/* QUOTES ++++++++++++++++++++++++++++++++++++++++++++ */
+/* Quote Style 1 - quote mark */
+.quote{
+	font:12px/20px Helvetica Neue, helvetica, arial;
+	text-align:left;
+	padding:0px 0px 30px 0px;
+	margin:0px;
+	position:relative;
+}
+
+.quote span{
+	text-indent: 34px;
+	display: block;
+}
+
+span.quoteblock{
+	color: #b0ccc6;
+	font-size: 70px;
+	position: absolute;
+	top: 12px;
+	left: 0px;
+	text-indent: -2px;
+}
+
+/* Quote Style 2 - left bar */
+.quote2{
+	font: 12px/20px Helvetica Neue, helvetica, arial, sans-serif;
+	text-align:left;
+	border-left:5px solid #b0ccc6;
+	padding-left:10px;
+	line-height:20px;
+	margin:0px 30px 0px 3px;
+	position:relative;
+}
+
+/* quote signature */
+em{	
+	color: #777;
+	font-size:1 2px;
+}
+
+/* button */
+button {
+  margin-top: 15px; 
+}
+
+/* DIVIDER ++++++++++++++++++++++++++++++++++++++++++++ */
+hr {
+	border: none 0;
+	border-top: 1px dashed #555; height: 1px;
+	width: 100%;
+	margin: 10px 0px 20px 0px;
+}
+
+/* LAYOUT STYLING ++++++++++++++++++++++++++++++++++++++++++++ */
+#container {
+  width: 1024px;
+  margin: auto;
+  padding-top: 50px;
+}
+
+#header {
+  width: 100%;
+  height: 84px;
+}
+
+#section {
+	height: 100%;
+	width: 100%;
+	background: #21180d;
+	-moz-border-radius: 10px; -webkit-border-radius:10px;
+	border-radius: 10px; 
+	-moz-box-shadow: 0 1px 3px #222; 
+	-webkit-box-shadow: 0 1px 3px #222; 
+	padding-top: 10px;
+	padding-bottom: 10px;
+  position: relative;
+}
+
+/* Slider Section Styling */
+.section .slider-inner {
+	height: 380px;
+	background: #21180d;
+	padding-top: 0px;
+	margin-top:-10px;
+	padding-left: 0px;
+	position: absolute;
+}
+
+
+/* IMAGE STYLES ++++++++++++++++++++++++++++++++++++++++++++ */
+img.left {
+	border: 1px solid #fff; padding: 5px;
+	-moz-box-shadow: 0 1px 3px #222; 
+	-webkit-box-shadow: 0 1px 3px #222; 
+	-moz-border-radius: 5px; -webkit-border-radius:5px;
+	border-radius: 5px; 
+	background-color: #eee; 
+	float: left; margin: 5px 15px 5px 0px;
+}
+
+img.right, img.right-me {
+	border: 1px solid #fff; padding:5px;
+	-moz-box-shadow: 0 1px 3px #222; 
+	-webkit-box-shadow: 0 1px 3px #222; 
+	-moz-border-radius: 5px; 
+	-webkit-border-radius: 5px;
+	border-radius: 5px; 
+	background-color: #eee;
+ 	float: right; margin: 5px 0px 5px 15px;
+}
+
+img.right-me {
+	margin: 5px 0px 5px 0px;
+}
+
+/* Icon Styling */
+.icon {
+	margin: 0px 0px 5px 0px;
+	text-align: left;
+	position: relative;
+}
+
+/* Google Chart */
+.chart	{
+	background-color: #fff;
+	width: 410px;
+	padding: 11px 0px 0px 15px;
+	margin: 5px 0px 22px 0px;
+	border: 2px solid #888;
+}
+
+
+/* 4. TYPOGRAPHY ++++++++++++++++++++++++++++++++++++++++++++ */
+
+h1 {
+	font: 68px/65px 'LeagueGothicRegular', Arial, sans-serif;
+	color: #f9f8cc;
+	margin-top: 20px; text-transform:uppercase;
+}
+
+h2 {font: 40px/35px 'BebasNeueRegular', Arial, sans-serif;
+	color: #f9f8cc;
+	margin: 20px 0px 10px 0px;
+}
+
+h3, h4, h5, h6 {
+	font-family:'BebasNeueRegular', Arial, sans-serif;
+	color: #bbb; margin-bottom:10px;
+}
+h3 {
+	font-size: 25px ;
+}
+
+h4 {
+	font-size: 22px ;
+}
+
+h5 {
+	font-size: 20px ;
+}
+
+h6 {
+	font-size: 18px ;
+}
+
+/* Pargaraph ++++++++++++++++++++++++++++++++++++++++++++ */
+p {
+	margin-bottom:20px;
+}	
+
+.clear {
+	clear: both;
+}
+
+
+/*  2. SECTIONS
+    ........................................................................................................................................ */
+
+/* 1. YOUR NAME ++++++++++++++++++++++++++++++++++++++++++++ */
+/* Name */
+#header_spacer {
+	color: #fff;
+	float: left;
+	margin: 0 0 0 0;
+  height: 100%;
+  width: 91px;
+	background: transparent url(images/menu_head.png) repeat-x;
+}
+
+#name {
+	font: 30px 'LeagueGothicRegular', Arial, sans-serif;
+	color: #fff;
+	float: left;
+	margin: 0;
+  height: 100%;
+	width: 439px;
+  background: transparent url(images/menu_rest.png) repeat-x;
+}
+
+/* 2. MENU ++++++++++++++++++++++++++++++++++++++++++++ */
+#nav {
+	font: 30px 'LeagueGothicRegular', Arial, sans-serif;
+	color: #f9f8cc;
+	background: transparent url(images/menu_ribbon.png) no-repeat;
+	width: 494px;
+  height: 100%;
+	margin: 0;
+	float: right;
+}
+
+#nav ul, #name ul {
+	margin: 30px 0 0 0;
+	padding: 0;
+}
+#nav li, #name li {
+	list-style-type: none;
+	background-image: transparent;
+	color: #FDE99D;
+	float: left;
+	margin:0 20px 0 16px;
+}
+
+#nav li a, #name li a {
+	color: #adadad;
+	text-shadow: 0px 2px 2px #222;
+	text-transform: uppercase;
+}
+
+#nav li a:hover, #name li a:hover {
+	color: #999;
+}
+
+/* Contact Button Link - choose your button colour and add it here */
+#contact-link a{ 
+	background: transparent  url(images/icons/contact-icon-red.png) no-repeat 0 0; 
+	margin: 497px 0px 0px 375px;
+	width:100px; height:87px;
+	display: block;
+	position:absolute;
+	text-indent:-9999px;
+}
+
+#contact-link a:hover{background-position: 0px -87px;}
+
+/* fix IE7 */
+*+html #contact-link a {margin-left:84px;}
+
+
+/* 3. COLUMN STYLING ++++++++++++++++++++++++++++++++++++++++++++ */
+
+/* Intro Page - first column */
+#home-one-column{
+  float:left;
+  width:450px;
+	margin-left: 50px;
+}
+
+#home-one-column-last{
+  float:right;
+  width:450px;
+	margin-right: 50px;
+  text-align: right;
+}
+
+/* 2 columns per page */
+.one-half {
+	float: left;
+	width: 430px;
+	margin: 0px 45px 15px 0px;
+}
+
+/* 4 columns per page */
+.one-fourth {
+	float: left;
+	width: 192px;
+	margin: 0px 45px 15px 0px;
+}
+
+/* last column in row */
+.last {
+	margin-right: 0px;
+}
+
+/* contact page columns */
+.contact-one-column{
+	float: left;
+	width: 405px;
+	margin: 0px 45px 15px 50px;
+}
+
+/* contact page last column containing form */
+.contact-one-column-last{
+	float: left;
+	width: 425px;
+	padding-top: 61px;	
+}
+
+/* 4. IMAGE ZOOM ++++++++++++++++++++++++++++++++++++++++++++ */
+.thumb_wrapper{
+	width: 200px;
+	height: 97px;
+	position: relative;
+	float: left;
+	margin: 5px 30px 30px 0px;
+}
+
+.thumb_wrapper span{
+	display: block;
+	text-align: center;
+	font-size: 11px;
+	font-style: italic;
+	margin-top: 3px;
+}
+.thumb{
+	border: 5px solid #fff;
+	margin-right: 20px;
+	width: 200px;
+	height: 97px;
+	overflow: hidden;
+}
+
+/* This is the moving lens square underneath the mouse pointer. */
+.cloud-zoom-lens {
+	border: 4px solid #888;
+	margin: -4px;	/* Set this to minus the border thickness. */
+	background-color: #fff;	
+	cursor: move;		
+}
+
+/* This is for the title text. */
+.cloud-zoom-title {
+	font-family: Arial, Helvetica, sans-serif;
+	position: absolute !important;
+	background-color: #000;
+	color: #fff;
+	padding: 3px;
+	width: 100%;
+	text-align: center;	
+	font-weight: bold;
+	font-size: 10px;
+	top: 0px;
+}
+
+/* This is the zoom window. */
+.cloud-zoom-big {
+	border: 5px solid #fff;
+	overflow: hidden;
+	-moz-box-shadow: 1px 1px 3px #555;
+	-webkit-box-shadow: 1px 1px 3px #555;
+	box-shadow: 1px 1px 3px #555;
+}
+
+/* This is the loading message. */
+.cloud-zoom-loading {
+	color: white;	
+	background: #222;
+	padding: 3px;
+	border: 1px solid #000;
+}
+
+/* 5. REVOLVING QUOTES - Testimonials ++++++++++++++++++++++++++++++++++++++++++++ */
+blockquote {
+	font-family: "Helvetica Neue", arial, sans-serif;
+	width: 430px; /* required */
+	margin: 0 auto; padding-bottom: 20px;
+}
+
+#quote_wrap em {font-size: 12px; color: #bbb;
+}
+
+#quote_wrap {margin: 0; padding: 0px 0px 5px 0px; 
+}
+
+/* 6. TABS ++++++++++++++++++++++++++++++++++++++++++++ */
+ul.tabNavigation {
+	list-style: none; margin: 0; padding: 0;
+}
+
+ul.tabNavigation li {
+	display: inline;
+}
+
+ul.tabNavigation li a {
+	padding: 3px 8px;
+	border:1px solid #666;
+	border-bottom:none;
+	color: #ddd;
+	background-color: #222;
+	text-decoration: none;
+}
+
+ul.tabNavigation li a.selected, ul.tabNavigation li a:hover { background-color: #333; color: #fff;
+}
+                
+ul.tabNavigation li a:focus { outline: 0;
+}
+
+div.tabs > div {
+	padding: 10px 0px 0px 0px; margin-top: 0px; border-top: 1px solid #666;
+}
+
+/* 6. TOGGLE ++++++++++++++++++++++++++++++++++++++++++++ */
+h2.trigger {
+	padding: 0 0 0 25px;
+	margin: 0 0 0px 0;
+	background: transparent url(images/icons/plus.png) no-repeat;
+	background-position: -1px 14px; 
+	height: 35px;
+	line-height: 46px;
+	width: 400px;
+	font-size: 19px;
+	font-weight: normal;
+	float: left;
+}
+
+h2.trigger a {
+	color: #ccc;
+	text-decoration: none;
+	display: block;
+}
+
+h2.trigger a:hover {
+	color: #f9f8cc;
+}
+
+h2.active {background: transparent url(images/icons/minus.png) no-repeat -1px 14px; overflow: hidden;
+}
+
+.toggle_container {
+	margin: 0; padding: 0;
+	font-size: 12px;
+	width: 400px;
+	clear: both;
+}
+
+.toggle_container .block {
+	padding: 2px 0px 0px 0px;
+}
+
+.toggle_container .block p {
+	padding: 5px 0;
+	margin: 5px 0;
+}
+
+
+/* 8. PORTFOLIO ++++++++++++++++++++++++++++++++++++++++++++ */
+.image-grid {
+  margin: 4px 0px 0 -15px;
+  padding-left: 0px;
+  width: 930px;float:left;
+}
+
+.image-grid li {
+  width: 128px;
+  margin: 0px 5px 25px 15px;
+  float: left;
+  text-align: center;
+  border:1px solid #fff; 
+  padding:2px;
+  -moz-box-shadow: 0 1px 3px #222; 
+  -webkit-box-shadow: 0 1px 3px #222; 
+  -moz-border-radius: 5px; -webkit-border-radius:5px;
+  border-radius: 5px; 
+  background-color: #eee;
+  color: #686f74;
+  height: 110px;
+  overflow: hidden;
+}
+
+/* 9. CONTACT PAGE STYLING ++++++++++++++++++++++++++++++++++++++++++++ */
+/*  Contact Form */
+/*  Contact Form */
+#error { font: normal 11px 'Helvetica Neue', arial, sans-serif; margin: 50px 0px 0px 65px; 
+}
+#error li{ list-style-type:none;
+}
+.hide { font: normal 12px 'Helvetica Neue', arial, sans-serif; display: none; color: #444; }
+input { outline: none; display: block; }
+#form_name, #form_email, textarea { 
+	font: normal 12px 'Helvetica Neue', arial, sans-serif; 
+	margin: -20px 0px 20px 65px; 
+	padding: 4px 5px 6px 5px;
+	width: 390px; 
+	border: 0px solid #ccc;
+}
+
+.label {
+	font: normal 12px  'Helvetica Neue', sans-serif;
+ 	margin-top: 10px; color: #ccc;
+}
+
+textarea { 
+	font: normal 12px 'Helvetica Neue', sans-serif; 
+	width: 390px; height: 65px;
+	padding: 5px;
+	margin: -20px 0px 5px 65px; 
+}
+
+#form_name, #form_email, textarea {
+	font: normal 12px 'Helvetica Neue', arial, sans-serif; background-color: #ededed; color: #555;
+	border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; 
+	border-top-style: solid; border-right-style: solid; border-bottom-style: solid; border-left-style: solid; 
+	border-top-color: #CACACA; border-right-color: #FFFFFF; border-bottom-color: #FFFFFF; border-left-color: #CACACA;
+	padding: 6px; -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px;
+}
+
+#form_submit, #reset {
+	margin: -10px 0px 0px 65px;
+	float:left;
+ 	 width: 70px; 
+	padding: 5px 0px 28px 0px; 
+	background-color: #3ea99f;
+  	background-image: -webkit-gradient(linear, left top, left bottom, from(#44a49b), to(#3ea99f));
+  /* Saf4+, Chrome */
+  background-image: -webkit-linear-gradient(top, #44a49b, #3ea99f);
+  background-image: -moz-linear-gradient(top, #44a49b, #3ea99f);
+  background-image: -ms-linear-gradient(top, #44a49b, #3ea99f);
+  background-image: -o-linear-gradient(top, #44a49b, #3ea99f);
+  background-image: linear-gradient(top, #44a49b, #3ea99f);
+  border: 1px solid #3ea99f;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  color: #fff;
+  font: bold 11px "helvetica neue", arial, sans-serif;
+  line-height: 1;
+  padding: 4px 4px;
+  text-align: center;
+  text-shadow: 0px 1px 0px #666;
+
+}
+
+#reset {
+	margin: -10px 0px 0px 5px;
+}
+
+#form_submit:hover, #reset:hover {
+    background-color: #40968e; color: #fff;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#3ea99f), to(#357f78));
+    /* Saf4+, Chrome */
+    background-image: -webkit-linear-gradient(top, #3ea99f, #357f78);
+    background-image: -moz-linear-gradient(top, #3ea99f, #357f78);
+    background-image: -ms-linear-gradient(top, #3ea99f, #357f78);
+    background-image: -o-linear-gradient(top, #3ea99f, #357f78);
+    background-image: linear-gradient(top, #3ea99f, #357f78);
+    border: 1px solid ##3ea99f;
+    cursor: pointer;
+    text-shadow: 0 1px 0 #666;
+}
+
+/*for FireFox*/
+input[type="submit"]::-moz-focus-inner, input[type="button"]::-moz-focus-inner , input[type="reset"]::-moz-focus-inner, input[type="button"]::-moz-focus-inner 
+{ border : 0px; } 
+/*for IE8 */
+input[type="reset"]:focus, input[type="button"]:focus , input[type="submit"]:focus, input[type="button"]:focus
+{ outline : none; }
+
+/* Contact Details List */
+.contact-list {
+	float: left;
+	width: 172px; background-color: transparent;
+	margin: 0px 30px 0px 0px;
+}
+
+ul.contact-list { padding: 0px 0px; display: block; overflow: hidden; margin-left:-5px;
+}
+
+.contact-list li { line-height: 20px; list-style: none;  display: block; padding-bottom: 12px; 
+}
+
+.home{background-image:url('images/icons/home.png');background-repeat: no-repeat; padding-left: 35px;background-position: 0px -3px;
+}
+
+.phone{background-image:url('images/icons/phone.png'); background-repeat: no-repeat; padding-left: 35px; background-position: 0px -5px; 
+}
+
+.email{background-image:url('images/icons/email.png'); background-repeat: no-repeat; padding-left: 35px; background-position: 0px -2px; 
+}
+
+.address{background-image:url('images/icons/address.png'); background-repeat: no-repeat; padding-left: 35px; background-position: 0px -2px; 
+}
+
+/* Social Icons List */
+.social-list{
+	margin:-5px 0px 10px 0px; 
+	padding: 0;
+}
+
+.social-list ul{ }
+.social-list  li { 
+	display: inline;
+	list-style-type: none;
+	padding-right: 10px;
+}
+
+/* Twitter */
+#twitter-wrapper {font: normal 12px 'Helvetica Neue', arial , sans-serif; float: left; clear: both; margin: 0px 0px 0px 0px; position: relative; width:400px; }
+#tweet { padding: 0px 0; background: 
+transparent url(images/icons/twitter-bird.png) no-repeat -2px 0px; 
+min-height: 40px; }
+.tweeter{ background: none; padding: 5px 0px 5px 30px; }
+#tweet ul { padding: 0; margin: 0; }
+#tweet ul li { list-style-type: none;background: none; padding: 5px 0px 5px 30px; 
+line-height: 20px; }
+#tweet ul li a { color: #999; text-decoration: none; border: none;}
+#tweet ul li a:hover { text-decoration: underline; }
+.username {font: italic normal 11px 'Helvetica Neue', arial , sans-serif; background: transparent; float:right;  }
+.username a { color: #5bb6cc;  }
+
+#footer {margin:-2px 0px 0px 75px; color: #333; font-size: 11px; text-align: left;
+}
+
+
+
+/* JUST FOR THE TYPO STYLES - DEMO */
+.butdemo {
+	margin-bottom:25px;
+}

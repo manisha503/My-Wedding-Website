@@ -1,4 +1,5 @@
 # pyramid env
+env/.Python
 env/bin/*
 env/lib/*
 env/include/*

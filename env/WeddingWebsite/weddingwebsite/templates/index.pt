@@ -1,0 +1,124 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=us-ascii" />
+
+  <title>Rishi and Manisha | 5.25.12</title>
+  <link rel="stylesheet" href="${request.static_url('weddingwebsite:static/style/main.css')}" type="text/css" media="screen" />
+  <link rel="stylesheet" href="${request.static_url('weddingwebsite:static/style/css/buttons.css')}" type="text/css" media="screen" />
+  <link rel="stylesheet" href="${request.static_url('weddingwebsite:static/style/css/anythingslider.css')}" type="text/css" media="screen" />
+  <link rel="stylesheet" href="${request.static_url('weddingwebsite:static/style/css/tipTip.css')}" type="text/css" media="screen" />
+  <link rel="stylesheet" href="${request.static_url('weddingwebsite:static/style/css/nivo-slider.css')}" type="text/css" media="screen" />
+  <link rel="stylesheet" href="${request.static_url('weddingwebsite:static/style/css/nivostyle.css')}" type="text/css" media="screen" />
+  <link rel="stylesheet" type="text/css" href="${request.static_url('weddingwebsite:static/style/css/jquery.jscrollpane.css')}" media="all" />
+  <link rel="stylesheet" href="${request.static_url('weddingwebsite:static/style/css/featured.css')}" type="text/css" media="screen" />
+  <link rel="stylesheet" href="${request.static_url('weddingwebsite:static/style/css/prettyPhoto.css')}" type="text/css" />
+  <script type="text/javascript" src="${request.static_url('weddingwebsite:static/style/js/jquery.js')}">
+</script>
+  <script type="text/javascript" src="${request.static_url('weddingwebsite:static/style/js/jquery.scripts.js')}">
+</script>
+  <script type="text/javascript" src="${request.static_url('weddingwebsite:static/style/js/jquery.nivo.slider.js')}">
+</script>
+  <script type="text/javascript" src="http://twitterjs.googlecode.com/svn/trunk/src/twitter.min.js">
+</script>
+  <script src="${request.static_url('weddingwebsite:static/style/js/jquery.form.js')}" type="text/javascript" charset="utf-8">
+</script><!-- Define slider dimensions here -->
+
+</head>
+
+<body>
+<div id="container">
+  <div id="header">
+    <div id="header_spacer">
+    </div>
+    <!-- YOUR NAME -->
+    <div id="name">
+      <ul>
+        <li><a href="#home" rel="home">Rishi and Manisha</a></li>
+      </ul>
+    </div><!-- YOUR NAME ENDS -->
+    <!--MENU STARTS -->
+
+    <div id="nav">
+      <ul>
+        <li><a href="#about">About</a></li>
+
+        <li><a href="#services">Services</a></li>
+
+        <li><a href="#work">Portfolio</a></li>
+      </ul>
+    </div><!-- MENU ENDS -->
+  </div>
+  <!-- INTRO PAGE STARTS -->
+
+  <div id="section">
+    <div id="home-one-column">
+      <h1>This is your intro page, welcome your visitors &amp; tell them who you are!</h1>
+    </div>
+    <div id="home-one-column-last">
+      <h1> This is the second heading </h1>
+    </div>
+    <div class="clear"></div>
+  </div>
+
+
+  <!-- FOOTER STARTS -->
+
+  <div id="footer">
+    &copy; rishiandmanisha.com - If you're reading this, you must be really bored.
+  </div><!-- FOOTER ENDS -->
+ 
+  <script type="text/javascript" src="${request.static_url('weddingwebsite:static/style/js/jquery.mousewheel.js')}">
+</script><script type="text/javascript" src="${request.static_url('weddingwebsite:static/style/js/jquery.contentcarousel.js')}">
+</script><script type="text/javascript">
+//<![CDATA[
+		$('#ca-container').contentcarousel();
+  //]]>
+  </script><script type="text/javascript">
+//<![CDATA[
+		$(document).ready(function() {
+		$('blockquote').quovolver();
+			});
+        //]]>
+  </script><script type="text/javascript" src="${request.static_url('weddingwebsite:static/style/js/cloud-zoom/cloud-zoom.1.0.2.js')}">
+</script><script type="text/javascript">
+// <![CDATA[
+  $(document).ready(function(){
+        $(document).pngFix();
+  });
+  // ]]>
+  </script><script type="text/javascript">
+//<![CDATA[
+  $(document).ready(function(){
+  $(".toggle_container").hide();
+  $("h2.trigger").click(function(){
+  $(this).toggleClass("active").next().slideToggle("slow");
+  });
+  });//]]>
+  </script><script type="text/javascript">
+//<![CDATA[
+  $(document).ready(function(){
+  $("a[rel^='prettyPhoto']").prettyPhoto({theme:'dark_rounded',autoplay_slideshow: false, overlay_gallery:false,});
+  });
+  //]]>
+  </script>
+  <script type="text/javascript">
+//<![CDATA[
+  $(document).ready(function() {
+  $('#submitform').ajaxForm({
+  target: '#error',
+  success: function() {
+  $('#error').fadeIn('slow');
+  }
+  });
+  });
+  //]]>
+  </script><!--[if lt IE 7]>
+  <script type="text/javascript" src="javascript/unitpngfix.js"></script>
+   <![endif]-->
+</div>
+</body>
+</html>
+
