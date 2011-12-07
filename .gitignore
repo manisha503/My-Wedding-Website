@@ -1,3 +1,6 @@
+# Compiled source
+*.pyc
+
 # pyramid env
 env/.Python
 env/bin/*

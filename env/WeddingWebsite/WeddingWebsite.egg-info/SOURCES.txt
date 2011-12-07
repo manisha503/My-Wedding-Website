@@ -38,6 +38,7 @@ weddingwebsite/static/style/css/tipTip.css
 weddingwebsite/static/style/fonts/SIL Open Font License 1.1.txt
 weddingwebsite/static/style/images/arrow.png
 weddingwebsite/static/style/images/arrows.png
+weddingwebsite/static/style/images/bg_gradient.png
 weddingwebsite/static/style/images/bullet.jpg
 weddingwebsite/static/style/images/bullets.png
 weddingwebsite/static/style/images/buttons.png
@@ -56,6 +57,7 @@ weddingwebsite/static/style/images/pic1.jpg
 weddingwebsite/static/style/images/pointer.png
 weddingwebsite/static/style/images/project_thumb.jpg
 weddingwebsite/static/style/images/project_thumb_large.jpg
+weddingwebsite/static/style/images/shadow_sprites.png
 weddingwebsite/static/style/images/single.jpg
 weddingwebsite/static/style/images/slider-arrows.png
 weddingwebsite/static/style/images/slider1.jpg
