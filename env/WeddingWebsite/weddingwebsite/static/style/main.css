@@ -211,7 +211,13 @@ hr {
 }
 
 #feature .inner {
-  padding: 15px 0 15px;
+  padding: 25px 0 25px;
+  text-align: center;
+}
+
+#feature .main_image {
+  height: 640px;
+  width: 960px;
 }
 
 #feature h1 {
