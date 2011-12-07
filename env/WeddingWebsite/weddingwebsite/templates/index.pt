@@ -29,7 +29,7 @@
 </head>
 
 <body>
-<header id="header">
+<div id="header">
   <div class="inner">
     <div id="logo_text">
       <a id="site_name" href="#home" rel="home">
@@ -46,7 +46,7 @@
       </ul>
     </div>
   </div>
-</header>
+</div>
 <div id="feature">
   <div class="top_shadow"></div>
   <div class="inner">
