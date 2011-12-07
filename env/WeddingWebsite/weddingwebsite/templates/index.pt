@@ -5,7 +5,7 @@
 <head>
 <meta http-equiv="content-type" content="text/html; charset=us-ascii" />
 
-  <title>Rishi and Manisha | 5.25.12</title>
+  <title>Rishi and Manisha | 6.23.12</title>
   <link rel="stylesheet" href="${request.static_url('weddingwebsite:static/style/main.css')}" type="text/css" media="screen" />
   <link rel="stylesheet" href="${request.static_url('weddingwebsite:static/style/css/buttons.css')}" type="text/css" media="screen" />
   <link rel="stylesheet" href="${request.static_url('weddingwebsite:static/style/css/anythingslider.css')}" type="text/css" media="screen" />
@@ -29,95 +29,33 @@
 </head>
 
 <body>
-<div id="container">
-  <div id="header">
-    <div id="header_spacer">
+<header id="header">
+  <div class="inner">
+    <div id="logo_text">
+      <a id="site_name" href="#home" rel="home">
+        <div id="site_title">Rishi and Manisha</div>
+      </a>
     </div>
-    <!-- YOUR NAME -->
-    <div id="name">
-      <ul>
-        <li><a href="#home" rel="home">Rishi and Manisha</a></li>
-      </ul>
-    </div><!-- YOUR NAME ENDS -->
-    <!--MENU STARTS -->
-
     <div id="nav">
       <ul>
-        <li><a href="#about">About</a></li>
+        <li><a href="#about">About Us</a></li>
 
         <li><a href="#services">Services</a></li>
 
         <li><a href="#work">Portfolio</a></li>
       </ul>
-    </div><!-- MENU ENDS -->
-  </div>
-  <!-- INTRO PAGE STARTS -->
-
-  <div id="section">
-    <div id="home-one-column">
-      <h1>This is your intro page, welcome your visitors &amp; tell them who you are!</h1>
     </div>
-    <div id="home-one-column-last">
-      <h1> This is the second heading </h1>
-    </div>
-    <div class="clear"></div>
   </div>
-
-
-  <!-- FOOTER STARTS -->
-
-  <div id="footer">
-    &copy; rishiandmanisha.com - If you're reading this, you must be really bored.
-  </div><!-- FOOTER ENDS -->
- 
-  <script type="text/javascript" src="${request.static_url('weddingwebsite:static/style/js/jquery.mousewheel.js')}">
-</script><script type="text/javascript" src="${request.static_url('weddingwebsite:static/style/js/jquery.contentcarousel.js')}">
-</script><script type="text/javascript">
-//<![CDATA[
-		$('#ca-container').contentcarousel();
-  //]]>
-  </script><script type="text/javascript">
-//<![CDATA[
-		$(document).ready(function() {
-		$('blockquote').quovolver();
-			});
-        //]]>
-  </script><script type="text/javascript" src="${request.static_url('weddingwebsite:static/style/js/cloud-zoom/cloud-zoom.1.0.2.js')}">
-</script><script type="text/javascript">
-// <![CDATA[
-  $(document).ready(function(){
-        $(document).pngFix();
-  });
-  // ]]>
-  </script><script type="text/javascript">
-//<![CDATA[
-  $(document).ready(function(){
-  $(".toggle_container").hide();
-  $("h2.trigger").click(function(){
-  $(this).toggleClass("active").next().slideToggle("slow");
-  });
-  });//]]>
-  </script><script type="text/javascript">
-//<![CDATA[
-  $(document).ready(function(){
-  $("a[rel^='prettyPhoto']").prettyPhoto({theme:'dark_rounded',autoplay_slideshow: false, overlay_gallery:false,});
-  });
-  //]]>
-  </script>
-  <script type="text/javascript">
-//<![CDATA[
-  $(document).ready(function() {
-  $('#submitform').ajaxForm({
-  target: '#error',
-  success: function() {
-  $('#error').fadeIn('slow');
-  }
-  });
-  });
-  //]]>
-  </script><!--[if lt IE 7]>
-  <script type="text/javascript" src="javascript/unitpngfix.js"></script>
-   <![endif]-->
+</header>
+<div id="feature">
+  <div class="top_shadow"></div>
+  <div class="inner">
+    <h1>This is your intro page, welcome your visitors &amp; tell them who you are!</h1>
+  </div>
+  <div class="bottom_shadow"></div>
+</div>
+<div id="footer">
+  &copy; rishiandmanisha.com - If you're reading this, you must be really bored.
 </div>
 </body>
 </html>

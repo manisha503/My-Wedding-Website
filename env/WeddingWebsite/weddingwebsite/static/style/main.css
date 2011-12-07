@@ -55,6 +55,17 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     font-style: normal;
 }
 
+@font-face {
+  font-family: 'SeganLight';
+  src: url('fonts/segan-light-webfont.eot');
+  src: url('fonts/segan-light-webfont.eot?#iefix') format('embedded-opentype'),
+       url('fonts/segan-light-webfont.woff') format('woff'),
+       url('fonts/segan-light-webfont.ttf') format('truetype'),
+       url('fonts/segan-light-webfont.svg#SeganLight') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
 /* 3. GENERAL STYLING ++++++++++++++++++++++++++++++++++++++++++++ */
 
 /* BODY ++++++++++++++++++++++++++++++++++++++++++++ */
@@ -65,7 +76,8 @@ body {
 	margin-top: 0; padding: 0;
 	overflow-x: hidden;
 	padding: 0px 0px 40px 0px;height:100%;
-	font: 13px/20px 'Helvetica Neue', Helvetica, Arial; color: #bbb;
+	font: 13px/20px 'SeganLight', Arial;
+  color: #bbb;
 }
 
 /* LINKS ++++++++++++++++++++++++++++++++++++++++++++ */
@@ -156,15 +168,72 @@ hr {
 }
 
 /* LAYOUT STYLING ++++++++++++++++++++++++++++++++++++++++++++ */
-#container {
-  width: 1024px;
-  margin: auto;
-  padding-top: 50px;
+#header, #feature {
+  min-width: 980px;
 }
 
 #header {
-  width: 100%;
-  height: 84px;
+  font-family: 'SeganLight', Arial, sans-serif;
+  height: 80px;
+  position: relative;
+  z-index: 200;
+}
+
+.inner {
+  width:960px;
+  margin:0 auto;
+  position:relative;
+  height:100%;
+}
+
+#logo_text {
+  position: absolute;
+  left: 0px;
+  bottom: 20px;
+}
+
+#site_name {
+  font-size: 40px;
+  line-height:40px;
+  display:block;
+  color: #444444;
+	text-shadow: 0px 2px 2px #ADADAD;
+}
+
+#site_title {
+  width: 320px;
+  height: 40px;
+}
+
+#feature {
+  background:url(images/bg_gradient.png) no-repeat scroll 50% 0 transparent;
+  background-color: #000000;
+}
+
+#feature .inner {
+  padding: 15px 0 15px;
+}
+
+#feature h1 {
+  font-size:42px;
+  color: #ffffff;
+  margin-bottom: 0;
+  padding: 5px 0;
+}
+
+#feature .top_shadow {
+  background:url(images/shadow_sprites.png) repeat-x scroll 0 0 transparent;
+  height: 10px;
+  font-size:0px;
+  overflow:hidden;
+  line-height: 10px;
+}
+
+#feature .bottom_shadow {
+  background:url(images/shadow_sprites.png) repeat-x scroll 0 -10px transparent;
+  height: 9px;
+  font-size:0px;
+  line-height:9px;
 }
 
 #section {
@@ -237,18 +306,18 @@ img.right-me {
 /* 4. TYPOGRAPHY ++++++++++++++++++++++++++++++++++++++++++++ */
 
 h1 {
-	font: 68px/65px 'LeagueGothicRegular', Arial, sans-serif;
+	font: 68px/65px 'SeganLight', Arial, sans-serif;
 	color: #f9f8cc;
 	margin-top: 20px; text-transform:uppercase;
 }
 
-h2 {font: 40px/35px 'BebasNeueRegular', Arial, sans-serif;
+h2 {font: 40px/35px 'SeganLight', Arial, sans-serif;
 	color: #f9f8cc;
 	margin: 20px 0px 10px 0px;
 }
 
 h3, h4, h5, h6 {
-	font-family:'BebasNeueRegular', Arial, sans-serif;
+	font-family:'SeganLight', Arial, sans-serif;
 	color: #bbb; margin-bottom:10px;
 }
 h3 {
@@ -280,58 +349,34 @@ p {
 /*  2. SECTIONS
     ........................................................................................................................................ */
 
-/* 1. YOUR NAME ++++++++++++++++++++++++++++++++++++++++++++ */
-/* Name */
-#header_spacer {
-	color: #fff;
-	float: left;
-	margin: 0 0 0 0;
-  height: 100%;
-  width: 91px;
-	background: transparent url(images/menu_head.png) repeat-x;
-}
-
-#name {
-	font: 30px 'LeagueGothicRegular', Arial, sans-serif;
-	color: #fff;
-	float: left;
-	margin: 0;
-  height: 100%;
-	width: 439px;
-  background: transparent url(images/menu_rest.png) repeat-x;
-}
 
 /* 2. MENU ++++++++++++++++++++++++++++++++++++++++++++ */
 #nav {
-	font: 30px 'LeagueGothicRegular', Arial, sans-serif;
+	font: 24px 'SeganLight', Arial, sans-serif;
 	color: #f9f8cc;
-	background: transparent url(images/menu_ribbon.png) no-repeat;
-	width: 494px;
-  height: 100%;
-	margin: 0;
-	float: right;
+	right: -15px;
+  bottom: 20px;
+  position: absolute;
+  height: 40px;
+  line-height: 40px;
 }
 
 #nav ul, #name ul {
-	margin: 30px 0 0 0;
 	padding: 0;
 }
 #nav li, #name li {
 	list-style-type: none;
-	background-image: transparent;
-	color: #FDE99D;
 	float: left;
-	margin:0 20px 0 16px;
+	margin: 0 16px 0 16px;
 }
 
 #nav li a, #name li a {
-	color: #adadad;
-	text-shadow: 0px 2px 2px #222;
-	text-transform: uppercase;
+	color: #444444;
+	text-shadow: 0px 2px 2px #ADADAD;
 }
 
-#nav li a:hover, #name li a:hover {
-	color: #999;
+#nav li a:hover, #name li a:hover, #site_title:hover {
+	color: #000000;
 }
 
 /* Contact Button Link - choose your button colour and add it here */
