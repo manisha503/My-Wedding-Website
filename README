@@ -1,1 +1,13 @@
 My first github project - my wedding website!
+
+Deployment notes:
+On linode server, in /home/app/modwsgi, there are two directories:
+    env
+    My-Wedding-Website
+
+My-Wedding-Website is the git repo and env is the pyramid environment that apache invokes via modwsgi.  The process is as follows:
+
+1) update code in My-Wedding-Website using a git pull
+2) cd My-Wedding-Website/env
+3) cp -r WeddingWebsite ../../env/  (overwrite the WeddingWebsite directory that was there before)
+4) sudo /etc/init.d/httpd restart (restart apache)
