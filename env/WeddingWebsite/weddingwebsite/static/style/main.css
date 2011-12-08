@@ -215,9 +215,29 @@ hr {
   text-align: center;
 }
 
+#image_wrap {
+  height: 440px;
+  background:url(images/image_wrap_shadow.png) no-repeat scroll center bottom transparent;
+  padding-bottom:40px;
+  position: relative;
+}
+
+#image_frame {
+  height: 440px;
+  width: 100%;
+  position: absolute;
+  top: 0px;
+  z-index: 100;
+  background: transparent;
+	-moz-box-shadow: inset 0 0 0 1px rgba(226,226,226,0.5); 
+	-webkit-box-shadow: inset 0 0 0 1px rgba(226,226,226,0.5);
+  box-shadow: inner 0 0 0 1px rgba(226,226,226,0.5); 
+}
+
 #feature .main_image {
-  height: 640px;
+  height: 440px;
   width: 960px;
+  position: relative;
 }
 
 #feature h1 {
@@ -324,7 +344,7 @@ h2 {font: 40px/35px 'SeganLight', Arial, sans-serif;
 
 h3, h4, h5, h6 {
 	font-family:'SeganLight', Arial, sans-serif;
-	color: #bbb; margin-bottom:10px;
+	color: #bbb;
 }
 h3 {
 	font-size: 25px ;
@@ -365,6 +385,7 @@ p {
   position: absolute;
   height: 40px;
   line-height: 40px;
+  z-index: 200;
 }
 
 #nav ul, #name ul {

@@ -50,9 +50,10 @@
 <div id="feature">
   <div class="top_shadow"></div>
   <div class="inner">
-    <img class="main_image" src="${request.static_url('weddingwebsite:static/style/images/palace_of_fine_arts.jpg')}" />
-    <br/>
-    <br/>
+    <div id="image_wrap">
+      <img class="main_image" src="${request.static_url('weddingwebsite:static/style/images/palace_of_fine_arts.jpg')}" />
+      <div id="image_frame"></div>
+    </div>
     <h3>You're invited to the event of the century... Rishi & Manisha's wedding!</h3>
   </div>
   <div class="bottom_shadow"></div>
