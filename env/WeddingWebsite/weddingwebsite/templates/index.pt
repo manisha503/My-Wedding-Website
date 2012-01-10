@@ -76,6 +76,9 @@
       <div id="slider" class="nivoSlider theme-default">
         <img src="${request.static_url('weddingwebsite:static/style/images/save_the_date-ribbon.jpg')}" />
         <img src="${request.static_url('weddingwebsite:static/style/images/palace_of_fine_arts-2.jpg')}" title="This is where Rishi proposed!"/>
+        <img src="${request.static_url('weddingwebsite:static/style/images/rishi_manisha_mehndi.JPG')}" title="Before our engagement party"/>
+        <img src="${request.static_url('weddingwebsite:static/style/images/group_dance_2.JPG')}"/>
+        <img src="${request.static_url('weddingwebsite:static/style/images/group_dance_1.JPG')}"/>
       </div>
     </div>
   </div>
