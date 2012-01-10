@@ -70,12 +70,19 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 
 /* BODY ++++++++++++++++++++++++++++++++++++++++++++ */
 /* Change your background pattern and colour here */
+html, body {
+  margin:0;
+  padding:0;
+  height:100%;
+}
+
 body {
 	background-color: #E2E2E2;
 	background-image: url(images/bg/bright_squares.png); background-repeat: repeat;
 	margin-top: 0; padding: 0;
 	overflow-x: hidden;
-	padding: 0px 0px 40px 0px;height:100%;
+	padding: 0px 0px 40px 0px;
+  height:100%;
 	font: 13px/20px 'SeganLight', Arial;
   color: #bbb;
 }
@@ -159,6 +166,77 @@ hr {
   height: 40px;
 }
 
+#landing-outer {
+  position: absolute;
+  top: 50%;
+  left: 0px;
+  width: 100%;
+  margin-top:-213px;
+}
+
+#landing-wrapper {
+  height: 426px;
+  width: 960px;
+  margin: 0px auto;
+  overflow: auto;
+}
+
+.landing {
+  width: 960px;
+  height: 426px;
+  margin: auto;
+}
+
+.landing-img-1 {
+  width: 191px;
+  height: 334px;
+  position:absolute;
+  margin-left: 1px;
+  display: none;
+}
+
+.landing-img-2 {
+  width: 191px;
+  height: 334px;
+  position:absolute;
+  margin-left: 193px;
+  display: none;
+}
+
+.landing-img-3 {
+  width: 191px;
+  height: 334px;
+  position:absolute;
+  margin-left: 385px;
+  display: none;
+}
+
+.landing-img-4 {
+  width: 191px;
+  height: 334px;
+  position:absolute;
+  margin-left: 577px;
+  display: none;
+}
+
+.landing-img-5 {
+  width: 191px;
+  height: 334px;
+  position:absolute;
+  margin-left: 769px;
+  display: none;
+}
+
+.landing-ribbon {
+  width: 852px;
+  height: 72px;
+  margin-top: 354px;
+  margin-left: 54px;
+  position:absolute;
+  display: none;
+  clear: both;
+}
+
 #feature {
   background:url(images/bg_gradient.png) no-repeat scroll 50% 0 transparent;
   /*background-color: #FFA02F;*/
@@ -187,17 +265,23 @@ hr {
   position: relative;
 }
 
-.slider_border {
-  height: 440px;
-  width: 960px;
-  padding: 1px;
-  position: relative;
-  -moz-box-shadow: inset 0 0 0 4px rgba(226,226,226,0.5);
-  -webkit-box-shadow: inset 0 0 0 4px rgba(226,226,226,0.5);
-  box-shadow: inner 0 0 0 4px rgba(226,226,226,0.5);
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  border-radius: 10px;
+.nivoSlider {
+  position:relative;
+  width:960px;
+  height:440px;
+  background:url(images/nivo/loading.gif) no-repeat 50% 50%;
+}
+
+.nivoSlider img {
+  position:absolute;
+  top:0px;
+  left:0px;
+  display:none;
+}
+
+.nivoSlider a {
+  border:0;
+  display:block;
 }
 
 #feature h1 {

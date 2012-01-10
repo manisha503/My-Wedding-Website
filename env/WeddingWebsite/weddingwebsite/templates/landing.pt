@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=us-ascii" />
+
+  <title>Rishi and Manisha | 6.23.12</title>
+  <link rel="stylesheet" href="${request.static_url('weddingwebsite:static/style/main.css')}" type="text/css" media="screen" />
+  <script type="text/javascript" src="${request.static_url('weddingwebsite:static/style/js/jquery-1.7.1.min.js')}"></script>
+</head>
+
+<body>
+  <div id="landing-outer">
+  <div id="landing-wrapper">
+  <div class="landing">
+    <img id="img1" class="landing-img-1" onLoad="onImageLoaded()"
+        src="${request.static_url('weddingwebsite:static/style/images/final-1.png')}" />
+    <img id="img2" class="landing-img-2" onLoad="onImageLoaded()"
+        src="${request.static_url('weddingwebsite:static/style/images/final-2.png')}" />
+    <img id="img3" class="landing-img-3" onLoad="onImageLoaded()"
+        src="${request.static_url('weddingwebsite:static/style/images/final-3.png')}" />
+    <img id="img4" class="landing-img-4" onLoad="onImageLoaded()"
+        src="${request.static_url('weddingwebsite:static/style/images/final-4.png')}" />
+    <img id="img5" class="landing-img-5" onLoad="onImageLoaded()"
+        src="${request.static_url('weddingwebsite:static/style/images/final-5.png')}" />
+    <img id="imgRibbon" class="landing-ribbon" onLoad="onImageLoaded()"
+      src="${request.static_url('weddingwebsite:static/style/images/final-ribbon.png')}" />
+  </div>
+  </div>
+  </div>
+  <tal:block tal:define="home_url redirect_url">
+    <script tal:content="string:
+        var home_url_js='${home_url}';
+    "></script>
+  </tal:block>
+  <script type="text/javascript">
+    var numImagesLoaded = 0
+    function onImageLoaded() {
+      numImagesLoaded++;
+      if (numImagesLoaded == 6) {
+        fadeImageIn($('#img1'));
+        fadeImageIn($('#img5'));
+      }
+    }
+    function fadeImageIn(img) {
+      img.fadeIn(1000, function() {
+        imageFadedIn();
+      })
+    }
+    numImagesFadedIn = 0
+    function imageFadedIn() {
+      numImagesFadedIn++;
+      if(numImagesFadedIn == 2) {
+        fadeImageIn($('#img2'));
+        fadeImageIn($('#img4'));
+      } else if (numImagesFadedIn == 4) {
+        fadeImageIn($('#img3'));
+        $('#imgRibbon').slideDown(1000);
+      } else if (numImagesFadedIn > 4) {
+        // add the document click listener
+        $('#landing-wrapper').click(function () {
+          window.location = home_url_js;
+        });
+      }
+    }
+  </script>
+</body>
+</html>
+
