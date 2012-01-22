@@ -31,7 +31,7 @@
         controlNavThumbsSearch: '.jpg', // Replace this with...
         controlNavThumbsReplace: '_thumb.jpg', // ...this in thumb Image src
         keyboardNav: true, // Use left & right arrows
-        pauseOnHover: true, // Stop animation while hovering
+        pauseOnHover: false, // Stop animation while hovering
         manualAdvance: false, // Force manual transitions
         captionOpacity: 0.8, // Universal caption opacity
         prevText: 'Prev', // Prev directionNav text
@@ -52,10 +52,11 @@
 
 <body>
 <div id="header">
-  <div class="inner">
+  <div class="header-inner">
     <div id="logo_text">
+      <img id="logo" src="${request.static_url('weddingwebsite:static/style/images/manishi_logo.png')}" />
       <a id="site_name" href="#home" rel="home">
-        <div id="site_title">Rishi and Manisha</div>
+        <div id="site_title">Rishi & Manisha</div>
       </a>
     </div>
     <div id="nav">
@@ -83,6 +84,9 @@
     </div>
   </div>
   <div class="bottom_shadow"></div>
+</div>
+<div id="rest">
+
 </div>
 <div id="footer">
   &copy; rishiandmanisha.com - If you're reading this, you must be really bored.

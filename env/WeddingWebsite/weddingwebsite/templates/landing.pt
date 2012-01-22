@@ -11,6 +11,11 @@
 </head>
 
 <body>
+  <tal:block tal:define="home_url redirect_url">
+    <script tal:content="string:
+        var home_url_js='${home_url}';
+    "></script>
+  </tal:block>
   <div id="landing-outer">
   <div id="landing-wrapper">
   <div class="landing">
@@ -26,14 +31,14 @@
         src="${request.static_url('weddingwebsite:static/style/images/final-5.png')}" />
     <img id="imgRibbon" class="landing-ribbon" onLoad="onImageLoaded()"
       src="${request.static_url('weddingwebsite:static/style/images/final-ribbon.png')}" />
+    <div class="landing-click-wrapper">
+      <div id="goLink" class="landing-click">
+        <a href="link" tal:attributes="href redirect_url">Let's Go!</a>
+      </div>
+    </div>
   </div>
   </div>
   </div>
-  <tal:block tal:define="home_url redirect_url">
-    <script tal:content="string:
-        var home_url_js='${home_url}';
-    "></script>
-  </tal:block>
   <script type="text/javascript">
     var numImagesLoaded = 0
     function onImageLoaded() {
@@ -58,10 +63,7 @@
         fadeImageIn($('#img3'));
         $('#imgRibbon').slideDown(1000);
       } else if (numImagesFadedIn > 4) {
-        // add the document click listener
-        $('#landing-wrapper').click(function () {
-          window.location = home_url_js;
-        });
+        $('#goLink').fadeIn(1000);
       }
     }
   </script>

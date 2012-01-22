@@ -88,8 +88,14 @@ body {
 }
 
 /* LINKS ++++++++++++++++++++++++++++++++++++++++++++ */
-a { outline:0; color: #FFFFFF; text-decoration: none; }
-a:hover {color: #f9f8cc; }
+a {
+	color: #444444;
+	text-shadow: 0px 2px 2px #ADADAD;
+  text-decoration: none;
+}
+a:hover {
+	color: #000000;
+}
 
 
 /* LISTS ++++++++++++++++++++++++++++++++++++++++++++ */
@@ -135,9 +141,16 @@ hr {
 
 #header {
   font-family: 'SeganLight', Arial, sans-serif;
-  height: 80px;
+  height: 120px;
   position: relative;
   z-index: 200;
+}
+
+.header-inner {
+  width:1010px;
+  margin:0 auto;
+  position:relative;
+  height:100%;
 }
 
 .inner {
@@ -149,21 +162,30 @@ hr {
 
 #logo_text {
   position: absolute;
-  left: 0px;
-  bottom: 20px;
+}
+
+#logo {
+  position: relative;
+  width: 119px;
+  height: 120px;
+  float: left;
 }
 
 #site_name {
+  position: relative;
   font-size: 40px;
   line-height:40px;
   display:block;
   color: #444444;
 	text-shadow: 0px 2px 2px #ADADAD;
+  float: left;
+  margin-top: 40px;
 }
 
 #site_title {
   width: 320px;
   height: 40px;
+  margin-left: 5px;
 }
 
 #landing-outer {
@@ -171,11 +193,11 @@ hr {
   top: 50%;
   left: 0px;
   width: 100%;
-  margin-top:-213px;
+  margin-top:-237px;
 }
 
 #landing-wrapper {
-  height: 426px;
+  height: 474px;
   width: 960px;
   margin: 0px auto;
   overflow: auto;
@@ -183,7 +205,7 @@ hr {
 
 .landing {
   width: 960px;
-  height: 426px;
+  height: 474px;
   margin: auto;
 }
 
@@ -237,13 +259,29 @@ hr {
   clear: both;
 }
 
+.landing-click-wrapper {
+  margin-top: 444px;
+  width: 70px;
+  height: 30px;
+  line-height: 30px;
+  clear: both;
+  float: right;
+	font: 18px 'SeganLight', Arial, sans-serif;
+}
+
+.landing-click {
+  display: none;
+}
+
 #feature {
   background:url(images/bg_gradient.png) no-repeat scroll 50% 0 transparent;
   /*background-color: #FFA02F;*/
   /*background-color: #C45900;*/
   /*background-color: #430F00;*/
   /*background-color: #000000;*/
-  background-color: #006785;
+  /*background-color: #006785;*/
+  /*background-color: #02ABD6; cerulean*/
+  background-color: #01A4CD;
 }
 
 #feature .inner {
@@ -425,10 +463,10 @@ p {
 	font: 24px 'SeganLight', Arial, sans-serif;
 	color: #f9f8cc;
 	right: -15px;
-  bottom: 20px;
+  bottom: 46px;
   position: absolute;
-  height: 40px;
-  line-height: 40px;
+  height: 28px;
+  line-height: 28px;
   z-index: 200;
 }
 
