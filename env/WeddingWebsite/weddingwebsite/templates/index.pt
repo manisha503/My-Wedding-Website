@@ -13,10 +13,11 @@
   <script type="text/javascript" src="${request.static_url('weddingwebsite:static/style/js/jquery.nivo.slider.rounded.2.7.1.js')}"></script>
   <script type="text/javascript">
     $(window).load(function() {
+      // set up slider
       var slider = $('#slider');
       slider.nivoSlider({
         borderRadius: 10,
-        effect: 'boxRandom', // Specify sets like: 'fold,fade,sliceDown'
+        effect: 'fade', // Specify sets like: 'fold,fade,sliceDown'
         slices: 10, // For slice animations
         boxCols: 8, // For box animations
         boxRows: 4, // For box animations
@@ -45,23 +46,46 @@
         lastSlide: function(){}, // Triggers when last slide is shown
         afterLoad: function(){} // Triggers when slider has loaded
       });
+      // fill in days left
+      today=new Date();
+      var weddingDate=new Date(2012, 5, 23) //Month is 0-11 in javascript so June is 5
+      //Set 1 day in milliseconds
+      var one_day=1000*60*60*24
+      //Calculate difference btw the two dates, and convert to days
+      daysUntilWedding = Math.floor((weddingDate.getTime()-today.getTime())/one_day);
+      $('#daysLeft').html(Math.abs(daysUntilWedding));
+      if(daysUntilWedding > 1) {
+        $('#daysLeftString').html("days left!!");
+      } else if(daysUntilWedding == 1) {
+        $('#daysLeftString').html("day left!!");
+      } else if(daysUntilWedding == 0) {
+        $('#daysLeft').hide();
+        $('#daysLeftString').html("It's HERE!");
+      } else {
+        $('#cantWaitString').html("Great seeing you in Long Beach");
+        if (daysUntilWedding == -1) {
+          $('#daysLeftString').html("day ago!!");
+        } else {
+          $('#daysLeftString').html("days ago!!");
+        }
+      }
     });
   </script>
 
 </head>
 
 <body>
-<div id="header">
+<div id="header" metal:define-macro="header">
   <div class="header-inner">
     <div id="logo_text">
       <img id="logo" src="${request.static_url('weddingwebsite:static/style/images/manishi_logo.png')}" />
-      <a id="site_name" href="#home" rel="home">
+      <a id="site_name" href="/">
         <div id="site_title">Rishi & Manisha</div>
       </a>
     </div>
     <div id="nav">
       <ul>
-        <li><a href="#about">About Us</a></li>
+        <li><a href="/our_story">Our Story</a></li>
 
         <li><a href="#services">Services</a></li>
 
@@ -70,27 +94,71 @@
     </div>
   </div>
 </div>
-<div id="feature">
+<div id="feature" metal:define-macro="feature">
   <div class="top_shadow"></div>
   <div class="inner">
-    <div id="image_slider_wrap">
-      <div id="slider" class="nivoSlider theme-default">
-        <img src="${request.static_url('weddingwebsite:static/style/images/save_the_date-ribbon.jpg')}" />
-        <img src="${request.static_url('weddingwebsite:static/style/images/palace_of_fine_arts-2.jpg')}" title="This is where Rishi proposed!"/>
-        <img src="${request.static_url('weddingwebsite:static/style/images/rishi_manisha_mehndi.JPG')}" title="Before our engagement party"/>
-        <img src="${request.static_url('weddingwebsite:static/style/images/group_dance_2.JPG')}"/>
-        <img src="${request.static_url('weddingwebsite:static/style/images/group_dance_1.JPG')}"/>
+    <div metal:define-slot="feature_content">
+      <div id="image_slider_wrap">
+        <div id="slider" class="nivoSlider theme-default">
+          <img src="${request.static_url('weddingwebsite:static/style/images/save_the_date-ribbon.jpg')}" />
+          <img src="${request.static_url('weddingwebsite:static/style/images/palace_of_fine_arts-2.jpg')}" title="This is where Rishi proposed!"/>
+          <img src="${request.static_url('weddingwebsite:static/style/images/rishi_manisha_mehndi.JPG')}" title="Before our engagement party"/>
+          <img src="${request.static_url('weddingwebsite:static/style/images/group_dance_2.JPG')}"/>
+          <img src="${request.static_url('weddingwebsite:static/style/images/group_dance_1.JPG')}"/>
+        </div>
       </div>
     </div>
   </div>
   <div class="bottom_shadow"></div>
 </div>
-<div id="rest">
-
+<div id="page" metal:define-macro="page">
+  <div class="inner">
+    <div metal:define-slot="page_content">
+      <div class="right_sidebar">
+        <div id="main">
+          <div class="content">
+            <h2 style="margin-bottom: 30px">The Latest!</h2>
+            <div class="entry">
+              <div class="image_styled entry_image">
+                <span class="image_frame">
+                  <a href="/">
+                    <img width="628" height="250"
+                    src="${request.static_url('weddingwebsite:static/style/images/blog/emirates.jpg')}">
+                  </a>
+                </span>
+                <img class="image_shadow"
+                src="${request.static_url('weddingwebsite:static/style/images/image_shadow.png')}">
+              </div>
+              <div class="entry_info">
+                <h4 class="entry_title">Wedding Shopping</h4>
+                <div class="entry_meta">
+                  <div>Jan 25, 2012</div>
+                </div>
+              </div>
+              <div class="entry_content"> We're headed to India for 2 weeks to visit family, meet each other's extended
+              family, and to do some wedding shopping!</div>
+            </div>
+          </div>
+        </div>
+        <div id="sidebar">
+          <div id="sidebar_content" class="lessgap">
+            <div id="date_counter">
+              <h3 id="cantWaitString">Can't wait to see you in Long Beach!</h3>
+              <h1 id="daysLeft"></h1>
+              <h3 id="daysLeftString">days left!!</h3>
+            </div>
+          </div>
+          <div id="sidebar_bottom"></div>
+        </div>
+        <div class="clearboth"></div>
+      </div>
+    </div>
+  </div>
+  <div id="page_bottom"></div>
 </div>
-<div id="footer">
+<!--<div id="footer">
   &copy; rishiandmanisha.com - If you're reading this, you must be really bored.
-</div>
+</div>-->
 </body>
 </html>
 

@@ -84,7 +84,8 @@ body {
 	padding: 0px 0px 40px 0px;
   height:100%;
 	font: 13px/20px 'SeganLight', Arial;
-  color: #bbb;
+	color: #444444;
+	text-shadow: 0px 2px 2px #ADADAD;
 }
 
 /* LINKS ++++++++++++++++++++++++++++++++++++++++++++ */
@@ -135,7 +136,7 @@ hr {
 }
 
 /* LAYOUT STYLING ++++++++++++++++++++++++++++++++++++++++++++ */
-#header, #feature {
+#header, #feature, #page {
   min-width: 980px;
 }
 
@@ -284,16 +285,13 @@ hr {
   background-color: #01A4CD;
 }
 
-#feature .inner {
-  padding: 30px 0 0;
-  text-align: center;
-}
 
 #image_slider_wrap {
   height: 440px;
   width: 960px;
   background:url(images/image_wrap_shadow.png) no-repeat scroll center bottom transparent;
-  padding-bottom:40px;
+  padding: 30px 0 40px;
+  text-align: center;
   position: relative;
 }
 
@@ -342,6 +340,139 @@ hr {
   height: 9px;
   font-size:0px;
   line-height:9px;
+}
+
+#page {
+  position:relative;
+  background:url("images/layout_sprites.png") repeat-x scroll 0 -24256px transparent;
+}
+
+#main, #sidebar{
+  position:relative;
+}
+
+* html #page, * html #sidebar{
+  display:inline;
+}
+
+#page .inner {
+  padding: 40px 0 0;
+  font-size: 20px;
+}
+
+#page_bottom {
+  height:30px;
+  background:url("images/layout_sprites.png") repeat-x scroll 0 -19px transparent;
+}
+
+/* Right Sidebar
+---------------------------------------------------------- */
+.right_sidebar #main{
+  float:left;
+  width:630px;
+}
+
+.right_sidebar #main .content {
+  width:630px;
+  overflow: hidden;
+}
+
+.right_sidebar #sidebar {
+  float:right;
+  width:300px;
+  margin: 0 0 0.5em 30px;
+}
+
+.right_sidebar #sidebar_content {
+  background: url("images/layout_sprites.png") no-repeat scroll left -209px transparent;
+  padding-top:50px;
+  padding-left:25px;
+  min-height:100px;
+  overflow: hidden;
+}
+
+.right_sidebar #sidebar_content.lessgap {
+  padding-top:35px;
+}
+
+.right_sidebar #sidebar_bottom {
+  clear:both;
+  background: url("images/layout_sprites.png") no-repeat scroll left -159px transparent;
+  height:50px;
+}
+
+.right_sidebar #date_counter {
+  text-align: center
+}
+
+.clearboth{
+  clear: both;
+  display: block;
+  font-size: 0px;
+  height: 0px;
+  line-height: 0;
+  width: 100%;
+  overflow:hidden;
+}
+
+.story_heading{
+  margin: 10px 0px;
+}
+
+.story_spacer {
+  height: 20px;
+}
+
+.entry {
+  margin-bottom: 80px;
+  clear: both;
+  overflow:hidden;
+}
+
+.image_styled {
+  margin-bottom: 10px;
+  display: block;
+}
+
+.entry_image {
+  margin:0px;
+}
+
+.entry_image .image_shadow {
+  width:100%;
+}
+
+.entry .entry_title {
+  margin-bottom:10px;
+}
+
+.entry_title {
+  font-size: 30px;
+}
+
+.image_frame {
+  display: block;
+  width: 628px;
+  height: 250px;
+  background-color:#f9f9f9;
+  background:url('images/loading.gif') #f9f9f9 no-repeat 50% 50%;
+  position: relative;
+  border:1px solid #C3C2C3;
+}
+
+.entry .entry_meta {
+  border-top:1px solid #C3C2C3;
+  border-bottom:1px solid #C3C2C3;
+  line-height:28px;
+  margin-bottom:10px;
+  position:relative;
+  overflow:hidden;
+  font-size:13px;
+}
+
+.entry_content {
+  position:relative;
+  padding-bottom: 10px;
 }
 
 #section {
@@ -415,33 +546,38 @@ img.right-me {
 
 h1 {
 	font: 68px/65px 'SeganLight', Arial, sans-serif;
-	color: #f9f8cc;
-	margin-top: 20px; text-transform:uppercase;
+	color: #444444;
+	text-shadow: 0px 2px 2px #ADADAD;
+	margin: 20px;
 }
 
 h2 {font: 40px/35px 'SeganLight', Arial, sans-serif;
-	color: #f9f8cc;
+	color: #444444;
+	text-shadow: 0px 2px 2px #ADADAD;
 	margin: 20px 0px 10px 0px;
 }
 
-h3, h4, h5, h6 {
-	font-family:'SeganLight', Arial, sans-serif;
-	color: #bbb;
+h3 {font: 25px/22px 'SeganLight', Arial, sans-serif;
+	color: #444444;
+	text-shadow: 0px 2px 2px #ADADAD;
+	margin: 10px;
 }
-h3 {
-	font-size: 25px ;
+
+h4, h5, h6 {
+	color: #444444;
+	text-shadow: 0px 2px 2px #ADADAD;
 }
 
 h4 {
-	font-size: 22px ;
+  font: 22px/19px 'SeganLight', Arial, sans-serif;
 }
 
 h5 {
-	font-size: 20px ;
+  font: 20px/17px 'SeganLight', Arial, sans-serif;
 }
 
 h6 {
-	font-size: 18px ;
+  font: 18px/15px 'SeganLight', Arial, sans-serif;
 }
 
 /* Pargaraph ++++++++++++++++++++++++++++++++++++++++++++ */
@@ -461,7 +597,7 @@ p {
 /* 2. MENU ++++++++++++++++++++++++++++++++++++++++++++ */
 #nav {
 	font: 24px 'SeganLight', Arial, sans-serif;
-	color: #f9f8cc;
+	color: #444444;
 	right: -15px;
   bottom: 46px;
   position: absolute;

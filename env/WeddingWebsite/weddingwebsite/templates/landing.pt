@@ -61,8 +61,8 @@
         fadeImageIn($('#img4'));
       } else if (numImagesFadedIn == 4) {
         fadeImageIn($('#img3'));
-        $('#imgRibbon').slideDown(1000);
-      } else if (numImagesFadedIn > 4) {
+        fadeImageIn($('#imgRibbon'));
+      } else if (numImagesFadedIn == 6) {
         $('#goLink').fadeIn(1000);
       }
     }

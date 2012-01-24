@@ -1,4 +1,5 @@
 from pyramid.httpexceptions import HTTPFound
+from pyramid.renderers import get_renderer
 
 from weddingwebsite.models import DBSession
 from weddingwebsite.models import MyModel
@@ -20,6 +21,10 @@ def landing(request):
   request.add_response_callback(_set_cookie)
   home_page_url = request.route_url('home')
   return {'redirect_url': home_page_url}
+
+def our_story(request):
+  main = get_renderer('templates/index.pt').implementation()
+  return {'main': main}
 
 def _set_cookie(request, response):
   response.set_cookie('first_visit', 'blah')
