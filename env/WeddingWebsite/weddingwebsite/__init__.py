@@ -18,5 +18,9 @@ def main(global_config, **settings):
     config.add_view('weddingwebsite.views.landing',
                     route_name='landing',
                     renderer='templates/landing.pt')
+    config.add_route('our_story', '/our_story')
+    config.add_view('weddingwebsite.views.our_story',
+                    route_name='our_story',
+                    renderer='templates/our_story.pt')
     return config.make_wsgi_app()
 
