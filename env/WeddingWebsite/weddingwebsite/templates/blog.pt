@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=us-ascii" />
+
+  <title>Rishi and Manisha | 6.23.12</title>
+  <link rel="stylesheet" href="${request.static_url('weddingwebsite:static/style/main.css')}" type="text/css" media="screen" />
+  <script type="text/javascript" src="${request.static_url('weddingwebsite:static/style/js/jquery-1.7.1.min.js')}"></script>
+</head>
+
+<body>
+<div metal:use-macro="main.macros['header']"></div>
+<div metal:use-macro="main.macros['feature']">
+  <h1 metal:fill-slot="feature_content" style="margin: 0px">Our blog</h1>
+</div>
+<div metal:use-macro="main.macros['page']">
+  <div metal:fill-slot="page_content">
+    <div metal:use-macro="right_sidebar.macros['right_sidebar']">
+      <h2 metal:fill-slot="left_title"></h2>
+      <div metal:fill-slot="left_content">
+        <span tal:repeat="entry python:all_entries">
+          <div metal:use-macro="blog_entry.macros['blog_entry']">
+            <img metal:fill-slot="entry_image" width="628" height="250" tal:attributes="src entry.image_url" />
+            <span metal:fill-slot="entry_title" tal:replace="entry.title"></span>
+            <span metal:fill-slot="entry_meta" tal:replace="entry.entry_date"></span>
+            <span metal:fill-slot="entry_content" tal:replace="entry.body"></span>
+          </div> 
+        </span>
+      </div>
+      <div metal:fill-slot="sidebar_content">
+        <div id="blog_links">
+          <h4 style="margin-bottom:10px"> The Archives </h4>
+          <ul>
+            <a href="/blog?month=Jan">January</a><br/>
+            <a href="/blog?month=Feb">February</a><br/>
+          </ul> 
+        </div>
+      </div>
+    </div> 
+  </div>
+</div>
+</body>
+</html>
+

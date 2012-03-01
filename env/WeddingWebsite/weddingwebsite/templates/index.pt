@@ -87,9 +87,9 @@
       <ul>
         <li><a href="/our_story">Our Story</a></li>
 
-        <li><a href="#services">Services</a></li>
+        <li><a href="/blog">Blog</a></li>
 
-        <li><a href="#work">Portfolio</a></li>
+        <li><a href="/events">Events</a></li>
       </ul>
     </div>
   </div>
@@ -114,43 +114,10 @@
 <div id="page" metal:define-macro="page">
   <div class="inner">
     <div metal:define-slot="page_content">
-      <div class="right_sidebar">
-        <div id="main">
-          <div class="content">
-            <h2 style="margin-bottom: 30px">The Latest!</h2>
-            <div class="entry">
-              <div class="image_styled entry_image">
-                <span class="image_frame">
-                  <a href="/">
-                    <img width="628" height="250"
-                    src="${request.static_url('weddingwebsite:static/style/images/blog/emirates.jpg')}">
-                  </a>
-                </span>
-                <img class="image_shadow"
-                src="${request.static_url('weddingwebsite:static/style/images/image_shadow.png')}">
-              </div>
-              <div class="entry_info">
-                <h4 class="entry_title">Wedding Shopping</h4>
-                <div class="entry_meta">
-                  <div>Jan 25, 2012</div>
-                </div>
-              </div>
-              <div class="entry_content"> We're headed to India for 2 weeks to visit family, meet each other's extended
-              family, and to do some wedding shopping!</div>
-            </div>
-          </div>
+      <div metal:use-macro="right_sidebar.macros['right_sidebar']">
+        <div metal:fill-slot="left_content">
+          <div metal:use-macro="blog_entry.macros['blog_entry']"></div>
         </div>
-        <div id="sidebar">
-          <div id="sidebar_content" class="lessgap">
-            <div id="date_counter">
-              <h3 id="cantWaitString">Can't wait to see you in Long Beach!</h3>
-              <h1 id="daysLeft"></h1>
-              <h3 id="daysLeftString">days left!!</h3>
-            </div>
-          </div>
-          <div id="sidebar_bottom"></div>
-        </div>
-        <div class="clearboth"></div>
       </div>
     </div>
   </div>

@@ -1,0 +1,225 @@
+[id],[familyId],[lastName],[firstName],[address1],[city],[state],[zip],[familyName],[numGarba],[numWedding],[numReception],[email]
+1,1,Stamos,John,"1408 W. Belmont Ave., #3",Chicago,IL,60657,Mr. John Stamos & Ms. Elizabeth Siegan,2,2,2,jastamos@gmail.com
+2,1,Siegan,Elizabeth,"1408 W. Belmont Ave., #3",Chicago,IL,60657,Mr. John Stamos & Ms. Elizabeth Siegan,2,2,2
+3,2,Ringwalla,Sukit,U10 Grandview Dr,South Burlington,Vermont,#05403,Mr. Sukit Ringwalla,1,1,1,kitringwala@gmail.com
+4,3,Ringwalla,Vishal,1150 N. Wells St. Apt. 3,Chicago,IL,60610,Mr. Vishal Ringwalla,1,1,1,vishal.ringwala@gmail.com
+5,4,Patel,Dharmesh,415 Armour Drive NE Apt 3301,Atlanta,Georgia,30324,Mr. Dharmesh Patel & Ms. Shreya Patel,2,2,2,dbpatel219@gmail.com
+6,5,Steffes,Robert,,,,,Mr. Robert Steffes,1,1,1,robert.steffes@gmail.com
+7,6,Shah,Anish,"846 W Armitage Ave., #3F",Chicago,IL,60614,Mr. Anish Shah,1,1,1,hello@anishshah.net
+8,7,Boral,Eitan,1717 S. Dorsey Ln. #2126,Tempe,AZ,85281,Mr. Eitan Boral & Mrs. Michal Ziv-El,2,2,2,ezboral@gmail.com
+9,7,Ziv-El,Michal,1717 S. Dorsey Ln. #2126,Tempe,AZ,85281,Mr. Eitan Boral & Mrs. Michal Ziv-El,2,2,2
+10,8,Beerman,Brian,5662 Byrneland St,Fitchburg,WI,53711,Mr. Brian & Mrs. Maren Beerman,2,2,2,powdernine@gmail.com
+11,9,Mau,Ross,1004 Chatsworth St N,Saint Paul,MN ,55103,Mr. Ross & Mrs. Maggie Mau,2,2,2,ross.mau@gmail.com
+12,9,Mau,Maggie,1004 Chatsworth St N,Saint Paul,MN ,55103,Mr. Ross & Mrs. Maggie Mau,2,2,2
+13,10,Eich,Darin,,,,,Mr. Darin Eich,1,1,1,djeich@gmail.com
+14,11,Detroja,Raj,"330 N. Jefferson St., Unit #1507",Chicago,IL,60661,Mr. Raj & Mrs. Mona Detroja,2,2,2,detroja@gmail.com
+15,11,Detroja,Mona,,,,,Mr. Raj & Mrs. Mona Detroja,2,2,2
+16,12,Vekaria,Keyur,,,,,Mr. Keyur Vekaria,1,1,1,keyur.vekaria@gmail.com
+17,13,Yuen,Brian,8120 Fountain Mist Blvd,Lehigh Acres,Fl,33972,Mr. Brian Yuen,1,1,1,brianmyuen@gmail.com
+18,14,Yeshwant,Srinu,69 Wacker Drive,Chicago,IL,60661,Mr. Srinu Yeshwant,1,1,1,yeshwant@gmail.com
+19,15,Shah,Bhavin,"121 Washington Ave S., Unit # 1209",Minneapolis,MN,55401,Mr. Bhavin Shah,1,1,1,shahbk1000@gmail.com
+20,16,Wolter,Jonathon Andrew,,,,,Mr. Jonathon Andrew Wolter,1,1,1,jawolter@gmail.com
+21,17,Patel,Trisha,"600 N Dearborn St., Apt 1805",Chicago,IL,60654,Ms. Trisha Patel,1,1,1,trishappatel@gmail.com
+22,18,Sampat,Kaushal,,,,,Mr. Kaushal Sampat,1,1,1,kaushalsampat@gmail.com
+23,19,Haghighat,Amir,"419 Fulton St., Unit D",SF,CA,94102,Mr. Amir Haghighat,1,1,1,amiruci@gmail.com
+24,58,Liu,Judy,1738 Haight St Apt 401,San Francisco,CA,94117,Ms. Judy Liu,1,1,1,judyliu1@gmail.com
+25,20,Portillo Frank,Ana Luz,"4388 El Camino Real, Unit 267",Los Altos,CA,94022,Mr. Jon Frank & Mrs. Ana Luz Portillo Frank,2,2,2,analuz.portillo@gmail.com
+26,20,Frank,Jon,"4388 El Camino Real, Unit 267",Los Altos,CA,94022,Mr. Jon Frank & Mrs. Ana Luz Portillo Frank,2,2,2,jonhenryfrank@gmail.com
+27,21,Huang,Andy,47 Starlite Court,Mountain View,CA,94043,Mr. Andy & Mrs. Ursula Huang,2,2,2,capanson@gmail.com
+28,21,Huang,Ursula,,,,,Mr. Andy & Mrs. Ursula Huang,2,2,2,urseberry@gmail.com
+29,22,Garg,Ankit,44243 View Point Circle,Fremont,CA,94539,Mr. Ankit Garg,1,1,1,ankitg06@gmail.com
+30,23,Doshi,Ashmi,5828 Riley St. #7,San Diego,CA,92110,Ms. Ashmi Doshi,1,1,1,ashmi.doshi@gmail.com
+31,24,Anjanappa,Ashwini,5 Essex Ct,Princeton,NJ,08540,Mr. Harish Krishnaswamy & Ms. Ashwini Anjanappa,2,2,2,ashwini.a@gmail.com
+32,24,Krishnaswamy,Harish,5 Essex Ct,Princeton,NJ,08540,Mr. Harish Krishnaswamy & Ms. Ashwini Anjanappa,2,2,2,harish.swamy@gmail.com
+33,25,Patel,Avni,448 Main Street,Norwich,VT,5055,Ms. Avni Patel & Mr. Tom Finn,2,2,2,avnip84@gmail.com
+34,25,Finn,Tom,,,,,Ms. Avni Patel & Mr. Tom Finn,2,2,2
+35,26,Shah,Bansari,253 East Delaware Place Unit 4G,Chicago,IL,60611,Ms. Bansari Shah,1,1,1,bansarishah@gmail.com
+36,27,Ghosh,Bobby,,,,,Dr. Bobby Ghosh,1,1,1,bghosh1@gmail.com
+37,28,Schmidt,Dana,440 Monroe Dr.,Palo Alto,CA,94306,Ms. Dana Schmidt & Mr. Eric Lovett,2,2,2,dana.schmidt@gmail.com
+38,28,Lovett,Eric,440 Monroe Dr.,Palo Alto,CA,94306,Ms. Dana Schmidt & Mr. Eric Lovett,2,2,2,etlovett@gmail.com
+39,29,Machiraju,Deepti,801 Church St #1127,Mountain View,CA,94041,Ms. Deepti Machiraju,1,1,1,dmachiraju@gmail.com
+40,30,Grau,Jim,"555 W. 53rd St., Apt.1046",New York,NY,10019,Mr. Jim & Mrs. Erin Grau,2,2,2,jim.grau@gmail.com
+41,30,Grau,Erin,,,,,Mr. Jim & Mrs. Erin Grau,2,2,2,erinjgrau@gmail.com
+42,31,Pandit,Jay,"325 Berry St., Apt 317",San Francisco,CA,94158,Dr. Jay Pandit & Ms. Roma Patel,2,2,2,jaypandit11@gmail.com
+43,31,Patel,Roma,"325 Berry St., Apt 317",San Francisco,CA,94158,Dr. Jay Pandit & Ms. Roma Patel,2,2,2,romasita87@gmail.com
+44,32,Amlin,Jeff,230 Castro St Apt 3,San Francisco,CA,94114,Mr. Jeff Amlin,1,1,1,jeff.amlin@gmail.com
+45,33,Newitter,Jenn,"130 Descanso Drive, Unit 437",San Jose,CA,95134,Mr. Justin & Mrs. Jenn Newitter,2,2,2,jennifer.yanes@gmail.com
+46,33,Newitter,Justin,"130 Descanso Drive, Unit 437",San Jose,CA,95134,Mr. Justin & Mrs. Jenn Newitter,2,2,2,justin.newitter@gmail.com
+47,34,Shermetaro,Joe,"1095 Santa Cruz Ave., Apt 3",Menlo Park,CA,94025,Ms. Kasey Alderete & Mr. Joe Shermetaro,2,2,2,joe.shermetaro@gmail.com
+48,34,Alderete,Kasey,"1095 Santa Cruz Ave., Apt 3",Menlo Park,CA,94025,Ms. Kasey Alderete & Mr. Joe Shermetaro,2,2,2,kaseya@gmail.com
+49,35,Baldwin,Juliana,2441 20th St. Apt. A,Santa Monica ,CA,90405,Ms. Juliana Baldwin,1,1,1,julianabaldwin@gmail.com
+50,36,Singh,Karan,"888 Massachusetts Ave., #117",Cambridge,MA,02139,Mr. Karan Singh & Mrs. Leena Bhalero Singh,2,2,2,kvsingh@gmail.com
+51,36,Bhalero Singh,Leena,,,,,Mr. Karan Singh & Mrs. Leena Bhalero Singh,2,2,2,leena.b.singh@gmail.com
+52,37,Shah,Karishma,1000 Franklin St. Apt 206,San Francisco,CA,94109,Ms. Karishma Shah,1,1,1,karishmavs@gmail.com
+53,38,Gilbert,Kea,,,,,Ms. Kea Gilbert,1,1,1,kea.gilbert@gmail.com
+54,39,Thakkar,Kevin,194 Barranca Ter,Sunnyvale,CA,94086,Mrs. Tanvi Vyas & Mr. Kevin Thakkar,2,2,2,kevin.thakkar@gmail.com
+55,39,Vyas,Tanvi,194 Barranca Ter,Sunnyvale,CA,94086,Mrs. Tanvi Vyas & Mr. Kevin Thakkar,2,2,2,tanvi.vyas@gmail.com
+56,40,Gala,Khushali,544 N. Milwaukee Ave. Apt 402,Chicago,IL,60642,Mrs. Khushali Gala Narechania & Mr. Tejas Narechania,2,2,2,khushali.gala@gmail.com
+57,40,Narechania,Tejas,,,,,Mrs. Khushali Gala Narechania & Mr. Tejas Narechania,2,2,2,tnarecha@gmail.com
+58,41,Peterson,Kimberly,1475 California St. Apt. F,Mountain View,CA,94041,Ms. Kimberley Peterson & Mr. Brandon Braun,2,2,2,kimpeterson2@gmail.com
+59,41,Braun,Brandon,1475 California St. Apt. F,Mountain View,CA,94041,Ms. Kimberley Peterson & Mr. Brandon Braun,2,2,2
+60,42,Prasad,Kiran,3703 Europe Ct,Santa Clara,CA,95051,Mr. Kiran & Mrs. Sumangala Prasad,2,2,2,phegaro@gmail.com
+61,43,Oglebay,Kjerstin,,,,,Dr. Kjerstin & Mr. Daniel Oglebay,2,2,2,kj730@hotmail.com
+62,43,Oglebay,Daniel,,,,,Dr. Kjerstin & Mr. Daniel Oglebay,2,2,2
+63,44,Shah,Kosha,,,,,Ms. Kosha Shah,1,1,1,kosha21@gmail.com
+64,45,Munshi,Vivek,1508 Ralston Ave. #308,Burlingame,CA,94010,Mr. Vivek & Mrs. Krishna Munshi,2,2,2,vivek.munshi@gmail.com
+65,45,Munshi,Krishna,,,,,Mr. Vivek & Mrs. Krishna Munshi,2,2,2,krishna.munshi@gmail.com
+66,46,Andalkar,Krupa,,,,,Ms. Krupa Andalkar,1,1,1,krupaandalkar@yahoo.com
+67,47,Trivedi,Mehul,,,,,Mr. Mehul Trivedi,1,1,1,mehult@gmail.com
+68,48,Feldstein,Mike,444 Wilton Ave,Palo Alto,CA,94040,Mr. Mike Feldstein,1,1,1,msfeldstein@gmail.com
+69,49,Pereira,Mindy,2532 Elliot St,Santa Clara,CA,95051,Ms. Mindy Pereira & Mr. Steve DelliCarpini,2,2,2,mindy.pereira@gmail.com
+70,49,DelliCarpini,Steve,2532 Elliot St,Santa Clara,CA,95051,Ms. Mindy Pereira & Mr. Steve DelliCarpini,2,2,2,sdellicarpini@gmail.com
+71,50,Raghavan,Nash,2236 Serra Ave,Santa Clara,CA,95050,Mr. Nash Raghavan,1,1,1,nash@theraghavans.com
+72,51,Vora,Neal,7016 Castlerock Drive,San Jose,CA,95120,Mr. Neal Vora & Guest,2,2,2,neal.vora@gmail.com
+73,52,Oza,Nick,2865 Old Oak Lane,Morgan Hill,CA,95037,Mr. Nick Oza,1,1,1,twinoza@gmail.com
+74,53,Shaikh,Nigar,,,,,Ms. Nigar Shaikh,1,1,1,nigar.shaikh@gmail.com
+75,54,Vora,Nirali,,,,,Ms. Nirali Vora & Guest,2,2,2,niraliv@gmail.com
+76,55,Rajagopalan,Nithya,,,,,Ms. Nithya Rajagopalan,1,1,1,nithya86@gmail.com
+77,56,Tanna,Parijat,,,,,Ms. Parijat Tanna & Guest,2,2,2,parijat426@gmail.com
+78,57,Sheth,Priya,"604 Bush St., Apt 706",San Francisco,CA,94108,Ms. Priya Sheth,1,1,1,priya521@gmail.com
+79,59,Shah,Rachana,1410 Cedar Pl,Los Altos,CA,94024,Ms. Rachana Shah,1,1,1,rachana4785@gmail.com
+80,60,Cook,Rachel,,,,,Dr. Rachel Cook & Guest,2,2,2,recook@gmail.com
+81,61,Neelakantan,Radha,1620 Corcoran St NW Apt E,Washington,DC,20009,Ms. Radha Neelakantan,1,1,1,radhaneela@gmail.com
+82,62,Patil,Sai,2507 Packard St. Apt H,Ann Arbor,MI,48104,Mrs. Sai Patil & Mr. Shailen Bhatia,2,2,2,sai.uday.patil@gmail.com
+83,62,Bhatia,Shailen,,,,,Mrs. Sai Patil & Mr. Shailen Bhatia,2,2,2
+84,63,Wasan,Sandeep,,,,,Mr. Sandeep Wasan & Ms. Amarjote Kaur,2,2,2,sswasan@gmail.com
+85,63,Kaur,Amarjote,,,,,Mr. Sandeep Wasan & Ms. Amarjote Kaur,2,2,2
+86,64,Kairam,Sanjay,,,,,Mr. Sanjay Kairam & Guest,2,2,2,sanjay.kairam@gmail.com
+87,65,Wedner,Sarah,"2290 S. Palm Canyon Dr., Apt. # 107",Palm Springs,Ca,92264,Ms. Sarah Wedner & Guest,2,2,2,sarahjwedner@hotmail.com
+88,66,Mantri,Shalin,"201 Mission St., 25th floor",San Francisco,CA,94105,Mr. Shalin Mantri,1,1,1,shamantri@gmail.com
+89,67,Ahmed,Shalini,33 ch. Marc-EMERY,"1239 Collex, Geneva",Switzerland,,Ms. Shalini Ahmed,1,1,1,shalahmed@gmail.com
+90,68,Andalkar,Shilpa,140 Julian Ave Apt 306,San Francisco,CA,94103,Mrs. Shilpa Andalkar & Mr. Jeremy Bamberger,2,2,2,andshilpa@gmail.com
+91,68,Bamberger,Jeremy,140 Julian Ave Apt 306,San Francisco,CA,94103,Mrs. Shilpa Andalkar & Mr. Jeremy Bamberger,2,2,2
+92,69,Reddy,Shivani,401 East Ontario St. Apt 2708,Chicago ,IL,60611,Ms. Shivani Reddy,1,1,1,shivanired@gmail.com
+93,70,Roy,Sudeep,"1500 Locust St., Apt 1911",Philadelphia,PA,19102,Dr. Sudeep & Dr. Shruti Roy,2,2,2,suderoy@gmail.com
+94,70,Roy,Shruti,,,,,Dr. Sudeep & Dr. Shruti Roy,2,2,2,spatel0202@gmail.com
+95,71,Sanghvi,Sonal,"1122, Langton Drive",San Ramon,CA,94582,Mr. Dharmen & Mrs. Sonal Sanghvi & Family,4,4,4,nupoordances@yahoo.com
+96,72,Nijjar,Sonia,425 5th Ave. Apt. 30A,New York,NY,10016,Ms. Sonia Nijjar,1,1,1,snijjar@gmail.com
+97,73,Mantri,Surag,,,,,Mr. Surag Mantri,1,1,1,smantri@gmail.com
+98,74,Nagjee,Tanay,,,,,Mr. Tanay Nagjee,1,1,1,tanay.nagjee@gmail.com
+99,77,Kansal,Sunil,13490 Compass Point Dr.,Strongsville,OH,44136,Mr. Sunil & Mrs. Meera Kansal,2,2,2,sunilckansal@hotmail.com
+100,77,Kansal,Meera,,,,,Mr. Sunil & Mrs. Meera Kansal,2,2,2,meerakansal@hotmail.com
+101,78,Shah,Ritesh,,,,,Mr. Ritesh & Mrs. Shilpi Shah,2,2,2,rashah4@yahoo.com
+102,78,Shah,Shilpi,,,,,Mr. Ritesh & Mrs. Shilpi Shah,2,2,2,shilpi_kansal@hotmail.com
+103,79,Desai,Rajendra,6876 Audubon Ct,Terre Haute,IN,47802,Dr. Rajendra Desai & Family ,5,5,5,rdesai51@gmail.com
+104,80,Gupta,Foram,"449 E. 14th Street, Apt 10E",New York,NY,10009,Drs. Amit & Foram Gupta,2,2,2,f_desai@hotmail.com
+105,81,Jhaveri,Nishit,7117 Faulkner Way,Dublin,OH,43017,Dr. Nishit & Mrs. Urvi Jhaveri,4,4,4,nishitjhaveri@hotmail.com
+106,82,Khandwala,Parul,1117 Beachcomber Dr.,Schaumburg,IL,60193,"Mr. Dushyant & Mrs. Parul Khandwala
+Ms. Sonali & Pinak and Mr. Shalin Khandwala
+Ranjikant & Pramila",6,6,6,parul55@hotmail.com
+107,82,Khandwala,Sonali,1117 Beachcomber Dr.,Schaumburg,IL,60193,"Mr. Dushyant & Mrs. Parul Khandwala
+Ms. Sonali & Pinak and Mr. Shalin Khandwala
+Ranjikant & Pramila",6,6,6,sugarwali@gmail.com
+108,82,Barot,Pinak,1117 Beachcomber Dr.,Schaumburg,IL,60193,"Mr. Dushyant & Mrs. Parul Khandwala
+Ms. Sonali & Pinak and Mr. Shalin Khandwala
+Ranjikant & Pramila",6,6,6,pdbarot@gmail.com
+109,82,Khandwala,Shalin,1117 Beachcomber Dr.,Schaumburg,IL,60193,"Mr. Dushyant & Mrs. Parul Khandwala
+Ms. Sonali & Pinak and Mr. Shalin Khandwala
+Ranjikant & Pramila",6,6,6,skhandwala2@gmail.com
+110,83,Khandwala,Mamta,1094 Tennessee Lane,Elk Grove,IL,60007,"Mr. Narendra & Mrs. Bela Khandwala
+Ms. Mamta & Ms. Shama Khandwala",4,4,4,mkhandwala12@gmail.com 
+111,83,Khandwala,Shama,1094 Tennessee Lane,Elk Grove,IL,60007,"Mr. Narendra & Mrs. Bela Khandwala
+Ms. Mamta & Ms. Shama Khandwala",4,4,4,shama.khandwala@gmail.com
+112,84,Pyron-Shah,Amy,11131 Lake Chapel Lane,Reston,VA,20191,Ms. Amy & Ms. Amanda Pyron-Shah,2,2,2,amyshah7@yahoo.com 
+113,84,Pyron-Shah,Amanda,11131 Lake Chapel Lane,Reston,VA,20191,Ms. Amy & Ms. Amanda Pyron-Shah,2,2,2,akpyron@gmail.com
+114,85,Shah,Jigna,56 Woodview Lane,Lemont,IL,60439,Dr. Keyur & Mrs. Jigna Shah,4,4,4,heyjig@yahoo.com
+115,86,Shah,Khushali,5515 Rita Ave,Crystal Lake,IL,60014,Dr. Amit and Mrs. Khushali Shah,5,5,5,khushali73@yahoo.com
+116,87,Shah,Deepak,1044 Ashford Ln.,Westmont,IL,60559,"Mr. Deepak & Mrs. Bina Shah
+Mr. Paras and Mr. Shrenik Shah",4,4,4,parasdiamstar@gmail.com
+117,87,Shah,Bina,1044 Ashford Ln.,Westmont,IL,60559,"Mr. Deepak & Mrs. Bina Shah
+Mr. Paras and Mr. Shrenik Shah",4,4,4,shahbina10@gmail.com
+118,87,Shah,Shrenik,1044 Ashford Ln.,Westmont,IL,60559,"Mr. Deepak & Mrs. Bina Shah
+Mr. Paras and Mr. Shrenik Shah",4,4,4,shrenikshah822@gmail.com
+119,87,Shah,Paras,1044 Ashford Ln.,Westmont,IL,60559,"Mr. Deepak & Mrs. Bina Shah
+Mr. Paras and Mr. Shrenik Shah",4,4,4,parasshah49@gmail.com
+120,88,Shah,Gunvant,310 Pebble Beach Lane,Bartlett,IL,60103,Mr. Gunvant & Mrs. Rekha Shah,2,2,2,garyshah007@yahoo.com
+121,89,Shah,Sejal,141 Kincaid Dr.,Lake Zurich,IL,60047,"Mr. Mahesh & Mrs. Shobha Shah
+Mr. Nimish & Mrs. Sejal Shah",6,6,6,snshah1968@yahoo.com
+122,90,Shah,Meena,1405 Midwest Club,Oak Brook,IL,60523,"Mr. Nitin & Mrs. Meena Shah
+Ms. Jamie and Ms. Jessica Shah",4,4,4,meena@chemimpex.com
+123,90,Shah,Nitin,1405 Midwest Club,Oak Brook,IL,60523,"Mr. Nitin & Mrs. Meena Shah
+Ms. Jamie and Ms. Jessica Shah",4,4,4,nitin@chemimpex.com
+124,90,Shah,Jamie,1405 Midwest Club,Oak Brook,IL,60523,"Mr. Nitin & Mrs. Meena Shah
+Ms. Jamie and Ms. Jessica Shah",4,4,4,shah.jamie@gmail.com
+125,90,Shah,Jessica,1405 Midwest Club,Oak Brook,IL,60523,"Mr. Nitin & Mrs. Meena Shah
+Ms. Jamie and Ms. Jessica Shah",4,4,4,jessica.shah86@gmail.com
+126,91,Ranavat,Michelle,"300 Mercer Street, 30F",New York,NY,10003,Mrs. Michelle & Mr. Anil Ranavat,2,2,2,michelle.ranavat@gmail.com
+127,91,Ranavat,Anil,"300 Mercer Street, 30F",New York,NY,10003,Mrs. Michelle & Mr. Anil Ranavat,2,2,2,anil.ranavat@gmail.com
+128,92,Shah,Sanjay,1814 W. Norwood St. Unit E,Chicago,IL,60660,"Mr. Priyavadan & Mrs. Hemi Shah
+Mr. Sachin and Mr. Sanjay Shah",4,4,4,sanjay.p.shah@gmail.com
+129,92,Shah,Sachin,1814 West Norwood Street,Chicago,IL,60660,"Mr. Priyavadan & Mrs. Hemi Shah
+Mr. Sachin and Mr. Sanjay Shah",4,4,4,sachinpshah@gmail.com
+130,92,Shah,Hemi,1814 West Norwood Street,Chicago,IL,60660,"Mr. Priyavadan & Mrs. Hemi Shah
+Mr. Sachin and Mr. Sanjay Shah",4,4,4,sales@crystalchem.com
+131,93,Shah,Raju,"1025 Charlela Lane, Apt #303",Elk Grove Village,IL,60007,"Mr. Raju & Mrs. Urvi Shah
+Ms. Riya, Mr. Ravi and Mr. Rohan Shah",5,5,5,raju@omnichemusa.com
+132,93,Shah,Rohan,"1025 Charlela Lane, Apt #303",Elk Grove Village,IL,60007,"Mr. Raju & Mrs. Urvi Shah
+Ms. Riya, Mr. Ravi and Mr. Rohan Shah",5,5,5,rohanrajushah@gmail.com
+133,93,Shah,Urvi,"1025 Charlela Lane, Apt #303",Elk Grove Village,IL,60007,"Mr. Raju & Mrs. Urvi Shah
+Ms. Riya, Mr. Ravi and Mr. Rohan Shah",5,5,5,ushah01@gmail.com
+134,93,Shah,Riya,"1025 Charlela Lane, Apt #303",Elk Grove Village,IL,60007,"Mr. Raju & Mrs. Urvi Shah
+Ms. Riya, Mr. Ravi and Mr. Rohan Shah",5,5,5,riyarshah@gmail.com
+135,93,Shah,Ravi,"1025 Charlela Lane, Apt #303",Elk Grove Village,IL,60007,"Mr. Raju & Mrs. Urvi Shah
+Ms. Riya, Mr. Ravi and Mr. Rohan Shah",5,5,5,ravirajushah@gmail.com
+136,94,Shah,Tushar,530 Pinebrook Dr.,Lombard,IL,60148,"Mr. Tushar & Mrs. Sveta Shah
+Mr. Aakash and Mr. Amar Shah",4,4,4,tusharshah64@gmail.com
+137,94,Shah,Aakash,530 Pinebrook Dr.,Lombard,IL,60148,"Mr. Tushar & Mrs. Sveta Shah
+Mr. Aakash and Mr. Amar Shah",4,4,4,aakashtshah@gmail.com
+138,94,Shah,Amar,530 Pinebrook Dr.,Lombard,IL,60148,"Mr. Tushar & Mrs. Sveta Shah
+Mr. Aakash and Mr. Amar Shah",4,4,4,amartshah@gmail.com
+139,94,Shah,Sveta,530 Pinebrook Dr.,Lombard,IL,60148,"Mr. Tushar & Mrs. Sveta Shah
+Mr. Aakash and Mr. Amar Shah",4,4,4,svetashah@yahoo.com
+140,95,Shah,Priya,"340 East Randolph, Apt. 3203",Chicago,IL,60601,Ms. Priti & Ms. Priya Shah,2,2,2,pshah824@gmail.com
+141,96,Vakharia,Sejal,25507 Skye Springs Lane,Katy,TX,77494,Mr. Adarsh & Mrs. Sejal Vakharia,2,2,2,snk8274@aol.com
+142,96,Vakharia,Adarsh,237 Remington Drive,Bartlett,IL,60103,Mr. Adarsh & Mrs. Sejal Vakharia,2,2,2,theschiz@hotmail.com
+143,98,Kansal,Reena,611 S Wells St. Apt 1905,Chicago,IL,60607,Mrs. Reena & Dr. Mayank Kansal,2,2,2,reenavshah@gmail.com
+144,98,Kansal,Mayank,611 S Wells St. Apt 1905,Chicago,IL,60607,Mrs. Reena & Dr. Mayank Kansal,2,2,2,mmkansal@gmail.com
+145,99,Parekh,Dilip,6430 Riggs Pl,Los Angeles,CA,90045,"Mr. Dilip, Mrs. Sushama & Mr. Sunil Parekh",3,3,3,dilipjparekh@gmail.com
+146,99,Parekh,Sushama,6430 Riggs Pl,Los Angeles,CA,90045,"Mr. Dilip, Mrs. Sushama & Mr. Sunil Parekh",3,3,3,sushama.parekh@gmail.com
+147,100,Shah,Jayshree,33 Brandywine Rd,South Barrington,IL,60010,Mrs. Jayshree Shah,1,1,1,jayshreeshah29@gmail.com
+148,101,Andalkar,Girish,4505 Fernandez St.,Union City,CA,94587,Mr. Girish & Mrs. Gauri Andalkar,2,2,2,girishandalkar@yahoo.com
+149,101,Andalkar,Gauri,,,,,Mr. Girish & Mrs. Gauri Andalkar,2,2,2
+150,102,Desai,Shailesh,1905 N. Pinecove Circle,Anaheim,CA,92670,Mr. Shailesh & Mrs. Amita Desai & Family,4,4,4,amitadesai@gmail.com
+151,103,Doshi,Smita,17112 Northfield Lane,Huntington Beach,CA,92647,Mr. & Mrs. Smita Doshi & Family,4,4,4,smitadoshi@gmail.com
+152,104,Jain,Sailes,1378 Quail Lane,Brea,CA,90274,Mr. Sailes & Mrs. Sachi Jain,0,0,2,sailesjain@aol.com
+153,105,Khandhar,Mahendra,6112 Leyte St.,Cypress,CA,90630,Mr. Mahendra & Mrs. Veena Khandar,0,0,2,mkkhandhar@hotmail.com
+154,106,Mehta,Kirit,3099 Champion St.,Chino Hills,CA,91709,,5,5,5,kgm500@yahoo.com
+155,107,Mehta,Pravin,8301 La Conte Dr.,Huntington Beach,CA,92646,,0,0,2,mehta_pravin@yahoo.com
+156,108,Parekh,Narendra,13718 Copper Leaf Ln,Charlotte,NC,28277,"Mr. Narendra, Mrs. Amishi & Ms. Saheli Parekh",3,3,3,narendra.parekh@bankofamerica.com
+157,108,Parekh,Amishi,,,,,"Mr. Narendra, Mrs. Amishi & Ms. Saheli Parekh",3,3,3
+158,108,Parekh,Saheli,,,,,"Mr. Narendra, Mrs. Amishi & Ms. Saheli Parekh",3,3,3
+159,109,Rambhia,Amee,"111 Hamlet Hill Road, Apt 714",Baltimore,MD,21210,Mrs. Amee & Mr. Rushabh Rambhia,2,2,2,amee.parekh@gmail.com
+160,109,Rambhia,Rushabh,,,,,Mrs. Amee & Mr. Rushabh Rambhia,2,2,2
+161,110,Patil,Uday,4011 Palos Verdes Dr. South,Rancho Palos Verdes,CA,90274,"Mr. Uday, Mrs. Sandhya & Mr. Neel Patil",3,3,3,globus@pacbell.net
+162,111,Shah,Virendra,24122 Huber Ave,Torrance,CA,90501,"Mr. Virendra, Mrs. Urvashi & Ms. Shanehi Shah",3,3,3,jcflag@yahoo.com
+163,112,Shah,Girishbhai,20485 Via Cadiz,Yorba Linda,CA,92886,"Mr. Girishbhai, Mrs. Sushila & Mr. Miku Shah",3,3,3,girishbhai@hotmail.com
+164,113,Shah,Ajay,12380 Angouleme Court,San Diego,CA,92130,,0,0,2,ajayshah58@gmail.com
+165,114,Shah,Hasendra,13510 Ashworth Place,Cerritos,CA,90703,,0,0,2,hasendra@aol.com
+166,115,Sheth,Vijay,1555 S Bundy Dr. #102,West Los Angeles,CA,90025,"Mr. Vijay, Mrs. Mina & Ms. Puja Sheth",3,3,3,vijaysheth@aol.com
+167,116,Gala,Kirit,414 Cambridge Dr.,Arcadia,CA,91007,Mr. Kirit & Mrs. Pallavi Gala,2,2,2,rotli414@yahoo.com
+168,117,Parekh,Ramesh,17 Lindberg,Irvine,CA,92620,,0,0,2,parekhra@gmail.com
+169,118,Shah,Girish,1280 S. Lemon Avenue,Walnut,CA,91789,,2,2,2,mahavireng@aol.com
+170,119,Shah,Bijal,473 Stanford Court,Irvine,CA,92612,,0,0,3,malubijal@yahoo.com
+171,120,Mody,Rajnibhai,,,,,,0,0,2,rajnikantmody@hotmail.com
+172,121,Shah,Yogesh,24250 Brookwood Dr,Diamond Bar,CA,91765,,0,0,2,shah_yj@yahoo.com
+173,122,Savla,Ashok,8843 1/2 Longden Avenue,Temple City,CA,91780,,0,0,2,ashoksavla630@yahoo.com
+174,123,Shah,Dipak,541 Lowe Dr.,Placentia,CA,92870,,0,0,2,dipaknita@yahoo.com
+175,124,Shah,Navin,,,,,,0,0,2,shahn@sbcglobal.net
+176,125,Mehta,Kishor,2023 Jewell Ridge,Vista,California,92081,,0,0,2,daman2118@yahoo.com
+177,126,Prakash,Viji,,,,,"Mrs. Viji, Mr. Kikkeri & Ms. Mythili Prakash",3,3,3,dancevg@gmail.com
+178,127,Jain,Hetal,2412 Darrow Street,Silver Spring,MD,20902,Mr. Suken & Mrs. Hetal Mehta Jain,0,0,2,hetalm@gmail.com
+179,127,Jain,Suken,2412 Darrow Street,Silver Spring,MD,20902,Mr. Suken & Mrs. Hetal Mehta Jain,0,0,2,sukenjain@gmail.com
+180,128,Goklani,Pavan,1805 silva pl,Santa Clara,Ca,95054,Mr. Pavan & Mrs. Pooja Goklani,2,2,2,pavan4all@gmail.com
+181,128,Goklani,Pooja,1805 silva pl,Santa Clara,Ca,95054,Mr. Pavan & Mrs. Pooja Goklani,2,2,2,poojies@gmail.com
+182,129,Shah,Pinu,8131 Kendra Court,Anaheim,CA,92808,Ms. Pinita Shah,1,1,1,pinita.shah@gmail.com
+183,130,Shah,Ashok,,,,,,0,0,2,parul.shah@swmc.com
+184,131,Killer,Ruehanee,"38 N. Almaden Blvd, Unit 1319",San Jose,California,95110,Mr. Shamik Patel & Ms. Ruehanee Killer,2,2,2,killer.rue@gmail.com
+185,131,Patel,Shamik,"38 N Almaden Blvd, Unit 1319",San Jose,CA,95110,Mr. Shamik Patel & Ms. Ruehanee Killer,2,2,2,shamikpatel23@gmail.com
+186,132,Sarkar,Sangita,"1490 Chestnut Street, Apt 6",San Francisco,CA,94123,Mr. Vivek Agrawal & Ms. Sangita Sarkar,2,2,2,ssarkar27@gmail.com
+187,132,Agrawal,Vivek,"1490 Chestnut Street, Apt 6",San Francisco,CA,94123,Mr. Vivek Agrawal & Ms. Sangita Sarkar,2,2,2,viagrawal@gmail.com
+188,133,Kamdar,Gopika,,,,,Ms. Gopika Kamdar & Guest,0,0,2,gvkamdar@gmail.com
+189,134,Khandhar,Ramesh,,,,,,0,0,1,ramesh.khandhar@gmail.com
+190,135,Parekh,Chandrakant,,,,,,0,0,2,cparekh2@yahoo.com
+191,136,Shah,Nirav,,,,,"Ms. Smita Shah
+Mr. Nirav Shah",2,2,2,nashah2@gmail.com
+192,137,Shah,Jayesh,536 N. Alta Vista Ave.,Monrovia,CA,91016,,2,2,2,akashavni@gmail.com

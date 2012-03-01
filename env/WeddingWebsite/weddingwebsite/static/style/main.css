@@ -85,7 +85,6 @@ body {
   height:100%;
 	font: 13px/20px 'SeganLight', Arial;
 	color: #444444;
-	text-shadow: 0px 2px 2px #ADADAD;
 }
 
 /* LINKS ++++++++++++++++++++++++++++++++++++++++++++ */
@@ -473,6 +472,25 @@ hr {
 .entry_content {
   position:relative;
   padding-bottom: 10px;
+  line-height:28px;
+}
+
+.event_title {
+  color: #01A4CD;
+  text-shadow: 0px 1px 1px #0B586B;
+  padding-top: 20px;
+}
+
+.event_location {
+  font-style: italic;
+  line-height:36px;
+  margin-bottom: 5px;
+  font-size: 16px;
+}
+
+.event_text {
+  line-height: 26px;
+  margin-bottom: 10px;
 }
 
 #section {
@@ -559,13 +577,11 @@ h2 {font: 40px/35px 'SeganLight', Arial, sans-serif;
 
 h3 {font: 25px/22px 'SeganLight', Arial, sans-serif;
 	color: #444444;
-	text-shadow: 0px 2px 2px #ADADAD;
-	margin: 10px;
+	margin: 10px 0px 10px 0px;
 }
 
 h4, h5, h6 {
 	color: #444444;
-	text-shadow: 0px 2px 2px #ADADAD;
 }
 
 h4 {

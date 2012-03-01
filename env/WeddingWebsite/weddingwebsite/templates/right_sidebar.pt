@@ -1,0 +1,27 @@
+<html>
+<body>
+  <div metal:define-macro="right_sidebar"> 
+    <span class="right_sidebar">
+      <div id="main">
+        <div class="content">
+          <h2 style="margin-bottom: 30px" metal:define-slot="left_title">The Latest!</h2>
+          <div metal:define-slot="left_content"></div>
+        </div>
+      </div>
+      <div id="sidebar">
+        <div id="sidebar_content" class="lessgap">
+          <span metal:define-slot="sidebar_content">
+            <div id="date_counter">
+              <h3 id="cantWaitString">Can't wait to see you in Long Beach!</h3>
+              <h1 id="daysLeft"></h1>
+              <h3 id="daysLeftString">days left!!</h3>
+            </div>
+          </span>
+        </div>
+        <div id="sidebar_bottom"></div>
+      </div>
+      <div class="clearboth"></div>
+    </span>
+  </div>
+</body>
+</html>

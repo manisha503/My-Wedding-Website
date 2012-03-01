@@ -22,5 +22,13 @@ def main(global_config, **settings):
     config.add_view('weddingwebsite.views.our_story',
                     route_name='our_story',
                     renderer='templates/our_story.pt')
+    config.add_route('blog', '/blog')
+    config.add_view('weddingwebsite.views.blog',
+                    route_name='blog',
+                    renderer='templates/blog.pt')
+    config.add_route('events', '/events')
+    config.add_view('weddingwebsite.views.events',
+                    route_name='events',
+                    renderer='templates/events.pt')
     return config.make_wsgi_app()
 

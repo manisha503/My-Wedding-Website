@@ -136,9 +136,7 @@
   to get her to stop jumping up and down for a second so that I could
   propose!  And she said yes.  :)</div>
   <div class="story_spacer"></div>
-  <div><img class="alignnone" title="Group Picture"
-  src="https://img.skitch.com/20120108-pkpqt85u6haxw4y38x8shqw2jd.png"
-  alt="" width="669" height="515" /></div>
+  <div><img class="alignnone" title="Group Picture" src="${request.static_url('weddingwebsite:static/style/images/group_pic_proposal.png')}" alt="" width="669" height="515" /></div>
   <div class="story_spacer"></div>
   <div>After a few minutes, Manisha's brother and all her friends came
   rushing out and we celebrated together.  THANKS to everyone who

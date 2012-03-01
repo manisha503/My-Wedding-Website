@@ -1,0 +1,29 @@
+<html>
+<body>
+  <div class="entry" metal:define-macro="blog_entry">
+    <div class="image_styled entry_image">
+      <span class="image_frame"> 
+        <span metal:define-slot="entry_image">
+          <a href="/blog">
+            <img width="628" height="250"
+            src="${request.static_url('weddingwebsite:static/style/images/blog/emirates.jpg')}"/>
+          </a>
+        </span>
+      </span>
+      <img class="image_shadow"
+      src="${request.static_url('weddingwebsite:static/style/images/image_shadow.png')}"/>
+    </div>
+    <div class="entry_info">
+      <h4 class="entry_title"><span metal:define-slot="entry_title">Wedding Shopping</span></h4>
+      <div class="entry_meta">
+        <span metal:define-slot="entry_meta">
+          <div>Jan 25, 2012</div>
+        </span>
+      </div>
+    </div>
+    <div class="entry_content"><span metal:define-slot="entry_content"> We're headed to India for 2
+    weeks to visit family, meet each other's extended family, and to do some wedding
+    shopping!</span></div>
+  </div>
+</body>
+</html>
