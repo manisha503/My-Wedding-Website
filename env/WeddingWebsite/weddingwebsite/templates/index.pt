@@ -116,7 +116,13 @@
     <div metal:define-slot="page_content">
       <div metal:use-macro="right_sidebar.macros['right_sidebar']">
         <div metal:fill-slot="left_content">
-          <div metal:use-macro="blog_entry.macros['blog_entry']"></div>
+          <div metal:use-macro="blog_entry.macros['blog_entry']">
+            <img metal:fill-slot="entry_image" width="628" height="250" tal:attributes="src
+            latest_entry.image_url" />
+            <span metal:fill-slot="entry_title" tal:replace="latest_entry.title"></span>
+            <span metal:fill-slot="entry_meta" tal:replace="latest_entry.entry_display_date"></span>
+            <span metal:fill-slot="entry_content" tal:replace="latest_entry.body"></span>
+          </div>
         </div>
       </div>
     </div>
