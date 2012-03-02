@@ -60,6 +60,7 @@ class BlogEntry(Base):
               'image_url': "static/style/images/blog/%s" % self.image_url,
               'title': self.title,
               'body': self.body,
+              'entry_display_date': datetime.datetime.strftime(self.entry_date, "%B %d, %Y"),
               'entry_date': self.entry_date }
 
 class User(Base):

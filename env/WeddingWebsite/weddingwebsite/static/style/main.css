@@ -386,7 +386,7 @@ hr {
   background: url("images/layout_sprites.png") no-repeat scroll left -209px transparent;
   padding-top:50px;
   padding-left:25px;
-  min-height:100px;
+  min-height:350px;
   overflow: hidden;
 }
 
@@ -491,6 +491,27 @@ hr {
 .event_text {
   line-height: 26px;
   margin-bottom: 10px;
+}
+
+.blog_nav {
+  clear: both;
+  height: 40px;
+  width: 200px;
+  text-align: center;
+  margin: 0px auto;
+}
+
+.blog_prev {
+  width: 50px;
+}
+
+.blog_nav a {
+  text-decoration: underline;
+}
+
+.blog_next {
+  width: 50px;
+  padding-left: 70px
 }
 
 #section {

@@ -24,17 +24,28 @@
           <div metal:use-macro="blog_entry.macros['blog_entry']">
             <img metal:fill-slot="entry_image" width="628" height="250" tal:attributes="src entry.image_url" />
             <span metal:fill-slot="entry_title" tal:replace="entry.title"></span>
-            <span metal:fill-slot="entry_meta" tal:replace="entry.entry_date"></span>
+            <span metal:fill-slot="entry_meta" tal:replace="entry.entry_display_date"></span>
             <span metal:fill-slot="entry_content" tal:replace="entry.body"></span>
-          </div> 
+          </div>
         </span>
+        <div class="blog_nav">
+          <span class="blog_prev">
+            <a tal:condition="prev_url" href="${prev_url}"><<</a>
+            <span tal:condition="not:prev_url"><<</span>
+          </span>
+          <span class="blog_next">
+            <a tal:condition="next_url" href="${next_url}">>></a>
+            <span tal:condition="not:next_url">>></span>
+          </span>
+        </div>
       </div>
       <div metal:fill-slot="sidebar_content">
         <div id="blog_links">
           <h4 style="margin-bottom:10px"> The Archives </h4>
           <ul>
-            <a href="/blog?month=Jan">January</a><br/>
-            <a href="/blog?month=Feb">February</a><br/>
+            <a href="/blog?month=Jan">December</a><br>
+            <a href="/blog?month=Jan">January</a><br>
+            <a href="/blog?month=Feb">February</a><br>
           </ul> 
         </div>
       </div>
