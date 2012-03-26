@@ -1,11 +1,13 @@
 import csv
 import datetime
 import os
+import string
 import transaction
 
 from sqlalchemy import Column
 from sqlalchemy import Date
 from sqlalchemy import Integer
+from sqlalchemy import SmallInteger
 from sqlalchemy import Text
 from sqlalchemy import Unicode
 
@@ -81,14 +83,42 @@ class User(Base):
     num_rsvp_garba = Column(Integer, default=0)
     num_rsvp_wedding = Column(Integer, default=0)
     num_rsvp_reception = Column(Integer, default=0)
+    accepted = Column(SmallInteger, default=0)
+    declined = Column(SmallInteger, default=0)
     email = Column(Text(100))
 
     def __init__(self, id, family_id):
         self.id = id
         self.family_id = family_id
 
+    def to_dict(self):
+        properties = dict(
+          id=self.id,
+          family_id=self.family_id,
+          last_name=self.last_name,
+          first_name=self.first_name,
+          address=self.address,
+          city=self.city,
+          state=self.state,
+          zip=self.zip,
+          family_name=self.family_name,
+          display_name=self.display_name,
+          num_invited_garba=self.num_invited_garba,
+          num_invited_wedding=self.num_invited_wedding,
+          num_invited_reception=self.num_invited_reception,
+          num_rsvp_garba=self.num_rsvp_garba,
+          num_rsvp_wedding=self.num_rsvp_wedding,
+          num_rsvp_reception=self.num_rsvp_reception,
+          accepted=self.accepted,
+          declined=self.declined,
+          email=self.email
+        )
+        return properties
+
 def populate():
     session = DBSession()
+    # for some reason, if you delete the users and want to re-import, you need to also delete the
+    # blog entries from the db
     populate_default(session)
     populate_users(session)
     populate_blog_entries(session)
@@ -114,8 +144,8 @@ def populate_users(session):
         id = row["[id]"]
         family_id = row["[familyId]"]
         user = User(id, family_id)
-        user.last_name = row["[lastName]"]
-        user.first_name = row["[firstName]"]
+        user.last_name = string.lower(row["[lastName]"])
+        user.first_name = string.lower(row["[firstName]"])
         user.address = row["[address1]"]
         user.city = row["[city]"]
         user.state = row["[state]"]

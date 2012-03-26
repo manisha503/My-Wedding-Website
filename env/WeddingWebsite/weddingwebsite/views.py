@@ -1,10 +1,11 @@
 import datetime
+import string
 
 from pyramid.httpexceptions import HTTPFound
 from pyramid.renderers import get_renderer
 
 from weddingwebsite.models import DBSession
-from weddingwebsite.models import MyModel, BlogEntry
+from weddingwebsite.models import MyModel, BlogEntry, User
 
 def home_page(request):
   dbsession = DBSession()
@@ -75,7 +76,80 @@ def blog(request):
 
 def events(request):
   main = get_renderer('templates/index.pt').implementation()
+  right_sidebar = get_renderer('templates/right_sidebar.pt').implementation()
+  return {'main': main,
+          'right_sidebar': right_sidebar}
+
+def bridal_party(request):
+  main = get_renderer('templates/index.pt').implementation()
   return {'main': main}
+
+def rsvp(request):
+  main = get_renderer('templates/index.pt').implementation()
+  right_sidebar = get_renderer('templates/right_sidebar.pt').implementation()
+  return {'main': main,
+          'right_sidebar': right_sidebar}
+
+def retrieve_rsvp(request):
+  dbsession = DBSession()
+  query = dbsession.query(User)
+  last_name = None
+  zip = None
+
+  if 'user_id' in request.params:
+    query = query.filter(User.id == request.params['user_id'])
+  else:
+    if 'last_name' in request.params:
+      last_name = string.lower(request.params['last_name'])
+      query = query.filter(User.last_name == last_name)
+    if 'zip' in request.params:
+      zip = request.params['zip']
+      query = query.filter(User.zip == zip)
+    #adding the group by ensures we get one entry per family (the last one)
+    query = query.group_by(User.family_id)
+  entries = query.all()
+
+  if not entries:
+    return {"error_message": "Couldn't find a record with last name: %s and zip: %s" \
+        % (request.params['last_name'], zip)}
+  entry_list = [entry.to_dict() for entry in entries]
+  response = dict(entries=entry_list)
+  return response
+
+def record_rsvp(request):
+  dbsession = DBSession()
+  query = dbsession.query(User)
+  query = query.filter(User.family_id == request.params['family_id'])
+  entries = query.all()
+
+  if not entries:
+    return {"error_message": "An error occurred recording your RSVP.  Please try again later."}
+
+  family_name = ""
+  num_garba = int(request.params["num_garba"])
+  num_wedding = int(request.params["num_wedding"])
+  num_reception = int(request.params["num_reception"])
+  accepted = int(request.params["accepted"])
+  for entry in entries:
+    family_name = entry.family_name
+    entry.declined = 1 if accepted == 0 else 0
+    entry.accepted = 1 if accepted == 1 else 0
+    if accepted:
+      entry.num_rsvp_garba = num_garba
+      entry.num_rsvp_wedding = num_wedding
+      entry.num_rsvp_reception = num_reception
+    else:
+      entry.num_rsvp_garba = 0
+      entry.num_rsvp_wedding = 0
+      entry.num_rsvp_reception = 0
+
+    dbsession.add(entry);
+  response = dict(family_name=family_name,
+                  accepted=accepted,
+                  num_rsvp_garba=num_garba,
+                  num_rsvp_wedding=num_wedding,
+                  num_rsvp_reception=num_reception)
+  return response
 
 def _set_cookie(request, response):
   response.set_cookie('first_visit', 'blah')

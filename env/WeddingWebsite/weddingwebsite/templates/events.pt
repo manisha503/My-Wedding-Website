@@ -13,39 +13,95 @@
 <body>
 <div metal:use-macro="main.macros['header']"></div>
 <div metal:use-macro="main.macros['feature']">
-  <h1 metal:fill-slot="feature_content" style="margin: 0px">Wedding Events</h1>
+  <h1 metal:fill-slot="feature_content" style="margin: 0px">Wedding Events & Venue</h1>
 </div>
 <div metal:use-macro="main.macros['page']">
   <div metal:fill-slot="page_content">
-    <h3>Friday, June 22nd, 2012</h3>
-    <h4 class="event_title">Garba 7pm-12pm</h4>
-    <span class="event_location"> Hyatt Regency Long Beach - Regency Ballroom </span>
-    <br>
-    <span class="event_text">Join us for dinner, dancing and mingling.</span>
-    <br>
-    <br>
-    <br>
-    <h3>Saturday, June 23rd, 2012</h3>
-    <h4 class="event_title">Baraat 3pm-4pm</h4>
-    <span class="event_location"> Hyatt Regency Long Beach - Rainbow Lagoon </span>
-    <br>
-    <span class="event_text">Dance with Rishi and his family as they rock their way to the mandap. Dance to the beat of the dhol
-    player and Rishi's heart.</span>
-    <h4 class="event_title">Wedding 4pm-5pm</h4>
-    <span class="event_location"> Hyatt Regency Long Beach - Rainbow Lagoon </span>
-    <br>
-    <span class="event_text">Rishi and Manisha exchange their vows and start a new life together! Delicious ice cream and
-    sweets will be served, so sit back and enjoy.</span>
-    <h4 class="event_title">Refreshment Power Hour 6pm-7pm</h4>
-    <span class="event_location">Hyatt Regency Long Beach - Outside Regency Ballroom</span>
-    <br>
-    <span class="event_text">Enjoy fantasmic appetizers while chillin with your favorite friends at
-    the wedding!</span>
-    <h4 class="event_title">Reception 7pm-??? ;)</h4>
-    <span class="event_location">Hyatt Regency Long Beach - Regency Ballroom</span>
-    <br>
-    <span class="event_text">Enjoy a very special night of music and food with Mr. &amp; Mrs. Rishi Shah. Get ready to
-    shake your butt and bust your gut.</span>
+    <div class="events">
+    <div metal:use-macro="right_sidebar.macros['right_sidebar']">
+      <h3 metal:fill-slot="left_title"></h3>
+      <div metal:fill-slot="left_content">
+        <h4>Friday, June 22nd, 2012</h4>
+        <h5 class="event_title">Garba 7pm-12pm</h5>
+        <span class="event_location"> Hyatt Regency Long Beach - Regency Ballroom </span>
+        <br>
+        <span class="event_text">Join us for dinner, dancing and mingling.</span>
+        <br>
+        <br>
+        <br>
+        <h4>Saturday, June 23rd, 2012</h4>
+        <h5 class="event_title">Baraat 3pm-4pm</h5>
+        <span class="event_location"> Hyatt Regency Long Beach - Rainbow Lagoon </span>
+        <br>
+        <span class="event_text">Dance with Rishi and his family as they rock their way to the mandap. Dance to the beat of the dhol
+        player and Rishi's heart.</span>
+        <h5 class="event_title">Wedding 4pm-5pm</h5>
+        <span class="event_location"> Hyatt Regency Long Beach - Rainbow Lagoon </span>
+        <br>
+        <span class="event_text">Rishi and Manisha exchange their vows and start a new life together! Delicious ice cream and
+        sweets will be served, so sit back and enjoy.</span>
+        <h5 class="event_title">Refreshment Power Hour 6pm-7pm</h5>
+        <span class="event_location">Hyatt Regency Long Beach - Outside Regency Ballroom</span>
+        <br>
+        <span class="event_text">Enjoy fantasmic appetizers while chillin with your favorite friends at
+        the wedding!</span>
+        <h5 class="event_title">Reception 7pm-??? ;)</h5>
+        <span class="event_location">Hyatt Regency Long Beach - Regency Ballroom</span>
+        <br>
+        <span class="event_text">Enjoy a very special night of music and food with Mr. &amp; Mrs. Rishi Shah. Get ready to
+        shake your butt and bust your gut.</span>
+      </div>
+      <div metal:fill-slot="sidebar_content">
+        <h3></h3>
+        <h4> All events will be held at:</h4>
+        <h5 class="event_title">Hyatt Regency Long Beach</h5>
+        <span class="event_text">
+        200 S. Pine Ave<br>
+        Long Beach, CA 90802<br>
+        (562) 491-1234
+        <br>
+        <br>
+        The closest airports are:
+        <ul style="margin-left:25px">
+          <li>Long Beach Airport (LGB)</li>
+          <li>Los Angeles Airport (LAX)</li>
+        </ul>
+        </span>
+        <img width="425px" height="300px"
+        src="${request.static_url('weddingwebsite:static/style/images/hyatt_venue.jpg')}" />
+        <span class="event_text">
+          <iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0"
+          marginwidth="0"
+          src="http://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Hyatt+Regency+Long+Beach,+South+Pine+Avenue,+Long+Beach,+CA&amp;aq=0&amp;oq=hyatt+regency+long+beach&amp;sll=37.0625,-95.677068&amp;sspn=35.410182,62.666016&amp;ie=UTF8&amp;hq=Hyatt+Regency+Long+Beach,+South+Pine+Avenue,+Long+Beach,+CA&amp;t=m&amp;ll=33.768017,-118.193836&amp;spn=0.049945,0.072956&amp;z=13&amp;iwloc=near&amp;output=embed"></iframe><br
+          /><small><a
+          href="http://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=Hyatt+Regency+Long+Beach,+South+Pine+Avenue,+Long+Beach,+CA&amp;aq=0&amp;oq=hyatt+regency+long+beach&amp;sll=37.0625,-95.677068&amp;sspn=35.410182,62.666016&amp;ie=UTF8&amp;hq=Hyatt+Regency+Long+Beach,+South+Pine+Avenue,+Long+Beach,+CA&amp;t=m&amp;ll=33.768017,-118.193836&amp;spn=0.049945,0.072956&amp;z=13"
+          target="_blank" style="text-decoration:underline">View Larger Map</a></small>
+        </span>
+        <h5 class="event_title">Directions</h5>
+        <span class="event_text">
+        <ul style="margin-left:25px">
+          <li>Take the 710 South toward Long Beach.</li>
+          <li>At the Freeway split, take the left lanes for Downtown Long Beach/Convention Center.</li>
+          <li>Stay on Shoreline Drive (DO NOT TAKE Broadway/Civic Center/Pine Avenue exit).</li>
+          <li>Follow the signs to Aquarium/Convention Center/Pine Avenue.</li>
+          <li>Turn left on Pine Avenue at the 4th stop light.</li>
+          <li>The hotel is on the corner of Shoreline Drive and Pine Avenue.</li>
+        </ul>
+        <h5 class="event_title">Things to do in Long Beach</h5>
+        <span class="event_text">
+        <ul style="margin-left:25px">
+          <li>Visit the Aquarium of the Pacific (right next to the hotel).</li>
+          <li>Take a tour of The Queen Mary (but watch out - rumor has it, it's haunted!).</li>
+          <li>Eat at Manisha's favorite restaurant - California Pizza Kitchen (no, in CA, it's not
+          just called 'Pizza Kitchen').</li>
+          <li>Ride the antique carousel at The Pike (right across the street from the hotel).</li>
+          <li>Check out 4th St between Cherry & Junipero, also known as "Retro Row" for some cool coffee shops and vintage
+          clothing stores (and pretend to be as hipster as Rishi).</li>
+        </ul>
+        </span>
+      </div>
+    </div>
+    </div>
   </div>
 </div>
 </body>

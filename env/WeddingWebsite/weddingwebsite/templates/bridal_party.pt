@@ -1,0 +1,42 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=us-ascii" />
+
+  <title>Rishi and Manisha | 6.23.12</title>
+  <link rel="stylesheet" href="${request.static_url('weddingwebsite:static/style/main.css')}" type="text/css" media="screen" />
+  <script type="text/javascript" src="${request.static_url('weddingwebsite:static/style/js/jquery-1.7.1.min.js')}"></script>
+</head>
+
+<body>
+<div metal:use-macro="main.macros['header']"></div>
+<div metal:use-macro="main.macros['feature']">
+  <h1 metal:fill-slot="feature_content" style="margin: 0px">Our Family & Bridal Party</h1>
+</div>
+<div metal:use-macro="main.macros['page']">
+<div metal:fill-slot="page_content" style="line-height: 26px">
+  <div class="family_container">
+    <div class="family">
+      <img src="${request.static_url('weddingwebsite:static/style/images/parekh_family.jpg')}" />
+    </div>
+    <div class="family_text">
+      <h3 class="family_title">Parekh Family</h3>
+    </div>
+    <div style="text-align:right" class="family_text">
+      <h3 class="family_title">Shah Family</h3>
+    </div>
+    <div class="family">
+      <img src="${request.static_url('weddingwebsite:static/style/images/parekh_family.jpg')}" />
+    </div>
+  </div>
+  <div class="bridesmaids_groomsmen_container">
+    <h3 class="bridal_party_title">Bridesmaids and Groomsmen</h3>
+    <div class="bridal_party_text">Test text blah blah blah</div>
+  </div>
+</div>
+</div>
+</body>
+</html>

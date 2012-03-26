@@ -13,7 +13,7 @@
 <body>
 <div metal:use-macro="main.macros['header']"></div>
 <div metal:use-macro="main.macros['feature']">
-  <h1 metal:fill-slot="feature_content" style="margin: 0px">Our story</h1>
+  <h1 metal:fill-slot="feature_content" style="margin: 0px">Our Story</h1>
 </div>
 <div metal:use-macro="main.macros['page']">
 <div metal:fill-slot="page_content" style="line-height: 26px">

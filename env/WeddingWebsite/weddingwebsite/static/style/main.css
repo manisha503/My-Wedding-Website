@@ -404,6 +404,179 @@ hr {
   text-align: center
 }
 
+.events .right_sidebar #main{
+  width:465px;
+}
+
+.events .right_sidebar #main .content {
+  width:465px;
+}
+
+.events .right_sidebar #sidebar {
+  width:465px;
+}
+
+.events .right_sidebar #sidebar_content.lessgap {
+  padding-top:0px;
+}
+
+.family_container {
+  height: 200px;
+  padding-top:20px;
+  padding-bottom:20px;
+}
+
+.family {
+  width: 240px;
+  float: left;
+}
+
+.family_text {
+  width: 220px;
+  float: left;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.family_title {
+  color: #01A4CD;
+  text-shadow: 0px 1px 1px #0B586B;
+}
+
+.bridesmaids_groomsmen_container {
+  margin: 0px auto;
+  width: 900px;
+}
+
+.bridal_party_title {
+  width: 500px;
+  text-align: center;
+  margin: 0px auto;
+  color: #01A4CD;
+  text-shadow: 0px 1px 1px #0B586B;
+  padding-bottom: 15px;
+}
+
+.bridal_party_text {
+  margin: 0px auto;
+  width: 600px;
+  line-height: 26px;
+  text-align: center;
+}
+
+.rsvp .right_sidebar #main{
+  width:465px;
+}
+
+.rsvp .right_sidebar #main .content {
+  width:465px;
+}
+
+.rsvp .right_sidebar #sidebar {
+  width:465px;
+}
+
+.rsvp .right_sidebar #sidebar_content.lessgap {
+  padding-top:0px;
+}
+
+.rsvp_title {
+  color: #01A4CD;
+  text-shadow: 0px 1px 1px #0B586B;
+  line-height: 24px;
+  margin-bottom: 8px;
+}
+
+.rsvp_name {
+  color: #01A4CD;
+  text-shadow: 0px 1px 1px #0B586B;
+  line-height: 24px;
+  margin-bottom: 8px;
+  width: 400px;
+  text-align: center;
+}
+
+.rsvp_text {
+  line-height:22px;
+}
+
+.find_rsvp_input {
+  line-height:22px;
+  font-size: 14px;
+  padding-left: 2px;
+  margin-bottom: 8px;
+}
+
+.find_rsvp_label {
+  width: 100px;
+  float:left;
+  line-height: 32px;
+}
+
+.rsvp_error {
+  color: #EA5D4E;
+  line-height: 20px;
+  font-size: 15px;
+  display: none;
+  margin-bottom: 5px;
+}
+
+.rsvp_submit {
+  width: auto;
+  padding: 7px 15px;
+  margin-top: 15px;
+  border: 0;
+  font-size: 14px;
+  color: #FFFFFF;
+  background: #01A4CD;
+	text-shadow: 0px 1px 1px #ADADAD;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+	border-radius: 5px;
+}
+
+.rsvp_input {
+  width: 20px;
+  height: 20px;
+  clear: left;
+  float: left;
+  font-size: 14px;
+  text-align: center;
+}
+
+.rsvp_select {
+  width: 50px;
+  line-height: 32px;
+  clear: left;
+  float: left;
+  font-size: 16px;
+}
+
+#rsvp_choose_family {
+  display: none;
+}
+
+#retrieved_rsvp_info {
+  display: none;
+}
+
+#thanks {
+  display: none;
+}
+
+.test {
+  width: 20px;
+  font-size: 14px;
+  padding-left: 2px;
+  margin-bottom: 8px;
+  float:left;
+}
+
+.rsvp_label {
+  margin-left: 5px;
+  line-height: 32px;
+}
+
 .clearboth{
   clear: both;
   display: block;
@@ -479,11 +652,12 @@ hr {
   color: #01A4CD;
   text-shadow: 0px 1px 1px #0B586B;
   padding-top: 20px;
+  padding-bottom: 10px;
 }
 
 .event_location {
   font-style: italic;
-  line-height:36px;
+  line-height:26px;
   margin-bottom: 5px;
   font-size: 16px;
 }
@@ -512,6 +686,10 @@ hr {
 .blog_next {
   width: 50px;
   padding-left: 70px
+}
+
+.left_events {
+  width: 400px;
 }
 
 #section {
@@ -633,7 +811,7 @@ p {
 
 /* 2. MENU ++++++++++++++++++++++++++++++++++++++++++++ */
 #nav {
-	font: 24px 'SeganLight', Arial, sans-serif;
+	font: 18px 'SeganLight', Arial, sans-serif;
 	color: #444444;
 	right: -15px;
   bottom: 46px;
@@ -649,7 +827,7 @@ p {
 #nav li, #name li {
 	list-style-type: none;
 	float: left;
-	margin: 0 16px 0 16px;
+	margin: 0 10px 0 10px;
 }
 
 #nav li a, #name li a {
