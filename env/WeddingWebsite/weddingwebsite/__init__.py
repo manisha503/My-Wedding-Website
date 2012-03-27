@@ -30,5 +30,21 @@ def main(global_config, **settings):
     config.add_view('weddingwebsite.views.events',
                     route_name='events',
                     renderer='templates/events.pt')
+    config.add_route('bridal_party', '/bridal_party')
+    config.add_view('weddingwebsite.views.bridal_party',
+                    route_name='bridal_party',
+                    renderer='templates/bridal_party.pt')
+    config.add_route('rsvp', '/rsvp')
+    config.add_view('weddingwebsite.views.rsvp',
+                    route_name='rsvp',
+                    renderer='templates/rsvp.pt')
+    config.add_route('retrieve_rsvp', '/retrieve_rsvp')
+    config.add_view('weddingwebsite.views.retrieve_rsvp',
+                    route_name='retrieve_rsvp',
+                    renderer='json')
+    config.add_route('record_rsvp', '/record_rsvp')
+    config.add_view('weddingwebsite.views.record_rsvp',
+                    route_name='record_rsvp',
+                    renderer='json')
     return config.make_wsgi_app()
 
