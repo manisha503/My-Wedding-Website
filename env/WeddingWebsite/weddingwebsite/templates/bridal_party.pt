@@ -8,10 +8,70 @@
 
   <title>Rishi and Manisha | 6.23.12</title>
   <link rel="stylesheet" href="${request.static_url('weddingwebsite:static/style/main.css')}" type="text/css" media="screen" />
+  <link rel="stylesheet" href="${request.static_url('weddingwebsite:static/style/css/jquery-ui-1.8.18.custom.css')}" type="text/css" media="screen" />
   <script type="text/javascript" src="${request.static_url('weddingwebsite:static/style/js/jquery-1.7.1.min.js')}"></script>
+  <script type="text/javascript"
+  src="${request.static_url('weddingwebsite:static/style/js/jquery-ui-1.8.18.custom.min.js')}"></script>
+  <script type="text/javascript">
+    (function ($) {
+      $.fn.setupClick = function(popup) {
+        return this.each(function() {
+          var $img1  = $(this).find("#img1");
+          var $img2  = $(this).find("#img2");
+          var margin = $img1.width()/2;
+          var width  = $img1.width();
+          var height = $img1.height();
+          var that = this;
+
+          $img2.stop().css({width:'0px',height:''+height+'px',marginLeft:''+margin+'px',opacity:'0.5'});
+
+          $img1.click(function(){
+            $img2.show();
+            $img1.stop().animate({width:'0px',height:''+height+'px',marginLeft:''+margin+'px',opacity:'0.5'},{duration:500});
+            window.setTimeout(
+              function() {
+                $img2.stop().animate(
+                  {width:''+width+'px',height:''+height+'px',marginLeft:'0px',opacity:'1'}, {duration:500});
+              },
+              500
+            );
+            window.setTimeout(
+              function() {
+                popup.dialog('option', 'title', 'Karishma');
+                popup.dialog('open');
+              }, 1000);
+          });
+
+          $img2.click(function(){
+            $img2.stop().animate({width:'0px',height:''+height+'px',marginLeft:''+margin+'px',opacity:'0.5'},{duration:500});
+            window.setTimeout(
+              function() {
+                $img1.stop().animate(
+                  {width:''+width+'px',height:''+height+'px',marginLeft:'0px',opacity:'1'}, {duration:500});
+              },
+              500
+            );
+          });
+        });
+      }
+
+    })(jQuery);
+
+
+    $(window).load(function () {
+      var $popup = $("div.ui-dialog")
+      $popup.dialog({autoOpen:false, modal:true, dialogClass:'alert'});
+      $("div.image_pair").setupClick($popup);
+    });
+  </script>
 </head>
 
 <body>
+<div style="display:none" class="ui-dialog ui-widget ui-widget-content ui-corner-all">
+  <div style="height: 200px; min-height: 109px; width: auto;" class="ui-dialog-content ui-widget-content" id="dialog">
+    <p>Dialog content goes here.</p>
+  </div>
+</div>
 <div metal:use-macro="main.macros['header']"></div>
 <div metal:use-macro="main.macros['feature']">
   <h1 metal:fill-slot="feature_content" style="margin: 0px">Our Family & Bridal Party</h1>
@@ -34,7 +94,111 @@
   </div>
   <div class="bridesmaids_groomsmen_container">
     <h3 class="bridal_party_title">Bridesmaids and Groomsmen</h3>
-    <div class="bridal_party_text">Test text blah blah blah</div>
+    <div class="bridal_party_text">Can you guess who's who?</div>
+    <div class="clearboth"></div>
+    <div class="image_pair" id="image_pair_1">
+      <img id="img1" class="bridal_party_pic" src="${request.static_url('weddingwebsite:static/style/images/test-bridal.png')}" />
+      <img id="img2" class="bridal_party_pic"
+      src="${request.static_url('weddingwebsite:static/style/images/final-2.png')}" />
+    </div>
+    <div class="image_pair" id="image_pair_2">
+      <img id="img1" class="bridal_party_pic"  src="${request.static_url('weddingwebsite:static/style/images/test-bridal.png')}" />
+      <img id="img2" class="bridal_party_pic"
+      src="${request.static_url('weddingwebsite:static/style/images/final-2.png')}" />
+    </div>
+    <div class="image_pair" id="image_pair_3">
+      <img id="img1" class="bridal_party_pic"  src="${request.static_url('weddingwebsite:static/style/images/test-bridal.png')}" />
+      <img id="img2" class="bridal_party_pic"
+      src="${request.static_url('weddingwebsite:static/style/images/final-2.png')}" />
+    </div>
+    <div class="image_pair" id="image_pair_4">
+      <img id="img1" class="bridal_party_pic"  src="${request.static_url('weddingwebsite:static/style/images/test-bridal.png')}" />
+      <img id="img2" class="bridal_party_pic"
+      src="${request.static_url('weddingwebsite:static/style/images/final-2.png')}" />
+    </div>
+    <div class="image_pair" id="image_pair_5">
+      <img id="img1" class="bridal_party_pic"  src="${request.static_url('weddingwebsite:static/style/images/test-bridal.png')}" />
+      <img id="img2" class="bridal_party_pic"
+      src="${request.static_url('weddingwebsite:static/style/images/final-2.png')}" />
+    </div>
+    <div class="clearboth"></div>
+    <div class="image_pair" id="image_pair_6">
+      <img id="img1" class="bridal_party_pic"  src="${request.static_url('weddingwebsite:static/style/images/test-bridal.png')}" />
+      <img id="img2" class="bridal_party_pic"
+      src="${request.static_url('weddingwebsite:static/style/images/final-2.png')}" />
+    </div>
+    <div class="image_pair" id="image_pair_7">
+      <img id="img1" class="bridal_party_pic"  src="${request.static_url('weddingwebsite:static/style/images/test-bridal.png')}" />
+      <img id="img2" class="bridal_party_pic"
+      src="${request.static_url('weddingwebsite:static/style/images/final-2.png')}" />
+    </div>
+    <div class="image_pair" id="image_pair_8">
+      <img id="img1" class="bridal_party_pic"  src="${request.static_url('weddingwebsite:static/style/images/test-bridal.png')}" />
+      <img id="img2" class="bridal_party_pic"
+      src="${request.static_url('weddingwebsite:static/style/images/final-2.png')}" />
+    </div>
+    <div class="image_pair" id="image_pair_9">
+      <img id="img1" class="bridal_party_pic"  src="${request.static_url('weddingwebsite:static/style/images/test-bridal.png')}" />
+      <img id="img2" class="bridal_party_pic"
+      src="${request.static_url('weddingwebsite:static/style/images/final-2.png')}" />
+    </div>
+    <div class="image_pair" id="image_pair_10">
+      <img id="img1" class="bridal_party_pic"  src="${request.static_url('weddingwebsite:static/style/images/test-bridal.png')}" />
+      <img id="img2" class="bridal_party_pic"
+      src="${request.static_url('weddingwebsite:static/style/images/final-2.png')}" />
+    </div>
+    <div class="clearboth"></div>
+    <div class="image_pair" id="image_pair_11">
+      <img id="img1" class="bridal_party_pic"  src="${request.static_url('weddingwebsite:static/style/images/test-bridal.png')}" />
+      <img id="img2" class="bridal_party_pic"
+      src="${request.static_url('weddingwebsite:static/style/images/final-2.png')}" />
+    </div>
+    <div class="image_pair" id="image_pair_12">
+      <img id="img1" class="bridal_party_pic"  src="${request.static_url('weddingwebsite:static/style/images/test-bridal.png')}" />
+      <img id="img2" class="bridal_party_pic"
+      src="${request.static_url('weddingwebsite:static/style/images/final-2.png')}" />
+    </div>
+    <div class="image_pair" id="image_pair_13">
+      <img id="img1" class="bridal_party_pic"  src="${request.static_url('weddingwebsite:static/style/images/test-bridal.png')}" />
+      <img id="img2" class="bridal_party_pic"
+      src="${request.static_url('weddingwebsite:static/style/images/final-2.png')}" />
+    </div>
+    <div class="image_pair" id="image_pair_14">
+      <img id="img1" class="bridal_party_pic"  src="${request.static_url('weddingwebsite:static/style/images/test-bridal.png')}" />
+      <img id="img2" class="bridal_party_pic"
+      src="${request.static_url('weddingwebsite:static/style/images/final-2.png')}" />
+    </div>
+    <div class="image_pair" id="image_pair_15">
+      <img id="img1" class="bridal_party_pic"  src="${request.static_url('weddingwebsite:static/style/images/test-bridal.png')}" />
+      <img id="img2" class="bridal_party_pic"
+      src="${request.static_url('weddingwebsite:static/style/images/final-2.png')}" />
+    </div>
+    <div class="clearboth"></div>
+    <div class="image_pair" id="image_pair_16">
+      <img id="img1" class="bridal_party_pic"  src="${request.static_url('weddingwebsite:static/style/images/test-bridal.png')}" />
+      <img id="img2" class="bridal_party_pic"
+      src="${request.static_url('weddingwebsite:static/style/images/final-2.png')}" />
+    </div>
+    <div class="image_pair" id="image_pair_17">
+      <img id="img1" class="bridal_party_pic"  src="${request.static_url('weddingwebsite:static/style/images/test-bridal.png')}" />
+      <img id="img2" class="bridal_party_pic"
+      src="${request.static_url('weddingwebsite:static/style/images/final-2.png')}" />
+    </div>
+    <div class="image_pair" id="image_pair_18">
+      <img id="img1" class="bridal_party_pic"  src="${request.static_url('weddingwebsite:static/style/images/test-bridal.png')}" />
+      <img id="img2" class="bridal_party_pic"
+      src="${request.static_url('weddingwebsite:static/style/images/final-2.png')}" />
+    </div>
+    <div class="image_pair" id="image_pair_19">
+      <img id="img1" class="bridal_party_pic"  src="${request.static_url('weddingwebsite:static/style/images/test-bridal.png')}" />
+      <img id="img2" class="bridal_party_pic"
+      src="${request.static_url('weddingwebsite:static/style/images/final-2.png')}" />
+    </div>
+    <div class="image_pair" id="image_pair_20">
+      <img id="img1" class="bridal_party_pic"  src="${request.static_url('weddingwebsite:static/style/images/test-bridal.png')}" />
+      <img id="img2" class="bridal_party_pic"
+      src="${request.static_url('weddingwebsite:static/style/images/final-2.png')}" />
+    </div>
   </div>
 </div>
 </div>

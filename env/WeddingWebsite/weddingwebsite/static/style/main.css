@@ -74,6 +74,7 @@ html, body {
   margin:0;
   padding:0;
   height:100%;
+  width: 100%;
 }
 
 body {
@@ -445,7 +446,7 @@ hr {
 
 .bridesmaids_groomsmen_container {
   margin: 0px auto;
-  width: 900px;
+  width: 960px;
 }
 
 .bridal_party_title {
@@ -462,6 +463,38 @@ hr {
   width: 600px;
   line-height: 26px;
   text-align: center;
+}
+
+.image_pair {
+  width: 187px;
+  height: 326px;
+  float: left;
+  margin: 5px 0 5px 5px;
+}
+
+#img1 {
+  position: absolute;
+  cursor:pointer;
+  width: 187px;
+}
+
+#img2 {
+  display: none;
+  position: absolute;
+  cursor:pointer;
+}
+
+.popup {
+  width: 600px;
+  margin: 0px auto;
+  display: none;
+  background-color: #01A4CD;
+  width: 100%;
+  height: 100%;
+}
+
+.bridal_image_row {
+  margin: 0px auto;
 }
 
 .rsvp .right_sidebar #main{
