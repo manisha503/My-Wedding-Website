@@ -33,7 +33,7 @@ def main(global_config, **settings):
     config.add_route('bridal_party', '/bridal_party')
     config.add_view('weddingwebsite.views.bridal_party',
                     route_name='bridal_party',
-                    renderer='templates/bridal_party.pt')
+                    renderer='templates/bridal_party2.pt')
     config.add_route('rsvp', '/rsvp')
     config.add_view('weddingwebsite.views.rsvp',
                     route_name='rsvp',
