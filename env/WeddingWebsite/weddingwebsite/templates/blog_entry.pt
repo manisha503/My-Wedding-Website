@@ -14,7 +14,7 @@
       src="${request.static_url('weddingwebsite:static/style/images/image_shadow.png')}"/>
     </div>
     <div class="entry_info">
-      <h4 class="entry_title"><span metal:define-slot="entry_title">Wedding Shopping</span></h4>
+      <div class="entry_title"><span metal:define-slot="entry_title">Wedding Shopping</span></div>
       <div class="entry_meta">
         <span metal:define-slot="entry_meta">
           <div>Jan 25, 2012</div>

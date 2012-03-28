@@ -469,7 +469,7 @@ hr {
   width: 187px;
   height: 304px;
   float: left;
-  margin: 5px 0 5px 5px;
+  margin: 5px 0 0 5px;
 }
 
 #img1 {
@@ -489,8 +489,17 @@ hr {
   margin: 0px auto;
   display: none;
   background-color: #01A4CD;
-  width: 100%;
-  height: 100%;
+}
+
+.popup_image {
+  width: 187px;
+  height: 304px;
+  float: left;
+  margin-right: 10px;
+}
+
+.popup_text {
+  font-size: 16px;
 }
 
 .bridal_image_row {
@@ -635,16 +644,17 @@ hr {
 }
 
 .image_styled {
-  margin-bottom: 10px;
+  width: 628px;
   display: block;
+  margin: 0px auto;
 }
 
 .entry_image {
-  margin:0px;
+  margin: 0px auto;
 }
 
 .entry_image .image_shadow {
-  width:100%;
+  width:628px;
 }
 
 .entry .entry_title {
@@ -652,6 +662,7 @@ hr {
 }
 
 .entry_title {
+  line-height: 30px;
   font-size: 30px;
 }
 

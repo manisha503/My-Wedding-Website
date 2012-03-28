@@ -17,9 +17,8 @@
 </div>
 <div metal:use-macro="main.macros['page']">
   <div metal:fill-slot="page_content">
-    <div metal:use-macro="right_sidebar.macros['right_sidebar']">
-      <h2 metal:fill-slot="left_title"></h2>
-      <div metal:fill-slot="left_content">
+    <div>
+      <div>
         <span tal:repeat="entry python:all_entries">
           <div metal:use-macro="blog_entry.macros['blog_entry']">
             <img metal:fill-slot="entry_image" width="628" height="250" tal:attributes="src entry.image_url" />
@@ -40,14 +39,6 @@
         </div>
       </div>
       <div metal:fill-slot="sidebar_content">
-        <div id="blog_links">
-          <h4 style="margin-bottom:10px"> The Archives </h4>
-          <ul>
-            <a href="/blog?month=Jan">December</a><br>
-            <a href="/blog?month=Jan">January</a><br>
-            <a href="/blog?month=Feb">February</a><br>
-          </ul> 
-        </div>
       </div>
     </div> 
   </div>
