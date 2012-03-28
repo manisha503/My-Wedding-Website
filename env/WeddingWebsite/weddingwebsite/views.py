@@ -87,6 +87,7 @@ def bridal_party(request):
 def rsvp(request):
   main = get_renderer('templates/index.pt').implementation()
   right_sidebar = get_renderer('templates/right_sidebar.pt').implementation()
+  request.add_response_callback(_set_cookie)
   return {'main': main,
           'right_sidebar': right_sidebar}
 
