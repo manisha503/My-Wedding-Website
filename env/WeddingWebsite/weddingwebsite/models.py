@@ -116,6 +116,7 @@ class User(Base):
         return properties
 
 def populate():
+    transaction.begin()
     session = DBSession()
     # for some reason, if you delete the users and want to re-import, you need to also delete the
     # blog entries from the db
