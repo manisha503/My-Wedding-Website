@@ -86,14 +86,14 @@
     <div id="nav">
       <ul>
         <li><a href="/our_story">Our Story</a></li>
-
-        <li><a href="/blog">Blog</a></li>
-
+        
         <li><a href="/events">Events</a></li>
 
         <li><a href="/bridal_party">Bridal Party</a></li>
 
         <li><a href="/rsvp">RSVP</a></li>
+
+        <li><a href="/blog">Blog</a></li>
       </ul>
     </div>
   </div>
@@ -120,10 +120,9 @@
     <div metal:define-slot="page_content">
       <div metal:use-macro="right_sidebar.macros['right_sidebar']">
         <div metal:fill-slot="left_content">
-          <a href="/blog">
+          <a style="text-shadow: 0px 0px 0px" href="/blog">
           <div metal:use-macro="blog_entry.macros['blog_entry']">
-            <img metal:fill-slot="entry_image" width="628" height="250" tal:attributes="src
-            latest_entry.image_url" />
+            <img metal:fill-slot="entry_image" width="628" height="250" tal:attributes="src latest_entry.image_url" />
             <span metal:fill-slot="entry_title" tal:replace="latest_entry.title"></span>
             <span metal:fill-slot="entry_meta" tal:replace="latest_entry.entry_display_date"></span>
             <span metal:fill-slot="entry_content" tal:replace="latest_entry.body"></span>

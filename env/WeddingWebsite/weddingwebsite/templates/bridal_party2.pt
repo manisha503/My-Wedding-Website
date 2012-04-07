@@ -270,7 +270,9 @@
   </div>
   <div class="bridesmaids_groomsmen_container">
     <h3 class="bridal_party_title">Bridesmaids and Groomsmen</h3>
-    <div class="bridal_party_text">Can you guess who's who?</div>
+    <div class="bridal_party_text">We thought we'd mix it up and help you get to know our
+    bridesmaids and groomsmen a little better.  So instead of just showing you who they are, see if
+    you can guess who's who based on the pictures below!<br>Click the image to reveal the answer!</div>
     <div class="clearboth"></div>
     <div class="image_pair" id="image_pair_1">
       <img id="img2" class="bridal_party_pic"
@@ -362,7 +364,7 @@
       <img id="img1" class="bridal_party_pic"
       src="${request.static_url('weddingwebsite:static/style/images/groomsmen/treo.jpg')}" />
       <img id="img2" class="bridal_party_pic"
-      src="${request.static_url('weddingwebsite:static/style/images/groomsmen/SukitRingwalla.jpg')}" />
+      src="${request.static_url('weddingwebsite:static/style/images/groomsmen/SukitRingwala.jpg')}" />
     </div>
     <div class="clearboth"></div>
     <div class="image_pair" id="image_pair_16">
@@ -381,7 +383,7 @@
       <img id="img1" class="bridal_party_pic"
       src="${request.static_url('weddingwebsite:static/style/images/groomsmen/t-shirt.jpg')}" />
       <img id="img2" class="bridal_party_pic"
-      src="${request.static_url('weddingwebsite:static/style/images/groomsmen/VishalRingwalla.jpg')}" />
+      src="${request.static_url('weddingwebsite:static/style/images/groomsmen/VishalRingwala.jpg')}" />
     </div>
     <div class="image_pair" id="image_pair_19">
       <img id="img1" class="bridal_party_pic"

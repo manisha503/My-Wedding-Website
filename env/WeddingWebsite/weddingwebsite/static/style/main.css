@@ -440,8 +440,7 @@ hr {
 }
 
 .family_title {
-  color: #01A4CD;
-  text-shadow: 0px 1px 1px #0B586B;
+  color: #1E94B1;
 }
 
 .bridesmaids_groomsmen_container {
@@ -453,16 +452,16 @@ hr {
   width: 500px;
   text-align: center;
   margin: 0px auto;
-  color: #01A4CD;
-  text-shadow: 0px 1px 1px #0B586B;
+  color: #1E94B1;
   padding-bottom: 15px;
 }
 
 .bridal_party_text {
   margin: 0px auto;
-  width: 600px;
+  width: 800px;
   line-height: 26px;
   text-align: center;
+  padding-bottom: 10px;
 }
 
 .image_pair {
@@ -488,7 +487,7 @@ hr {
   width: 600px;
   margin: 0px auto;
   display: none;
-  background-color: #01A4CD;
+  background-color: #1E94B1;
 }
 
 .popup_image {
@@ -523,15 +522,13 @@ hr {
 }
 
 .rsvp_title {
-  color: #01A4CD;
-  text-shadow: 0px 1px 1px #0B586B;
+  color: #1E94B1;
   line-height: 24px;
   margin-bottom: 8px;
 }
 
 .rsvp_name {
-  color: #01A4CD;
-  text-shadow: 0px 1px 1px #0B586B;
+  color: #1E94B1;
   line-height: 24px;
   margin-bottom: 8px;
   width: 400px;
@@ -693,8 +690,7 @@ hr {
 }
 
 .event_title {
-  color: #01A4CD;
-  text-shadow: 0px 1px 1px #0B586B;
+  color: #1E94B1;
   padding-top: 20px;
   padding-bottom: 10px;
 }
@@ -871,7 +867,7 @@ p {
 #nav li, #name li {
 	list-style-type: none;
 	float: left;
-	margin: 0 10px 0 10px;
+	margin: 0 15px 0 15px;
 }
 
 #nav li a, #name li a {

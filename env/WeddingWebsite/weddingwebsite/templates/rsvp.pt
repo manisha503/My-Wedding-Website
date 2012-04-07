@@ -301,10 +301,10 @@
         <h3 metal:fill-slot="left_title">RSVP</h3>
         <div metal:fill-slot="left_content">
           <div class="rsvp_section">
-            <h6 class="rsvp_title" id="rsvp_title">Please RSVP by May 13,
-            2012</h6>
+            <h5 class="rsvp_title" id="rsvp_title">Please RSVP by May 13,
+            2012</h5>
             <div id="find_rsvp">
-              <h5 class="rsvp_title" id="rsvp_subtitle">To get started, please enter your last name and zip code:</h5>
+              <h4 class="rsvp_title" id="rsvp_subtitle">To get started, please enter your last name and zip code:</h4>
               <label class="find_rsvp_label" for="last_name">Last Name:</label>
               <input class="find_rsvp_input" type="text" name="lname" id="last_name"/><br>
               <label class="find_rsvp_label" for="zip">Zip Code:</label>
@@ -325,8 +325,8 @@
             <div id="retrieved_rsvp_info">
               <div style="font-size: 24px; margin-top:20px" class="rsvp_name" id="invited">You're invited!</div>
               <div class="rsvp_name" id="name">Mr. Rishi Shah</div>
-              <h6 style="margin-top: 20px" class="rsvp_title" id="retrieved_rsvp_prompt">Please
-              choose one of the following options:</h6>
+              <h5 style="margin-top: 20px" class="rsvp_title" id="retrieved_rsvp_prompt">Please
+              choose one of the following options:</h5>
               <input class="rsvp_input" type="radio" name="accept_decline" id="accept">
               Gladly accept, can't wait!</input>
               <div style="margin-left: 30px"> 
@@ -352,7 +352,7 @@
               <input class="rsvp_submit" type="submit" value="Submit RSVP!" id="submit_2"/>
             </div>
             <div id="thanks">
-              <div style="font-size: 24px; margin-top:20px" class="rsvp_name" id="thanks_msg"></div>
+              <h4 style="margin-top:20px" class="rsvp_name" id="thanks_msg"></h4>
               <input class="rsvp_submit" type="submit" value="Change My RSVP" id="submit_3"/>
             </div>
           </div>
