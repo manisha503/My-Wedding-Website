@@ -24,7 +24,7 @@
             <img metal:fill-slot="entry_image" width="628" height="250" tal:attributes="src entry.image_url" />
             <span metal:fill-slot="entry_title" tal:replace="entry.title"></span>
             <span metal:fill-slot="entry_meta" tal:replace="entry.entry_display_date"></span>
-            <span metal:fill-slot="entry_content" tal:replace="entry.body"></span>
+            <span metal:fill-slot="entry_content" tal:replace="structure entry.body"></span>
           </div>
         </span>
         <div class="blog_nav">

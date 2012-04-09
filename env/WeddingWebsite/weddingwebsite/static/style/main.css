@@ -428,23 +428,29 @@ hr {
 }
 
 .family {
-  width: 240px;
+  width: 474px;
+  height: 316px;
+  margin-left: 3px;
   float: left;
 }
 
 .family_text {
-  width: 220px;
-  float: left;
-  margin-right: 10px;
+  width: 460px;
   margin-left: 10px;
+  margin-right: 10px;
 }
 
 .family_title {
   color: #1E94B1;
 }
 
+.family_details {
+  line-height: 22px;
+  margin-bottom: 5px;
+}
+
 .bridesmaids_groomsmen_container {
-  margin: 0px auto;
+  margin: 30px 0px 0px 0px;
   width: 960px;
 }
 

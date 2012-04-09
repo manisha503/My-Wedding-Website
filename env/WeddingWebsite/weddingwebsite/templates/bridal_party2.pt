@@ -255,19 +255,37 @@
 <div metal:use-macro="main.macros['page']">
 <div metal:fill-slot="page_content" style="line-height: 26px">
   <div class="family_container">
-    <div class="family">
-      <img src="${request.static_url('weddingwebsite:static/style/images/parekh_family.jpg')}" />
-    </div>
-    <div class="family_text">
+    <div style="float:left" class="family_text">
       <h3 class="family_title">Parekh Family</h3>
+      <h5 class="family_details"> Manisha's family is from sunny Los Angeles, CA.  Her parents,
+      Dilip and Sushama Parekh, always encouraged her and her younger brother Sunil to try new
+      activities and keep their brains active.  Instead of playing Hungry Hungry Hippos when they
+      were growing up, their family game was MindTrap - a game of solving puzzles and brain teasers.
+      Want to try one out?<br>
+      <span style="font-size: 16px; line-height:18px; font-style:italic">
+      A black dog stands in the middle of an intersection in a town painted black. None of the
+      street lights are working due to a power failure caused by a local storm. A car with two
+      broken headlights drives towards the dog but turns in time to avoid hitting him. How could the
+      driver have seen the dog in time?</span><br>
+      <br>Their favorite thing about Rishi is that he loves making smoothies.  </h5>
     </div>
-    <div style="text-align:right" class="family_text">
+    <div style="float:right; text-align:right" class="family_text">
       <h3 class="family_title">Shah Family</h3>
+      <h5 class="family_details">Rishi has one amazing mom - Jayshree, one super cool sister -
+      Reena, the cutest niece - Suriana and the smartest brother in law - Mayank.  Rishi's family is
+      from Chicago, IL where they grew up as snow loving people.  Their family mascot is <a
+      href="http://www.tycollector.com/buddies/humphrey-9307.htm" style="text-decoration:underline">Humphrey the camel</a> who protects the Shah Family house at night.<br> <br>Their favorite thing about
+      Manisha is that she can put up with Rishi's non-stop goofy personality.</h5>
     </div>
+    <div class="clearboth"></div>
     <div class="family">
       <img src="${request.static_url('weddingwebsite:static/style/images/parekh_family.jpg')}" />
+    </div>
+    <div class="family">
+      <img src="${request.static_url('weddingwebsite:static/style/images/shah_family.jpg')}" />
     </div>
   </div>
+  <div class="clearboth"></div>
   <div class="bridesmaids_groomsmen_container">
     <h3 class="bridal_party_title">Bridesmaids and Groomsmen</h3>
     <div class="bridal_party_text">We thought we'd mix it up and help you get to know our

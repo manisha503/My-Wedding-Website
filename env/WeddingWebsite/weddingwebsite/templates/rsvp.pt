@@ -251,13 +251,17 @@
                 $thanksMsg.html(msg + "Sorry to see that you can't make it.  We will miss you!");
               }
               else {
+                var confirmation = "";
                 if (response.num_rsvp_garba) {
-                  $thanksMsg.html(msg + "We're thrilled you can join us.<br>See you Friday, June 22!");
-                } else if (response.num_rsvp_wedding) {
-                  $thanksMsg.html(msg + "We're thrilled you can join us.<br>See you Saturday, June 23!");
-                } else if (response.num_rsvp_reception) {
-                  $thanksMsg.html(msg + "We're thrilled you can join us.<br>See you Saturday, June 23!");
-                } 
+                  confirmation += response.num_rsvp_garba + " for the Garba <br>";
+                }
+                if (response.num_rsvp_wedding) {
+                  confirmation += response.num_rsvp_wedding + " for the Wedding <br>"
+                }
+                if (response.num_rsvp_reception) {
+                  confirmation += response.num_rsvp_reception + " for the Reception <br>"
+                }
+                $thanksMsg.html(msg + confirmation + "We're thrilled you can join us!");
               }
 
               $thanksDiv.show();
@@ -305,9 +309,9 @@
             2012</h5>
             <div id="find_rsvp">
               <h4 class="rsvp_title" id="rsvp_subtitle">To get started, please enter your last name and zip code:</h4>
-              <label class="find_rsvp_label" for="last_name">Last Name:</label>
+              <div class="find_rsvp_label">Last Name:</div>
               <input class="find_rsvp_input" type="text" name="lname" id="last_name"/><br>
-              <label class="find_rsvp_label" for="zip">Zip Code:</label>
+              <div class="find_rsvp_label">Zip Code:</div>
               <input class="find_rsvp_input" type="text" name="zip" id="zip"/><br>
               <div class="rsvp_error" id="rsvp_error"></div>
               <input class="rsvp_submit" type="submit" value="Find My Invite" id="submit"/>
@@ -370,7 +374,7 @@
             Long Beach, CA 90802<br>
             (562) 491-1234 <br>
             <a href="https://resweb.passkey.com/go/ParekhShahWedding" target="_blank"
-            style="font-size: 16px">https://resweb.passkey.com/go/ParekhShahWedding</a>
+            style="font-size: 16px; text-decoration:underline">https://resweb.passkey.com/go/ParekhShahWedding</a>
             <br>  
             <br>
             Renaissance Hotel Long Beach: $139/night; 5 minute walk from the Hyatt<br>
@@ -379,7 +383,7 @@
             (562) 437-5900 <br>
             <a
             href="http://www.marriott.com/hotels/travel/lgbrn-renaissance-long-beach-hotel/?toDate=6/24/12&groupCode=pswpswa&fromDate=6/22/12&app=resvlink"
-            target="_blank" style="font-size: 16px">http://www.marriott.com/hotels/travel/lgbrn-renaissance-long-beach-hotel</a>
+            target="_blank" style="font-size: 16px; text-decoration:underline">http://www.marriott.com/hotels/travel/lgbrn-renaissance-long-beach-hotel</a>
             <br>
             <a href="http://g.co/maps/dxa4u" target="_blank"><img
             src="${request.static_url('weddingwebsite:static/style/images/renaissance_hyatt.jpg')}"
