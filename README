@@ -8,6 +8,8 @@ On linode server, in /home/app/modwsgi, there are two directories:
 My-Wedding-Website is the git repo and env is the pyramid environment that apache invokes via modwsgi.  The process is as follows:
 
 1) update code in My-Wedding-Website using a git pull
-2) cd My-Wedding-Website/env
-3) cp -r WeddingWebsite ../../env/  (overwrite the WeddingWebsite directory that was there before)
-4) sudo /etc/init.d/httpd restart (restart apache)
+2) Backup existing database -> cp ../env/WeddingWebsite/WeddingWebsite.db /home/app
+3) cd My-Wedding-Website/env
+4) cp -r WeddingWebsite ../../env/  (overwrite the WeddingWebsite directory that was there before)
+5) mv /home/app/WeddingWebsite.db ../../env/WeddingWebsite
+6) sudo /etc/init.d/httpd restart (restart apache)
