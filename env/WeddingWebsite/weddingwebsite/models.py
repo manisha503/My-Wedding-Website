@@ -142,21 +142,39 @@ def populate_users(session):
         # if we don't have a familyName assigned to them yet, skip for now
         if not row["[familyName]"]:
           continue
-        id = row["[id]"]
-        family_id = row["[familyId]"]
-        user = User(id, family_id)
-        user.last_name = string.lower(row["[lastName]"])
-        user.first_name = string.lower(row["[firstName]"])
-        user.address = row["[address1]"]
-        user.city = row["[city]"]
-        user.state = row["[state]"]
-        user.zip = row["[zip]"]
-        user.family_name = row["[familyName]"]
-        user.num_invited_garba = row["[numGarba]"]
-        user.num_invited_wedding = row["[numWedding]"]
-        user.num_invited_reception = row["[numReception]"]
-        user.email = row["[email]"]
+        user = generate_user(row)
         session.add(user)
+    else:
+      # there are already users in the db; add the diffs.
+      max_id = session.query(User).order_by(User.id.desc()).first().id
+      print "USERS FOUND; adding the users greater than %d " %  max_id
+      here = os.path.dirname(__file__)
+      user_file = csv.DictReader(open(os.path.join(here, 'data', 'AllWebsiteUsers.csv')))
+      for row in user_file:
+        id = int(row["[id]"])
+        if id > max_id:
+          # if we don't have a familyName assigned to them yet, skip for now
+          if not row["[familyName]"]:
+            continue
+          user = generate_user(row)
+          session.add(user)
+
+def generate_user(row):
+    id = row["[id]"]
+    family_id = row["[familyId]"]
+    user = User(id, family_id)
+    user.last_name = string.lower(row["[lastName]"])
+    user.first_name = string.lower(row["[firstName]"])
+    user.address = row["[address1]"]
+    user.city = row["[city]"]
+    user.state = row["[state]"]
+    user.zip = row["[zip]"]
+    user.family_name = row["[familyName]"]
+    user.num_invited_garba = row["[numGarba]"]
+    user.num_invited_wedding = row["[numWedding]"]
+    user.num_invited_reception = row["[numReception]"]
+    user.email = row["[email]"]
+    return user
 
 def populate_blog_entries(session):
     record = session.query(BlogEntry).order_by(BlogEntry.id.desc()).first()
@@ -167,13 +185,14 @@ def populate_blog_entries(session):
     here = os.path.dirname(__file__)
     blog_file = csv.DictReader(open(os.path.join(here, 'data', 'AllBlogEntries.csv')))
     for row in blog_file:
-      id = row["[id]"]
-      image_url = row["[image_url]"]
-      title = row["[title]"]
-      body = row["[body]"]
-      date = datetime.datetime.strptime(row["[date]"], "%Y-%m-%d").date()
-      blog_entry = BlogEntry(id, image_url, title, body, date)
-      session.add(blog_entry)
+      id = int(row["[id]"])
+      if id > latest_idx:
+        image_url = row["[image_url]"]
+        title = row["[title]"]
+        body = row["[body]"]
+        date = datetime.datetime.strptime(row["[date]"], "%Y-%m-%d").date()
+        blog_entry = BlogEntry(id, image_url, title, body, date)
+        session.add(blog_entry)
 
 def initialize_sql(engine):
     DBSession.configure(bind=engine)

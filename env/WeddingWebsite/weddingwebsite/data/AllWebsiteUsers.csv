@@ -45,8 +45,8 @@
 44,31,Y,Pandit,Jay,"325 Berry St., Apt 317",San Francisco,CA,94158,Dr. Jay Pandit & Ms. Roma Patel,2,2,2,jaypandit11@gmail.com,,,Y
 45,31,Y,Patel,Roma,"325 Berry St., Apt 317",San Francisco,CA,94158,Dr. Jay Pandit & Ms. Roma Patel,2,2,2,romasita87@gmail.com,,,Y
 46,32,Y,Amlin,Jeff,230 Castro St Apt 3,San Francisco,CA,94114,Mr. Jeff Amlin,1,1,1,jeff.amlin@gmail.com,,,Y
-47,33,,Newitter,Jenn,"130 Descanso Drive, Unit 437",San Jose,CA,95134,Mr. Justin & Mrs. Jenn Newitter,2,2,2,jennifer.yanes@gmail.com,,,Y
-48,33,,Newitter,Justin,"130 Descanso Drive, Unit 437",San Jose,CA,95134,Mr. Justin & Mrs. Jenn Newitter,2,2,2,justin.newitter@gmail.com,,,Y
+47,33,Y,Newitter,Jenn,6 Beech Street,Newton,MA,02458,Mr. Justin & Mrs. Jenn Newitter,2,2,2,jennifer.yanes@gmail.com,,,Y
+48,33,Y,Newitter,Justin,6 Beech Street,Newton,MA,02458,Mr. Justin & Mrs. Jenn Newitter,2,2,2,justin.newitter@gmail.com,,,Y
 49,34,Y,Shermetaro,Joe,"1095 Santa Cruz Ave., Apt 3",Menlo Park,CA,94025,Ms. Kasey Alderete & Mr. Joe Shermetaro,2,2,2,joe.shermetaro@gmail.com,,,Y
 50,34,Y,Alderete,Kasey,"1095 Santa Cruz Ave., Apt 3",Menlo Park,CA,94025,Ms. Kasey Alderete & Mr. Joe Shermetaro,2,2,2,kaseya@gmail.com,,,Y
 51,35,Y,Baldwin,Juliana,2441 20th St. Apt. A,Santa Monica ,CA,90405,Ms. Juliana Baldwin,1,1,1,julianabaldwin@gmail.com,,,Y
@@ -233,8 +233,7 @@
 232,130,Y,Khandhar,Ramesh,11851 Laurelwood Dr.,Studio City,CA,91604,Mr. Ramesh Khandhar,0,0,1,ramesh.khandhar@gmail.com,,,Y
 233,131,Y,Parekh,Chandrakant,12914 Wolverton Lane,Cerritos,CA,90703,Mr. Chandrakant & Mrs. Hasmita Parekh,0,0,2,cparekh2@yahoo.com,,,Y
 234,131,Y,Parekh,Hasmita,12914 Wolverton Lane,Cerritos,CA,90703,Mr. Chandrakant & Mrs. Hasmita Parekh,0,0,2,,,,Y
-235,132,Y,Shah,Nirav,,,,,"Ms. Smita Shah
-Mr. Nirav Shah",2,2,2,nashah2@gmail.com
+235,132,Y,Shah,Nirav,809 Orleans Pl,Westmont,IL,60559,Ms. Smita Shah & Mr. Nirav Shah,2,2,2,nashah2@gmail.com
 236,133,Y,Shah,Jayesh,536 N. Alta Vista Ave.,Monrovia,CA,91016,Mr. Jayesh & Mrs. Ramila Shah,0,0,2,akashavni@gmail.com,,,Y
 237,133,Y,Shah,Ramila,536 N. Alta Vista Ave.,Monrovia,CA,91016,Mr. Jayesh & Mrs. Ramila Shah,0,0,2,,,,Y
 238,134,Y,Kamdar,Vikram,16945 Old Lake Road,Riverside,CA,92503,Mr. Vikram & Mrs. Ila Kamdar,0,0,2,vikkam@hotmail.com,,,Y
@@ -293,8 +292,8 @@ Mr. Nirav Shah",2,2,2,nashah2@gmail.com
 291,157,Y,Acharya,Rekha,4705 East Cerro Vista Drive,Anaheim,CA,92807,Mr. Shashi & Mrs. Rekha Acharya & Family,0,0,3,rekhaacharya12@gmail.com
 292,157,Y,Acharya,Shashi,4705 East Cerro Vista Drive,Anaheim,CA,92807,,0,0,3
 293,157,Y,Acharya,Amritha,4705 East Cerro Vista Drive,Anaheim,CA,92807,Mr. Shashi & Mrs. Rekha Acharya & Family,0,0,3
-294,158,,Hingnikar,Shrikant,1323 Cleveland Road,Glendale,CA,91202,Mr. Shrikant & Mrs. Urmila Hingnikar,0,0,2,Hingnikars@gmail.com,,,Y
-295,158,,Hingnikar,Urmila,1323 Cleveland Road,Glendale,CA,91202,Mr. Shrikant & Mrs. Urmila Hingnikar,0,0,2,,,,Y
+294,158,Y,Hingnikar,Shrikant,1323 Cleveland Road,Glendale,CA,91202,Mr. Shrikant & Mrs. Urmila Hingnikar,0,0,2,Hingnikars@gmail.com,,,Y
+295,158,Y,Hingnikar,Urmila,1323 Cleveland Road,Glendale,CA,91202,Mr. Shrikant & Mrs. Urmila Hingnikar,0,0,2,,,,Y
 296,159,Y,Saoji,Mohan,1310 Suzanne Way,Longwood,FL,32779,Mr. Mohan & Mrs. Maya Saoji,2,2,2, mohansaoji@yahoo.com,,,Y
 297,159,Y,Saoji,Maya,1310 Suzanne Way,Longwood,FL,32779,Mr. Mohan & Mrs. Maya Saoji,2,2,2,,,,Y
 298,160,Y,Desai,Saloni,100 Hawnley Trace,Suwanee,GA,30024,Mrs. Saloni & Mr. Hiren Desai,3,3,3,,,,Y
@@ -311,8 +310,8 @@ Mr. Nirav Shah",2,2,2,nashah2@gmail.com
 309,164,,Dhami,Hina,,,,,Mr. Nikhil & Mrs. Hina Dhami,0,0,2
 310,165,Y,Lopez,James,255 S. Rengstorf Ave #55,Mountain View,CA,94040,Mr. James & Ms. Ximena Lopez,2,2,2,james.j.lopez@gmail.com
 311,165,Y,Lopez,Ximena,255 S. Rengstorf Ave #55,Mountain View,CA,94040,Mr. James & Ms. Ximena Lopez,2,2,2
-312,166,,Kennedy,Pete,875 Waller Street Apt 4,San Francisco,CA,94117,Mr. & Mrs. Pete Kennedy,2,2,2
-313,166,,Kennedy,,875 Waller Street Apt 4,San Francisco,CA,94117,Mr. & Mrs. Pete Kennedy,2,2,2
+312,166,Y,Kennedy,Pete,875 Waller Street Apt 4,San Francisco,CA,94117,Mr. & Mrs. Pete Kennedy,2,2,2
+313,166,Y,Kennedy,Samantha,875 Waller Street Apt 4,San Francisco,CA,94117,Mr. & Mrs. Pete Kennedy,2,2,2
 314,167,Y,Sheth,Khyati,190 Ryland St. Apt 3429,San Jose,CA,95110,Mr. Karan Shah & Mrs. Khyati Sheth,2,2,2
 315,167,Y,Shah,Karan,190 Ryland St. Apt 3429,San Jose,CA,95110,Mr. Karan Shah & Mrs. Khyati Sheth,2,2,2
 316,168,Y,Achar,Sathya,2857 Via Victoria,Palos Verdes,CA,90274,Mr. Sathya & Mrs. Pratima Achar,0,0,2,sachar@moog.com
@@ -374,5 +373,23 @@ Adarsh Vista, Basava Nagar Main Road",Vibhudipura,"Bangalore, INDIA",560 037,Mr.
 368,192,Y,Hossain,Shelly,14 Upper Pond,Barrington,IL,60010,Dr. Zahur & Mrs. Shelly Hossain,2,2,2
 369,193,Y,Shah,Prakash,31 Briarwood South,Oak Brook,IL,60523,Mr. Prakash & Mrs. Paresha Shah,2,2,2
 370,193,Y,Shah,Paresha,31 Briarwood South,Oak Brook,IL,60523,Mr. Prakash & Mrs. Paresha Shah,2,2,2
-371,194,Y,Blasz,Mike,8714 Sisson Highway ,Eden,NY,14057,Mr. & Mrs. Mike Blasz,0,0,2,mblasz@moog.com
-372,194,Y,Blasz,,8714 Sisson Highway ,Eden,NY,14057,Mr. & Mrs. Mike Blasz,0,0,2
+371,194,Y,Blasz,Mike,8714 Sisson Highway ,Eden,NY,14057,Mr. & Mrs. Mike Blasz,0,2,2,mblasz@moog.com
+372,194,Y,Blasz,,8714 Sisson Highway ,Eden,NY,14057,Mr. & Mrs. Mike Blasz,0,2,2
+373,195,Y,Elbert,Ralph,8202 Old Post Road East,East Amherst,NY,14051 ,Mr. & Mrs. Ralph Elbert,0,2,2,relbert@moog.com 
+374,195,Y,Elbert,,8202 Old Post Road East,East Amherst,NY,14051 ,Mr. & Mrs. Ralph Elbert,0,2,2
+375,196,Y,Engineer,Gopi,440 N. Wabash Ave. #1512,Chicago,IL,60611,Ms. Gopi Engineer,1,1,1,gopiengineer@gmail.com
+376,197,Y,Stanek,Steven,262 Segovia Place,Fremont,CA,94539,Mr. Steven Stanek,0,1,1,steven@shopkick.com
+377,198,Y,Quach,Diana,900 Font Terrace,San Jose,CA,95126,Ms. Diana Quach & Guest,0,2,2,diana@shopkick.com
+378,198,Y,,,900 Font Terrace,San Jose,CA,95126,Ms. Diana Quach & Guest,0,2,2
+379,199,Y,Maebert,Robert,484 Waverley Street,Menlo Park,CA,94025,Mr. Robert Maebert & Ms. Allyson Cassis,0,2,2,robert@shopkick.com
+380,199,Y,Cassis,Allyson,484 Waverley Street,Menlo Park,CA,94025,Mr. Robert Maebert & Ms. Allyson Cassis,0,2,2
+381,200,Y,Ng,Dominique,14 Perry Ave,Menlo Park,CA,94025,Mrs. Dominique Ng & Mr. Jonathan Jew-Lim,0,2,2,dominique@shopkick.com
+382,200,Y,Jew-Lim,Jonathan,14 Perry Ave,Menlo Park,CA,94025,Mrs. Dominique Ng & Mr. Jonathan Jew-Lim,0,2,2
+383,201,Y,Roeding,Cyriac,6 LeRoy Way,Portola Valley,CA,94028,Mr. Cyriac & Mrs. Angel Roeding,0,2,2,cyriac@shopkick.com
+384,201,Y,Roeding,Angel,6 LeRoy Way,Portola Valley,CA,94028,Mr. Cyriac & Mrs. Angel Roeding,0,2,2
+385,202,Y,Emigh,Aaron,882 Bell St,East Palo Alto,CA ,94303,Mr. Aaron Emigh & Guest,0,2,2,aaron@shopkick.com
+386,202,Y,,,882 Bell St,East Palo Alto,CA ,94303,Mr. Aaron Emigh & Guest,0,2,2
+387,203,Y,Langsdorf,Margot,1880 Steiner Street Apt 408,San Francisco,CA,94115,Ms. Margot Langsdorf,0,1,1,margot@shopkick.com
+388,204,Y,Chen,Fonda,900 High School Way #2217,Mountain View,CA,94041,Ms. Fonda Chen & Guest,0,2,2,fonda@shopkick.com
+389,204,Y,,,900 High School Way #2217,Mountain View,CA,94041,Ms. Fonda Chen & Guest,0,2,2
+390,205,Y,Chang,Tim,925 Oakes Street,East Palo Alto,CA,94305,Mr. Tim Chang,0,1,1,tim@shopkick.com
