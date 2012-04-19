@@ -59,7 +59,7 @@
 
           function onSuccess(response) {
             if (response.error_message) {
-              $error.html(response.error_message);
+              $error.html(response.error_message + "<br><br> <b>Having issues submitting your RSVP?  Email us instead at rsvp@rishiandmanisha.com</b>");
               $error.show();
             } else if (response.entries.length > 1){
               showFamilyPicker(response);
@@ -81,7 +81,7 @@
             var zip = $zip.val();
 
             if (lname.length == 0 || zip.length == 0) {
-              $error.html("Please enter your last name and zip code");
+              $error.html("Please enter your last name and 5-digit zip code");
               $error.show();
               return;
             }
@@ -308,11 +308,14 @@
             <h5 class="rsvp_title" id="rsvp_title">Please RSVP by May 13,
             2012</h5>
             <div id="find_rsvp">
-              <h4 class="rsvp_title" id="rsvp_subtitle">To get started, please enter your last name and zip code:</h4>
+              <h4 class="rsvp_title" id="rsvp_subtitle">To get started, please enter your last name
+              and 5-digit zip code:</h4>
               <div class="find_rsvp_label">Last Name:</div>
-              <input class="find_rsvp_input" type="text" name="lname" id="last_name"/><br>
+              <input class="find_rsvp_input" type="text" name="lname" id="last_name"/>
+              <div class="clearboth"></div>
               <div class="find_rsvp_label">Zip Code:</div>
-              <input class="find_rsvp_input" type="text" name="zip" id="zip"/><br>
+              <input class="find_rsvp_input" type="text" name="zip" id="zip"/>
+              <div class="clearboth"></div>
               <div class="rsvp_error" id="rsvp_error"></div>
               <input class="rsvp_submit" type="submit" value="Find My Invite" id="submit"/>
             </div>

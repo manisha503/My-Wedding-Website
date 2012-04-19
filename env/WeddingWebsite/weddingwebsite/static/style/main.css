@@ -550,6 +550,7 @@ hr {
   font-size: 14px;
   padding-left: 2px;
   margin-bottom: 8px;
+  float: left;
 }
 
 .find_rsvp_label {

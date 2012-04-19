@@ -9,21 +9,14 @@ from weddingwebsite.models import MyModel, BlogEntry, User
 
 def home_page(request):
   dbsession = DBSession()
-  root = dbsession.query(MyModel).filter(MyModel.name==u'root').first()
-  if "first_visit" not in request.cookies:
-    url = request.route_url('landing')
-    return HTTPFound(location=url)
-  else:
-    dbsession = DBSession()
-    latest_entry = dbsession.query(BlogEntry).order_by(BlogEntry.id.desc()).first()
-    right_sidebar = get_renderer('templates/right_sidebar.pt').implementation()
-    blog_entry = get_renderer('templates/blog_entry.pt').implementation()
+  latest_entry = dbsession.query(BlogEntry).order_by(BlogEntry.id.desc()).first()
+  right_sidebar = get_renderer('templates/right_sidebar.pt').implementation()
+  blog_entry = get_renderer('templates/blog_entry.pt').implementation()
 
-    return {'root':root,
-            'project':'WeddingWebsite',
-            'right_sidebar':right_sidebar,
-            'blog_entry':blog_entry,
-            'latest_entry':latest_entry.to_dict()}
+  return {'project':'WeddingWebsite',
+          'right_sidebar':right_sidebar,
+          'blog_entry':blog_entry,
+          'latest_entry':latest_entry.to_dict()}
 
 def landing(request):
   if "first_visit" in request.cookies:
