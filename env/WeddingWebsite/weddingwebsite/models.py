@@ -147,6 +147,7 @@ def populate_users(session):
     else:
       # there are already users in the db; add the diffs.
       max_id = session.query(User).order_by(User.id.desc()).first().id
+      max_family_id = session.query(User).order_by(User.family_id.desc()).first().family_id
       print "USERS FOUND; adding the users greater than %d " %  max_id
       here = os.path.dirname(__file__)
       user_file = csv.DictReader(open(os.path.join(here, 'data', 'AllWebsiteUsers.csv')))
@@ -156,6 +157,24 @@ def populate_users(session):
           # if we don't have a familyName assigned to them yet, skip for now
           if not row["[familyName]"]:
             continue
+          user = generate_user(row)
+          session.add(user)
+
+      if max_id == 390:
+        new_user_file = csv.DictReader(open(os.path.join(here, 'data', 'WeddingInviteesApril22.csv')))
+        last_family_id = 0
+        for row in new_user_file:
+          family_id = int(row["[familyId]"])
+          if family_id != last_family_id:
+            last_family_id = family_id
+            max_family_id += 1
+            family_id = max_family_id
+          else:
+            family_id = max_family_id
+
+          row["[familyId]"] = str(family_id)
+          max_id += 1
+          row["[id]"] = str(max_id)
           user = generate_user(row)
           session.add(user)
 
