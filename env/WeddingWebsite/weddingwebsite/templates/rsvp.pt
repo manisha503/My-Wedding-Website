@@ -86,12 +86,6 @@
               return;
             }
 
-            if (!/^\d+$/g.test(zip)) {
-              $error.html("Invalid zip code");
-              $error.show();
-              return;
-            }
-            
             var url = "/retrieve_rsvp?last_name=" + lname + "&zip=" + zip;
 
             $.ajax({type:    "GET",
