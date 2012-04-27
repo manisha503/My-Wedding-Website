@@ -109,6 +109,11 @@
           <img src="${request.static_url('weddingwebsite:static/style/images/rishi_manisha_mehndi.JPG')}" title="Before our engagement party"/>
           <img src="${request.static_url('weddingwebsite:static/style/images/group_dance_2.JPG')}"/>
           <img src="${request.static_url('weddingwebsite:static/style/images/group_dance_1.JPG')}"/>
+          <img src="${request.static_url('weddingwebsite:static/style/images/CoutureFoto-14.jpg')}"/>
+          <img src="${request.static_url('weddingwebsite:static/style/images/CoutureFoto-31.jpg')}"/>
+          <img src="${request.static_url('weddingwebsite:static/style/images/CoutureFoto-72.jpg')}"/>
+          <img src="${request.static_url('weddingwebsite:static/style/images/CoutureFoto-75.jpg')}"/>
+          <img src="${request.static_url('weddingwebsite:static/style/images/CoutureFoto-87.jpg')}"/>
         </div>
       </div>
     </div>

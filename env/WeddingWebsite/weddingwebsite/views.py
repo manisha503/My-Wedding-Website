@@ -38,13 +38,18 @@ def blog(request):
   dbsession = DBSession()
   query = dbsession.query(BlogEntry)
   offset_date = None
+  entries = None
   if 'offset' in request.params:
     offset = request.params['offset']
     if 'dir' in request.params and request.params['dir'] == 'newer':
       query = query.filter(BlogEntry.id > offset)
+      entries = query.order_by(BlogEntry.id.asc()).limit(3).all()
+      entries.reverse()
     else:
       query = query.filter(BlogEntry.id < offset)
-  entries = query.order_by(BlogEntry.id.desc()).limit(3).all()
+      entries = query.order_by(BlogEntry.id.desc()).limit(3).all()
+  else:
+    entries = query.order_by(BlogEntry.id.desc()).limit(3).all()
 
   prev_url = None
   next_url = None

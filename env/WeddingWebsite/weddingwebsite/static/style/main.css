@@ -137,7 +137,7 @@ hr {
 
 /* LAYOUT STYLING ++++++++++++++++++++++++++++++++++++++++++++ */
 #header, #feature, #page {
-  min-width: 980px;
+  min-width: 1039px;
 }
 
 #header {
@@ -860,7 +860,7 @@ p {
 #nav {
 	font: 18px 'SeganLight', Arial, sans-serif;
 	color: #444444;
-	right: -15px;
+	right: -5px;
   bottom: 46px;
   position: absolute;
   height: 28px;
