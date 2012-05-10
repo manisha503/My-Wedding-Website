@@ -1,0 +1,6 @@
+[id],[familyId],[lastName],[firstName],[address1],[city],[state],[zip],[familyName],[displayName],[numGarba],[numWedding],[numReception],[num_rsvp_garba],[num_rsvp_wedding],[num_rsvp_reception],[accepted],[declined],[email]
+,1,Ohri,Arjun,285 Third St. #225,Cambridge,MA,02142,Mr. Arjun Ohri & Ms. Ami Dalal,,2,2,2,,,,,,
+,1,Dalal,Ami,285 Third St. #225,Cambridge,MA,02142,Mr. Arjun Ohri & Ms. Ami Dalal,,2,2,2,,,,,,
+,2,Karwa,Rajuli,P.O. Box 4205,Incline Village,NV,89450,Rajuli & John,,2,2,2,,,,,,
+,2,,John,P.O. Box 4205,Incline Village,NV,89450,Rajuli & John,,2,2,2,,,,,,
+,3,Jiwani,Sam,,,,90045,Mr. Sam Jiwani,,2,2,2,,,,,,
