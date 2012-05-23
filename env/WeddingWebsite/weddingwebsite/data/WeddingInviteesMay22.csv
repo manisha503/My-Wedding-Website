@@ -1,0 +1,3 @@
+[id],[familyId],[lastName],[firstName],[address1],[city],[state],[zip],[familyName],[displayName],[numGarba],[numWedding],[numReception],[num_rsvp_garba],[num_rsvp_wedding],[num_rsvp_reception],[accepted],[declined],[email]
+,1,Namiri,Sima,,,,90045,Ms. Sima Namiri & Mr. Houman,,0,0,2,,,,,,
+,1,,Houman,,,,90045,Ms. Sima Namiri & Mr. Houman,,0,0,2,,,,,,
