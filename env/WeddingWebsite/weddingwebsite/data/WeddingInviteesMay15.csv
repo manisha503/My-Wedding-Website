@@ -1,0 +1,10 @@
+[id],[familyId],[lastName],[firstName],[address1],[city],[state],[zip],[familyName],[displayName],[numGarba],[numWedding],[numReception],[num_rsvp_garba],[num_rsvp_wedding],[num_rsvp_reception],[accepted],[declined],[email]
+,1,Jain,Surendra,924 Via Mirada,Rancho Palos Verdes,CA,90274,Mr. Surendra & Mrs. Kala Jain & Family,,6,6,6,,,,,,
+,1,Jain,Kala,924 Via Mirada,Rancho Palos Verdes,CA,90274,Mr. Surendra & Mrs. Kala Jain & Family,,6,6,6,,,,,,
+,1,Jain,Sapna,924 Via Mirada,Rancho Palos Verdes,CA,90274,Mr. Surendra & Mrs. Kala Jain & Family,,6,6,6,,,,,,
+,1,Jain,Sheena,924 Via Mirada,Rancho Palos Verdes,CA,90274,Mr. Surendra & Mrs. Kala Jain & Family,,6,6,6,,,,,,
+,1,Jain,Ashley,924 Via Mirada,Rancho Palos Verdes,CA,90274,Mr. Surendra & Mrs. Kala Jain & Family,,6,6,6,,,,,,
+,1,Jain,Adesh,924 Via Mirada,Rancho Palos Verdes,CA,90274,Mr. Surendra & Mrs. Kala Jain & Family,,6,6,6,,,,,,
+,2,Shah,Sumedha,,,,90045,Mr. Sudhir & Ms. Sumedha Shah,,2,2,2,,,,,,
+,2,,Sudhir,,,,90045,Mr. Sudhir & Ms. Sumedha Shah,,2,2,2,,,,,,
+,3,Dhume,Sunil,,,,90045,Mr. Sunil Dhume & Family,,4,4,4,,,,,,
