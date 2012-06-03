@@ -28,7 +28,7 @@ or find one that works with your web framework.
 
 import httplib
 import time
-import oauth.oauth as oauth
+import oauth2 as oauth
 
 # settings for the local test consumer
 SERVER = 'localhost'
