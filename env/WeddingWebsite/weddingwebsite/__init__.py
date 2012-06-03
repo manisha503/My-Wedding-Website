@@ -46,5 +46,9 @@ def main(global_config, **settings):
     config.add_view('weddingwebsite.views.record_rsvp',
                     route_name='record_rsvp',
                     renderer='json')
+    config.add_route('registry', '/registry')
+    config.add_view('weddingwebsite.views.registry',
+                    route_name='registry',
+                    renderer='templates/registry.pt')
     return config.make_wsgi_app()
 

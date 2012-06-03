@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=us-ascii" />
+
+  <title>Rishi and Manisha | 6.23.12</title>
+  <link rel="stylesheet" href="${request.static_url('weddingwebsite:static/style/main.css')}" type="text/css" media="screen" />
+  <script type="text/javascript" src="${request.static_url('weddingwebsite:static/style/js/jquery-1.7.1.min.js')}"></script>
+</head>
+
+<body>
+<div metal:use-macro="main.macros['header']"></div>
+<div metal:use-macro="main.macros['feature']">
+  <h1 metal:fill-slot="feature_content" style="margin: 0px">Registry</h1>
+</div>
+<div metal:use-macro="main.macros['page']">
+<div metal:fill-slot="page_content" style="line-height: 26px">
+  <div style="height:500px">Rishi and I are so happy that you can join us for our wedding.  Having all of you there is what
+  makes this event so special and we know it takes a lot of time and money to make it out for the
+  weekend.  We really don't expect any gifts but we are registered at <a
+  href="http://www.crateandbarrel.com/Gift-Registry/Guest/View-Registry.aspx?grid=4893837"
+  style="text-decoration:underline">Crate & Barrel</a> if you would like to get us something.
+  Thanks so much and can't wait to celebrate with you!
+  </div>
+  <div class="clearboth"></div>
+</div>
+</div>
+</body>
+</html>
+

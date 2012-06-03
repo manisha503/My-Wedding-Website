@@ -129,12 +129,12 @@
             entry.family_name + '<br>';
           }
 
-          function populateNumericDropdown(select, num_invited, num_rsvp) {
+          function populateNumericDropdown(select, num_invited, num_rsvp, rsvped) {
             if (num_rsvp || num_invited) {
               html = ""
               for (var i = 0; i <= num_invited; i++) {
                 var selected = false;
-                if (i == num_rsvp || i == num_invited) {
+                if ((i == num_rsvp && rsvped) || (i == num_invited && !rsvped)) {
                   selected = true;
                 }
                 if (selected){
@@ -166,7 +166,8 @@
             } else {
               $decline.prop('checked', false);
             }
-            populateNumericDropdown($numGarba, user.num_invited_garba, user.num_rsvp_garba)
+            populateNumericDropdown($numGarba, user.num_invited_garba, user.num_rsvp_garba,
+            user.accepted || user.declined)
             if(user.num_rsvp_garba) {
               $garbaDiv.show();
             } else if (user.num_invited_garba) {
@@ -175,7 +176,7 @@
               $garbaDiv.hide();
             }
             populateNumericDropdown($numWedding, user.num_invited_wedding,
-                user.num_rsvp_wedding)
+                user.num_rsvp_wedding, user.accepted || user.declined)
             if(user.num_rsvp_wedding) {
               $weddingDiv.show();
               $numWedding.val(user.num_rsvp_wedding);
@@ -187,7 +188,7 @@
             }
             
             populateNumericDropdown($numReception, user.num_invited_reception,
-                user.num_rsvp_reception)
+                user.num_rsvp_reception, user.accepted || user.declined)
             if(user.num_rsvp_reception) {
               $receptionDiv.show();
               $numReception.val(user.num_rsvp_reception);

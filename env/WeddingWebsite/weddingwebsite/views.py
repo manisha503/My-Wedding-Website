@@ -31,6 +31,10 @@ def our_story(request):
   main = get_renderer('templates/index.pt').implementation()
   return {'main': main}
 
+def registry(request):
+  main = get_renderer('templates/index.pt').implementation()
+  return {'main': main}
+
 def blog(request):
   main = get_renderer('templates/index.pt').implementation()
   right_sidebar = get_renderer('templates/right_sidebar.pt').implementation()

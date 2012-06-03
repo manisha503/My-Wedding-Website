@@ -94,6 +94,8 @@
         <li><a href="/rsvp">RSVP</a></li>
 
         <li><a href="/blog">Blog</a></li>
+        
+        <li><a href="/registry">Registry</a></li>
       </ul>
     </div>
   </div>
@@ -130,7 +132,7 @@
             <img metal:fill-slot="entry_image" width="628" height="250" tal:attributes="src latest_entry.image_url" />
             <span metal:fill-slot="entry_title" tal:replace="latest_entry.title"></span>
             <span metal:fill-slot="entry_meta" tal:replace="latest_entry.entry_display_date"></span>
-            <span metal:fill-slot="entry_content" tal:replace="latest_entry.body"></span>
+            <span metal:fill-slot="entry_content" tal:replace="structure latest_entry.body"></span>
           </div>
           </a>
         </div>
