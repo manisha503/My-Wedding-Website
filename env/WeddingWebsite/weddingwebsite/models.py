@@ -250,6 +250,24 @@ def populate_users(session):
           user = generate_user(row)
           session.add(user)
 
+      if max_id == 478:
+        new_user_file = csv.DictReader(open(os.path.join(here, 'data', 'WeddingInviteesJune3.csv')))
+        last_family_id = 0
+        for row in new_user_file:
+          family_id = int(row["[familyId]"])
+          if family_id != last_family_id:
+            last_family_id = family_id
+            max_family_id += 1
+            family_id = max_family_id
+          else:
+            family_id = max_family_id
+
+          row["[familyId]"] = str(family_id)
+          max_id += 1
+          row["[id]"] = str(max_id)
+          user = generate_user(row)
+          session.add(user)
+
 def generate_user(row):
     id = row["[id]"]
     family_id = row["[familyId]"]
