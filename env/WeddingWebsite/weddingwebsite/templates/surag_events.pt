@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=us-ascii" />
+
+  <title>Surag and Alka | 6.1.13</title>
+  <link rel="stylesheet" href="${request.static_url('weddingwebsite:static/style/surag_main.css')}" type="text/css" media="screen" />
+  <script type="text/javascript" src="${request.static_url('weddingwebsite:static/style/js/jquery-1.7.1.min.js')}"></script>
+</head>
+
+<body>
+<div metal:use-macro="main.macros['header']"></div>
+<div metal:use-macro="main.macros['feature']">
+  <h1 metal:fill-slot="feature_content" style="margin: 0px">Wedding Events & Venue</h1>
+</div>
+<div metal:use-macro="main.macros['page']">
+  <div metal:fill-slot="page_content">
+    <div class="events">
+    <div metal:use-macro="right_sidebar.macros['right_sidebar']">
+      <h3 metal:fill-slot="left_title"></h3>
+      <div metal:fill-slot="left_content">
+        <h4>Friday, May 31, 2013</h4>
+        <h5 class="event_title">Sangeet 6pm-12am</h5>
+        <span class="event_location"> Fess Parker's Doubletree Hotel, Plaza del Sol </span>
+        <br>
+        <span class="event_text">Join us for dinner, dancing and mingling.</span>
+        <br>
+        <br>
+        <br>
+        <h4>Saturday, June 1, 2013</h4>
+        <h5 class="event_title">Wedding 2pm-4pm</h5>
+        <span class="event_location"> Fess Parker's Doubletree Hotel, Plaza del Sol </span>
+        <br>
+        <span class="event_text">Surag and Alka exchange their vows and start a new life together!</span>
+        <h5 class="event_title">Cocktail Hour 6pm-8pm</h5>
+        <span class="event_location"> Fess Parker's Doubletree Hotel, Grand Ballroom Foyer </span>
+        <br>
+        <span class="event_text">Woo hoooooooo</span>
+        <h5 class="event_title">Reception 8pm-2am</h5>
+        <span class="event_location"> Fess Parker's Doubletree Hotel, Grand Ballroom</span>
+        <br>
+        <span class="event_text">DANCE</span>
+      </div>
+      <div metal:fill-slot="sidebar_content">
+        <h3></h3>
+        <h4> All events will be held at:</h4>
+        <h5 class="event_title">Fess Parker's Doubletree Hotel</h5>
+        <span class="event_text">
+        <a href="http://www.fessparkersantabarbarahotel.com"
+        style="text-decoration:underline">http://www.fessparkersantabarbarahotel.com/</a> <br>
+        633 E. Cabrillo Blvd<br>
+        Santa Barbara, CA<br>
+        (805) 564-4333
+        <br>
+        <br>
+        The closest airports are:
+        <ul style="margin-left:25px">
+          <li>Los Angeles Airport (LAX)</li>
+          <li>Santa Barbara Municipal Airport (SBA)</li>
+          <li>Burbank Bob Hope Airport (BUR)</li>
+        </ul>
+        </span>
+        <img width="425px" height="300px"
+        src="${request.static_url('weddingwebsite:static/style/images/doubletree_venue.jpg')}" />
+        <span class="event_text">
+          <iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0"
+          marginwidth="0"
+          src="http://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=633+E.+Cabrillo+Blvd+Santa+Barbara,+CA&amp;sll=37.7577,-122.4376&amp;sspn=0.141145,0.304871&amp;ie=UTF8&amp;hq=&amp;hnear=633+E+Cabrillo+Blvd,+Santa+Barbara,+California+93103&amp;ll=34.416761,-119.672162&amp;spn=0.036819,0.076218&amp;t=m&amp;z=14&amp;iwloc=near&amp;output=embed"></iframe><br
+          /><small><a
+          href="http://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=633+E.+Cabrillo+Blvd+Santa+Barbara,+CA&amp;sll=37.7577,-122.4376&amp;sspn=0.141145,0.304871&amp;ie=UTF8&amp;hq=&amp;hnear=633+E+Cabrillo+Blvd,+Santa+Barbara,+California+93103&amp;ll=34.416761,-119.672162&amp;spn=0.036819,0.076218&amp;t=m&amp;z=14"
+          target="_blank" style="text-decoration:underline">View Larger Map</a></small>
+        </span>
+        <h5 class="event_title">Directions</h5>
+        <span class="event_text">
+        <ul style="margin-left:25px">
+        </ul>
+        <h5 class="event_title">Things to do in Santa Barbara</h5>
+        <span class="event_text">
+        <ul style="margin-left:25px">
+        </ul>
+        </span>
+      </div>
+    </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
+

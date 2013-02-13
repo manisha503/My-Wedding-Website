@@ -1,0 +1,422 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=us-ascii" />
+
+  <title>Surag and Alka | 6.1.13</title>
+  <link rel="stylesheet" href="${request.static_url('weddingwebsite:static/style/surag_main.css')}" type="text/css" media="screen" />
+  <link rel="stylesheet" href="${request.static_url('weddingwebsite:static/style/css/jquery-ui-1.8.18.custom.css')}" type="text/css" media="screen" />
+  <script type="text/javascript" src="${request.static_url('weddingwebsite:static/style/js/jquery-1.7.1.min.js')}"></script>
+  <script type="text/javascript"
+  src="${request.static_url('weddingwebsite:static/style/js/jquery-ui-1.8.18.custom.min.js')}"></script>
+  <script type="text/javascript">
+    var bridal_party_text = {
+      image_pair_1: {
+        title: 'Ana Luz Portillo Frank - Monterey Jack Cheese',
+        text: 'Ana Luz and I lived together for a year after college in the best ' +
+              'apartment ever - Gemello Village.  It was here that Ana Luz introduced ' +
+              'me to Monterey Jack cheese, so I\'m pretty sure I have her to thank for ' +
+              'my cheese addiction.  We had sworn one of us would live in that ' +
+              'apartment until we were 35... looks like that didn\'t end up happening ' +
+              'but we ARE still eating Monterey Jack cheese!'},        
+      image_pair_2: {
+        title: 'Priya Sheth - Shopping!',
+        text: 'Priya and I are childhood friends and share a love for shopping - ' +
+              'but mainly when it\'s with each other.  Somehow, every time we go ' +
+              'shopping together, we both find amazing stuff, and a lot of it.  Priya ' +
+              'is the one person who can convince me to buy anything...the best was ' +
+              'around our birthdays a couple years ago.  We both found the same top ' +
+              'and both liked it.  We ended up deciding the only reasonable thing to ' +
+              'do was to both buy the top and then give it to each other for our ' +
+              'birthdays!'},
+      image_pair_3: {
+        title: 'Rachel Cook - Monster\'s Rinc',
+        text: 'Rachel and I became friends junior year of college when we were on ' +
+              'staff together in Rinc - an all freshman dorm.  Our dorm theme that year ' +
+              'was "Monster\'s Rinc" and from painting Monster\'s Inc characters on the ' +
+              'dorm windows before orientation, through the whirlwind of the year that ' +
+              'followed, Rachel was always there for me.  We had to fill out a form ' +
+              'before that year asking us who on staff we\'d be friends with.  We both ' +
+              'chose each other and here we are!'},
+      image_pair_4: {
+        title: 'John Stamos - Mulholland Drive',
+        text: 'John Stamos was probably the coolest guy I ever knew (until I actually ' +
+              'became friends with him). He got girls, listened to cool music, and was ' +
+              'always cracking inappropriate jokes. Anything Stamos would say or do, I ' +
+              'would instantly think was the coolest thing ever. One day I got invited ' +
+              'to Stamos\' place and saw a Mulholland Drive poster in his place.  I ' +
+              'went on to tell him that I also liked the movie (even though I had never ' +
+              'heard of it). Later that week I rented the movie and realized not only ' +
+              'did I not understand the movie but I actually simply didn\'t like it. ' +
+              'Nevertheless, over the next few weeks I went on to tell everyone that ' +
+              '"Mullholand Drive" was one of my top 10 movies; I thought that would ' +
+              'make me cool...'},
+      image_pair_5: {
+        title: 'Anish Shah - Jake and Amir',
+        text: 'Anish and I became friends in San francisco in 2009ish. As soon as ' +
+              'he told me that his favorite show was "Jake and Amir", I knew he had a ' +
+              'friend. Unfortunately the show has declined in quality, it just isn\'t as ' +
+              'funny as it used to be - could this be a sign of us growing up? (I don\'t ' +
+              'think so - we still crack the same old ridiculous jokes)'},
+      image_pair_6: {
+        title: 'Sai Patil - Peanut Butter',
+        text: 'Sai is the older sister I never had.  We grew up together and the two of ' +
+              'us along with our brothers would spend weeks at each other\'s houses over ' +
+              'the summer.  One summer, we were obsessed with the card game Peanut Butter.' +
+              'In the game, you have a partner that you sit across from and in order to win, ' +
+              'you have to find a 4 of a kind and then make a sign to your partner. When your ' +
+              'partner sees the sign, they say "Peanut Butter".  But if the other team ' +
+              'catches you, you lose.  Sai and I had the BEST SIGN EVER.  We tricked Sunil ' +
+              'and Neel so much that finally we confessed - we had a blanket covering our ' +
+              'legs under the table and were kicking each other as our sign! They never ' +
+              'wanted to play after that...'},
+      image_pair_7: {
+        title: 'Karishma Shah - Kryptonite',
+        text: 'Karishma and I have been friends since we were 10.  We have gone through ' +
+              'everything together and especially since college, my second home has been ' +
+              'her apartment in SF.  Karishma is the cooler me that I wish I could be. ' +
+              'It\'s probably because of that belief that I will always go along with ' +
+              'anything she wants me to do.  She\'s my kryptonite - I\'m powerless to ' +
+              'her will.  Luckily she hasn\'t abused her power yet!'},
+      image_pair_8: {
+        title: 'Brian Yuen - Tekken Tag',
+        text: 'One of my all time favorite video games is Tekken Tag for PS2. The reason ' +
+              'liked it so much growing up was because there was a cheap move you could do ' +
+              'easily over and over again and win everytime. Brian\'s last name is "Yuen" ' +
+              'and Rishi would always choose the character named Brian so that when he won ' + 
+              'the announcer guy would say "Brian YOUWIN" which sounds like Brian\'s last ' +
+              'name. I know this story sounds really dumb but trust me, it was funny at ' +
+              'the time.'},
+      image_pair_9: {
+        title: 'Robert Steffes - Qdoba',
+        text: 'I went with Robert and his friend (who I didn\'t know) to Qdoba for dinner. ' +
+              'Robert\'s friend decided to order a water and proceeded to fill it up ' +
+              'with Coke, thus getting the Coke for free. Robert was not happy about this ' +
+              'so he told on his friend! The guy behind the counter told Robert that he ' +
+              'didn\'t really care. This was one of the weirdest experiences I\'ve ever had ' +
+              'with Robert. Robert is my business partner and we have lunch at least 200 ' +
+              'times out of the year together - I\'ll always pay for Coke.'},
+      image_pair_10: {
+        title: 'Raj Detroja - 100 MPH',
+        text: '100-100-100. When Raj got his drivers license we decided to hop into his ' +
+              'mom\'s car and go for a joy ride. Obviously we got a ticket the same day. ' +
+              'Raj went home and blamed the entire thing on me. He told his mom that I was ' +
+              'in the back seat yelling "100 100 100"... as if I was telling Raj to go 100 ' +
+              'miles per hour.'},
+      image_pair_11: {
+        title: 'Dana Schmidt - The Giver',
+        text: 'I have lived with Dana for more years than anyone else besides my immediate ' +
+              'family.  We\'ve always had a blast living together and have loved being ' +
+              'roommates (if I do say so myself).  We became especially ' +
+              'close sophomore year when we shared a room the size of a walk-in ' +
+              'closet.  Our beds were L-shape bunked.  Dana slept 5 inches from the ' +
+              'ceiling while my legs were literally under her head and I probably ended up ' +
+              'kicking the boards under her mattress at least once a week. Living in ' +
+              'those close quarters, we felt it only natural to not only share space, but ' +
+              'also to share bedtime reading.  Dana and I read the entire book The Giver ' +
+              'out loud to each other that year, switching off chapter by chapter!'},
+      image_pair_12: {
+        title: 'Tanvi Vyas - Down',
+        text: 'If I had to sum up Tanvi in one word, it would be Down.  There\'s the ' +
+              'obvious translation of her being up for trying anything new, always ' +
+              'supportive and encouraging.  There\'s the 2nd meaning of getting down - ' +
+              'Tanvi can out-dance anyone on the dance floor.  There\'s also the ' +
+              'reference to Jay Sean\'s song which we choreographed for her and Kevin\'s '+
+              'first dance.  But the Down memory I love the most is the one of me and ' +
+              'Tanvi in downtown Mountain View, blasting the song on our phones, singing ' +
+              'along and dancing down the street.  Not sure who else I could do that with.'},
+      image_pair_13: {
+        title: 'Khushali Gala - Indian People',
+        text: 'When we were 14, Khushali and I went to our first YJA (Young Jains of America) ' +
+              'conference.  We were really excited to spend a whole weekend away from home ' +
+              'with all our friends.  When we landed in Houston, there were buses ready to ' +
+              'pick us up and naturally it was a little chaotic and crowded.  In a moment of ' +
+              'confusion and exasperation Khushali turned to me and said "Wow, there are a ' + 
+              'LOT of Indian people here!"  We immediately started cracking up at how ' +
+              'ridiculous the statement was seeing as how we were at a Jain convention.  We ' +
+              'still laugh at the memory to this day.'},
+      image_pair_14: {
+        title: 'Keyur Vekaria - Sideburns',
+        text: 'Keyur is one of my oldest friends. We have known each other for ' +
+              '16 years and I have NEVER seen Keyur without sideburns. Growing up, I ' +
+              'really envied them... and I guess I still do since my beard still comes '+
+              'out patchy.'},
+      image_pair_15: {
+        title: 'Sukit Ringwala - Treo',
+        text: 'Sukit and I always wanted smartphones. Unfortunately they were expensive ' +
+              'and we are cheap. Luckily, we figured out how to get the best deal ever. ' +
+              'Step #1 Get a family plan Step #2 get 25 percent off on a corporate discount ' +
+              'Step #3 tell Sprint you want to be on the "SERO" plan. Till this day Sukit ' +
+              'and I are still PHONE BROTHERS!'},
+      image_pair_16: {
+        title: 'Kasey Alderete - Jump',
+        text: 'Kasey and I have been friends since freshman year of college and we ' +
+              'hit it off right away during orientation.  I remember being dropped off ' +
+              'by my parents and being nervous and unsure of what to do next once they ' +
+              'left.  Kasey came up to me and remembered that I was in her dinner ' +
+              'group for that day so we started talking and the rest is history.  ' +
+              'That year, Kasey and I also coined our trademark jump move - kind of like ' +
+              'our secret handshake.  1 - 2 - 3 - JUMP!'},
+      image_pair_17: {
+        title: 'Kjerstin Barrett - World\'s "Gratest" Friend',
+        text: 'Kjerstin and I have been friends since Kindergarten.  We went to elementary, ' +
+              'middle and high school together and were inseparable throughout.  In 2nd (or ' + 
+              'maybe it was 4th?) grade, we had an assignment in class to decorate pennants.  ' +
+              'I can\'t even remember what I made, but Kjerstin made one for me that said ' + 
+              '"World\'s Gratest Friend" and I was so touched!  I put it up on the wall in ' + 
+              'my room and it is STILL there to this day!  We laugh about how gratest is ' +
+              'misspelled and how her handwriting was already so perfect at that age.'},
+      image_pair_18: {
+        title: 'Vishal Ringwala - T-shirt',
+        text: 'I would always stay with Vishal when visiting Madison. One thing I would never ' +
+              'do is pack for the right amount of days. This led to me always "borrowing" ' +
+              'Vishal\'s clothes...and by "borrowing" I mean keeping.  Thanks Vishal!'},
+      image_pair_19: {
+        title: 'Dharmesh Patel - Pink Shirt',
+        text: 'One day Dharmesh decided to wear a pink shirt. He told me that it would be a ' +
+              'great way to get women to talk to us. I didn\'t believe him, mainly because ' +
+              'Dharmesh was also wearing a fedora at the time. I bet Dharmesh that if he ' +
+              'could get even one girl to talk to him because of his pink shirt, then I would ' +
+              'also buy a pink shirt. Turns out I was wrong, very wrong. That day Dharmesh ' +
+              'got more girls to talk to him than ever before. Ever since that day, Dharmesh ' +
+              'busts out his pink shirt every weekend.  And no, I never bought one.'},
+      image_pair_20: {
+        title: 'Mayank Kansal - Slate',
+        text: 'The only person I can never impress is my brother-in-law Mayank.  ' +
+              'Somehow he always sees through my grand ideas of world domination. Mayank ' +
+              'is an avid news reader so I thought I\'d be able to impress him by getting ' +
+              'one of my articles in Yahoo! Money or USNews. After a few months of ' +
+              'shmoozing, I finally got my articles in those two publications. When I ' +
+              'showed Mayank, he told me "I\'ll be impressed when you get into Slate.com ' +
+              '(Mayank\'s favorite news website)". It is now my #1 goal to get something ' +
+              'published on Slate...anyone have any connections?'}
+    }; 
+    
+    (function ($) {
+      $.fn.setupClick = function(popup) {
+        return this.each(function() {
+          var $img1  = $(this).find("#img1");
+          var $img2  = $(this).find("#img2");
+          var $popupImg = popup.find("#popup_image");
+          var $popupText = popup.find("#popup_text");
+          var that = this;
+
+          $img1.click(function(){
+            $img1.hide();
+            $img2.show();
+            
+            var title = bridal_party_text[$(that).attr('id')]['title']; 
+            var text = bridal_party_text[$(that).attr('id')]['text']; 
+            $popupImg.attr("src", $img2.attr("src"));
+            $popupText.html(text);
+            popup.dialog('option', 'title', title);
+            popup.dialog('open');
+          });
+
+          $img2.click(function(){
+            $img2.hide();
+            $img1.show();
+          });
+
+          popup.click(function(){
+            popup.dialog('close');
+          });
+
+          
+        });
+      }
+
+    })(jQuery);
+
+
+    $(window).load(function () {
+      var $popup = $("div.ui-dialog")
+      $popup.dialog({autoOpen:false, modal:true, dialogClass:'alert', width:600,height:380});
+      $("div.image_pair").setupClick($popup);
+    });
+  </script>
+</head>
+
+<body>
+<div style="display:none" class="ui-dialog ui-widget ui-widget-content ui-corner-all">
+  <div class="ui-dialog-content ui-widget-content" id="dialog">
+    <img class="popup_image" id="popup_image"/>
+    <div class="popup_text" id="popup_text">
+    </div>
+  </div>
+</div>
+<div metal:use-macro="main.macros['header']"></div>
+<div metal:use-macro="main.macros['feature']">
+  <h1 metal:fill-slot="feature_content" style="margin: 0px">Our Family & Bridal Party</h1>
+</div>
+<div metal:use-macro="main.macros['page']">
+<div metal:fill-slot="page_content" style="line-height: 26px">
+  <div class="family_container">
+    <div style="float:left" class="family_text">
+      <h3 class="family_title">Parekh Family</h3>
+      <h5 class="family_details"> Manisha's family is from sunny Los Angeles, CA.  Her parents,
+      Dilip and Sushama Parekh, always encouraged her and her younger brother Sunil to try new
+      activities and keep their brains active.  Instead of playing Hungry Hungry Hippos when they
+      were growing up, their family game was MindTrap - a game of solving puzzles and brain teasers.
+      Want to try one out?<br>
+      <span style="font-size: 16px; line-height:18px; font-style:italic">
+      A black dog stands in the middle of an intersection in a town painted black. None of the
+      street lights are working due to a power failure caused by a local storm. A car with two
+      broken headlights drives towards the dog but turns in time to avoid hitting him. How could the
+      driver have seen the dog in time?</span><br>
+      <br>Their favorite thing about Rishi is that he loves making smoothies.  </h5>
+    </div>
+    <div style="float:right; text-align:right" class="family_text">
+      <h3 class="family_title">Shah Family</h3>
+      <h5 class="family_details">Rishi has one amazing mom - Jayshree, one super cool sister -
+      Reena, the cutest niece - Suriana and the smartest brother in law - Mayank.  Rishi's family is
+      from Chicago, IL where they grew up as snow loving people.  Their family mascot is <a
+      href="http://www.tycollector.com/buddies/humphrey-9307.htm" style="text-decoration:underline">Humphrey the camel</a> who protects the Shah Family house at night.<br> <br>Their favorite thing about
+      Manisha is that she can put up with Rishi's non-stop goofy personality.</h5>
+    </div>
+    <div class="clearboth"></div>
+    <div class="family">
+      <img src="${request.static_url('weddingwebsite:static/style/images/parekh_family.jpg')}" />
+    </div>
+    <div class="family">
+      <img src="${request.static_url('weddingwebsite:static/style/images/shah_family.jpg')}" />
+    </div>
+  </div>
+  <div class="clearboth"></div>
+  <div class="bridesmaids_groomsmen_container">
+    <h3 class="bridal_party_title">Bridesmaids and Groomsmen</h3>
+    <div class="bridal_party_text">We thought we'd mix it up and help you get to know our
+    bridesmaids and groomsmen a little better.  So instead of just showing you who they are, see if
+    you can guess who's who based on the pictures below!<br>Click the image to reveal the answer!</div>
+    <div class="clearboth"></div>
+    <div class="image_pair" id="image_pair_1">
+      <img id="img2" class="bridal_party_pic"
+      src="${request.static_url('weddingwebsite:static/style/images/bridesmaids/analuz.jpg')}" />
+      <img id="img1" class="bridal_party_pic"
+      src="${request.static_url('weddingwebsite:static/style/images/bridesmaids/montereyjack.jpg')}" />
+    </div>
+    <div class="image_pair" id="image_pair_2">
+      <img id="img1" class="bridal_party_pic"
+      src="${request.static_url('weddingwebsite:static/style/images/bridesmaids/shopping.jpg')}" />
+      <img id="img2" class="bridal_party_pic"
+      src="${request.static_url('weddingwebsite:static/style/images/bridesmaids/priya.jpg')}" />
+    </div>
+    <div class="image_pair" id="image_pair_3">
+      <img id="img1" class="bridal_party_pic"
+      src="${request.static_url('weddingwebsite:static/style/images/bridesmaids/monstersing.jpg')}" />
+      <img id="img2" class="bridal_party_pic"
+      src="${request.static_url('weddingwebsite:static/style/images/bridesmaids/rachel.jpg')}" />
+    </div>
+    <div class="image_pair" id="image_pair_4">
+      <img id="img1" class="bridal_party_pic"
+      src="${request.static_url('weddingwebsite:static/style/images/groomsmen/mulholland-drive-1.jpg')}" />
+      <img id="img2" class="bridal_party_pic"
+      src="${request.static_url('weddingwebsite:static/style/images/groomsmen/JohnStamos.jpg')}" />
+    </div>
+    <div class="image_pair" id="image_pair_5">
+      <img id="img1" class="bridal_party_pic"
+      src="${request.static_url('weddingwebsite:static/style/images/groomsmen/JakeAndAmirDot.jpg')}" />
+      <img id="img2" class="bridal_party_pic"
+      src="${request.static_url('weddingwebsite:static/style/images/groomsmen/AnishShah.jpg')}" />
+    </div>
+    <div class="clearboth"></div>
+    <div class="image_pair" id="image_pair_6">
+      <img id="img1" class="bridal_party_pic"
+      src="${request.static_url('weddingwebsite:static/style/images/bridesmaids/peanutbutter.jpg')}" />
+      <img id="img2" class="bridal_party_pic"
+      src="${request.static_url('weddingwebsite:static/style/images/bridesmaids/sai.jpg')}" />
+    </div>
+    <div class="image_pair" id="image_pair_7">
+      <img id="img1" class="bridal_party_pic"
+      src="${request.static_url('weddingwebsite:static/style/images/bridesmaids/kryptonite.jpg')}" />
+      <img id="img2" class="bridal_party_pic"
+      src="${request.static_url('weddingwebsite:static/style/images/bridesmaids/karishma.jpg')}" />
+    </div>
+    <div class="image_pair" id="image_pair_8">
+      <img id="img1" class="bridal_party_pic"
+      src="${request.static_url('weddingwebsite:static/style/images/groomsmen/tekkentag.jpg')}" />
+      <img id="img2" class="bridal_party_pic"
+      src="${request.static_url('weddingwebsite:static/style/images/groomsmen/BrianYuen.jpg')}" />
+    </div>
+    <div class="image_pair" id="image_pair_9">
+      <img id="img1" class="bridal_party_pic"
+      src="${request.static_url('weddingwebsite:static/style/images/groomsmen/qdoba.jpg')}" />
+      <img id="img2" class="bridal_party_pic"
+      src="${request.static_url('weddingwebsite:static/style/images/groomsmen/RobertSteffes.jpg')}" />
+    </div>
+    <div class="image_pair" id="image_pair_10">
+      <img id="img1" class="bridal_party_pic"
+      src="${request.static_url('weddingwebsite:static/style/images/groomsmen/100mph.jpg')}" />
+      <img id="img2" class="bridal_party_pic"
+      src="${request.static_url('weddingwebsite:static/style/images/groomsmen/RajDetroja.jpg')}" />
+    </div>
+    <div class="clearboth"></div>
+    <div class="image_pair" id="image_pair_11">
+      <img id="img1" class="bridal_party_pic"
+      src="${request.static_url('weddingwebsite:static/style/images/bridesmaids/thegiver.jpg')}" />
+      <img id="img2" class="bridal_party_pic"
+      src="${request.static_url('weddingwebsite:static/style/images/bridesmaids/dana.jpg')}" />
+    </div>
+    <div class="image_pair" id="image_pair_12">
+      <img id="img1" class="bridal_party_pic"
+      src="${request.static_url('weddingwebsite:static/style/images/bridesmaids/jaysean.jpg')}" />
+      <img id="img2" class="bridal_party_pic"
+      src="${request.static_url('weddingwebsite:static/style/images/bridesmaids/tanvi.jpg')}" />
+    </div>
+    <div class="image_pair" id="image_pair_13">
+      <img id="img1" class="bridal_party_pic"
+      src="${request.static_url('weddingwebsite:static/style/images/bridesmaids/indianpeople.jpg')}" />
+      <img id="img2" class="bridal_party_pic"
+      src="${request.static_url('weddingwebsite:static/style/images/bridesmaids/khushali.jpg')}" />
+    </div>
+    <div class="image_pair" id="image_pair_14">
+      <img id="img1" class="bridal_party_pic"
+      src="${request.static_url('weddingwebsite:static/style/images/groomsmen/sideburns.jpg')}" />
+      <img id="img2" class="bridal_party_pic"
+      src="${request.static_url('weddingwebsite:static/style/images/groomsmen/KeyurVekaria.jpg')}" />
+    </div>
+    <div class="image_pair" id="image_pair_15">
+      <img id="img1" class="bridal_party_pic"
+      src="${request.static_url('weddingwebsite:static/style/images/groomsmen/treo.jpg')}" />
+      <img id="img2" class="bridal_party_pic"
+      src="${request.static_url('weddingwebsite:static/style/images/groomsmen/SukitRingwala.jpg')}" />
+    </div>
+    <div class="clearboth"></div>
+    <div class="image_pair" id="image_pair_16">
+      <img id="img1" class="bridal_party_pic"
+      src="${request.static_url('weddingwebsite:static/style/images/bridesmaids/jump.jpg')}" />
+      <img id="img2" class="bridal_party_pic"
+      src="${request.static_url('weddingwebsite:static/style/images/bridesmaids/kasey.jpg')}" />
+    </div>
+    <div class="image_pair" id="image_pair_17">
+      <img id="img1" class="bridal_party_pic"
+      src="${request.static_url('weddingwebsite:static/style/images/bridesmaids/worldsgratestfriend.jpg')}" />
+      <img id="img2" class="bridal_party_pic"
+      src="${request.static_url('weddingwebsite:static/style/images/bridesmaids/kjerstin.jpg')}" />
+    </div>
+    <div class="image_pair" id="image_pair_18">
+      <img id="img1" class="bridal_party_pic"
+      src="${request.static_url('weddingwebsite:static/style/images/groomsmen/t-shirt.jpg')}" />
+      <img id="img2" class="bridal_party_pic"
+      src="${request.static_url('weddingwebsite:static/style/images/groomsmen/VishalRingwala.jpg')}" />
+    </div>
+    <div class="image_pair" id="image_pair_19">
+      <img id="img1" class="bridal_party_pic"
+      src="${request.static_url('weddingwebsite:static/style/images/groomsmen/pinkshirt.jpg')}" />
+      <img id="img2" class="bridal_party_pic"
+      src="${request.static_url('weddingwebsite:static/style/images/groomsmen/DharmeshPatel.jpg')}" />
+    </div>
+    <div class="image_pair" id="image_pair_20">
+      <img id="img1" class="bridal_party_pic"
+      src="${request.static_url('weddingwebsite:static/style/images/groomsmen/slate.jpg')}" />
+      <img id="img2" class="bridal_party_pic"
+      src="${request.static_url('weddingwebsite:static/style/images/groomsmen/MayankKansal.jpg')}" />
+    </div>
+  </div>
+</div>
+</div>
+</body>
+</html>

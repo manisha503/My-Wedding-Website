@@ -1,0 +1,147 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=us-ascii" />
+
+  <title>Surag and Alka | 6.1.13</title>
+  <link rel="stylesheet" href="${request.static_url('weddingwebsite:static/style/surag_main.css')}" type="text/css" media="screen" />
+  <script type="text/javascript" src="${request.static_url('weddingwebsite:static/style/js/jquery-1.7.1.min.js')}"></script>
+</head>
+
+<body>
+<div metal:use-macro="main.macros['header']"></div>
+<div metal:use-macro="main.macros['feature']">
+  <h1 metal:fill-slot="feature_content" style="margin: 0px">Our Story</h1>
+</div>
+<div metal:use-macro="main.macros['page']">
+<div metal:fill-slot="page_content" style="line-height: 26px">
+  <h3 class="story_heading">How We Met</h3>
+  <div>
+  Rishi and I met at Jaina in 2009.  Our first conversation was about the Palm Treo - he had one!
+  I was immediately intrigued.  The follow-on conversations about Richard Branson, Neckar Island and
+  the Gmail 'lantern' (the Google Labs icon you used to see in Gmail), were perfect indications of
+  Rishi's ability to carry on a conversation about ANYTHING which I felt was just perfect for me.
+  We're truly lucky to have found each other and I can't wait for the years ahead!</div>
+  <div class="clearboth"></div>
+  <div style="float:right">~ Manisha</div>
+  <div class="clearboth"></div>
+  <div class="story_spacer"></div>
+  <h3 class="story_heading">Our Proposal</h3>
+  <div>
+  Manisha and I got engaged on Saturday August 13th, 2011! I wanted to share with you one of my
+  greatest successes - getting Manisha to marry me ;)</div>
+  <div class="story_spacer"></div>
+  <h4 class="story_heading">The Idea</h4>
+  <div>
+  Manisha is a big fan of treasure hunts, so I decided to create a fake scavenger hunt across San
+  Francisco that incorporated her favorite things:
+    <ul style="margin-left: 40px">
+      <li>Her friends</li>
+      <li>Smartphones (nerd alert!)</li>
+      <li>Cheese</li>
+      <li>Dancing</li>
+      <li>Puzzles</li>
+      <li>and Me! (I was hoping to find this out for sure)</li>
+    </ul>
+  </div>
+  <div class="story_spacer"></div>
+  <h3 class="story_heading">The 7 Step Plan</h3>
+  <a title="SF Hunt" href="http://www.SFHunt.com" target="_blank"><img class="alignnone"
+  title="SF Hunt Image"
+  src="https://img.skitch.com/20120108-e4grj41dwt444fr9j6gji53y8b.png" alt="" width="578"
+  height="634" /></a>
+  <ol style="margin-left: 40px">
+    <li>Build a website: <a href="http://www.sfhunt.com/" target="_blank">http://www.SFHunt.com</a> (see above)</li>
+    <li>Have her friend Judy ask her to do the treasure hunt with her</li>
+    <li>Make a smartphone based treasure hunt - each clue would be emailed to the team</li>
+    <li>They will need at least 8 members to be on the team so "magically" all her close friends
+    will also sign up (a few of mine too!)</li>
+    <li>Each clue will be something very specific to Manisha, therefore she will
+    be the only one that will be able to solve the clues easily. Think "Slumdog Millionaire for Manisha"</li>
+    <li>The only way to get the next clue is if they email "The Company"
+    (SFHunt) picture proof of the entire team solving the clue.</li>
+    <li>The last clue will lead Manisha to me. I will be in a suit with an engagement ring
+    and will propose to her then.</li>
+  </ol>
+  <div class="story_spacer"></div>
+  <h3 class="story_heading">How It Went Down</h3>
+  <h4 class="story_heading">2 Weeks Before:</h4>
+  <div>Judy invited Manisha to a treasure hunt via email. Literally one
+  minute later, Manisha forwarded me and her friends the email and asked if
+  we wanted to join in on the fun.</div>
+  <div></div>
+  <div><em>Success! The Plan was in motion. </em></div>
+  <div class="story_spacer"></div>
+  <h4 class="story_heading">The Night Before:</h4>
+  <div>I emailed the entire group from <a href="mailto:admin@sfhunt.com"
+  target="_blank">admin@sfhunt.com</a> so it looked like a  real company and
+  reminded the entire team to get ready.
+  </div>
+  <div class="story_spacer"></div>
+  <h4 class="story_heading">The Day Of THE TREASURE HUNT:</h4>
+  <div>Everyone met up at Dolores Park at 10a (30 minutes before the
+  Treasure Hunt began).  We got our first clue at 10:30 and the Hunt began!</div>
+  <div class="story_spacer"></div>
+  <div>Manisha was under the impression that "SF Hunt Admin" was sending out
+  the clues, but really it was my friend Shalin who was sitting at a local
+  Starbucks sending out pre-drafted emails.</div>
+  <div class="story_spacer"></div>
+  <div>There were 6 clues total.  The first 5 were completed with all of us
+  together as a team.  The great thing was that no one else knew the
+  locations that the clues led to so even her friends were legitimately
+  trying to solve each clue.  This definitely helped make the hunt more
+  believable.</div>
+  <div class="story_spacer"></div>
+  <div>Throughout the day, SF Hunt Admin would send us emails letting us
+  know what place we were in!  Manisha was under the impression that there
+  were 7 other teams competing.  After the first clue, our team was in 6th
+  place... then 4th... then 3rd.  Everyone was getting excited about the
+  possibility of winning and that was pumping Manisha up even more.</div>
+  <div class="story_spacer"></div>
+  <div>The 6th clue had everyone split up into pairs.  Priya (Manisha's good
+  friend from childhood) and Manisha had to go to the Palace of Fine Arts
+  for their clue.</div>
+  <div class="story_spacer"></div>
+  <div>While Priya and Manisha were heading towards The Palace of Fine
+  Arts, my roommate Anish picked me up in his getaway car with my suit and
+  drove me there as well.</div>
+  <div class="story_spacer"></div>
+  <div>Priya did a great job delaying Manisha by stopping to use the
+  restroom, taking some extra turns and driving slowly. This really helped
+  me get in position for my final proposal.</div>
+  <div class="story_spacer"></div>
+  <div>The last email said "Congrats!  Your team is currently in first
+  place!  Send one person to the rotunda at Palace of Fine Arts to claim
+  your prize".  At this point, Priya told Manisha to "Go Go Go!" and she
+  started running to the rotunda.</div>
+  <div class="story_spacer"></div>
+  <h3 class="story_heading">The Proposal</h3>
+  <div>I was in a suit and Anish was ready with his camera.  Anish saw
+  Manisha run into the rotunda and gave me a signal to go ahead.  I
+  started playing music from my phone and ran in to give her a big
+  hug.</div>
+  <div class="story_spacer"></div>
+  <div>Manisha was SO SHOCKED to see me standing there in a suit.  I had
+  to get her to stop jumping up and down for a second so that I could
+  propose!  And she said yes.  :)</div>
+  <div class="story_spacer"></div>
+  <div><img class="alignnone" title="Group Picture" src="${request.static_url('weddingwebsite:static/style/images/group_pic_proposal.png')}" alt="" width="669" height="515" /></div>
+  <div class="story_spacer"></div>
+  <div>After a few minutes, Manisha's brother and all her friends came
+  rushing out and we celebrated together.  THANKS to everyone who
+  participated on that day - Anish, Judy, Andy, Ursula, Karishma, Priya,
+  Robert, Shalin, Jamie, Sunil, Kaushal.</div>
+  <div class="story_spacer"></div>
+  <div>Special thanks to Anish Shah (my amazing roommate) for
+  masterminding the entire operation. Also thanks to Manisha for saying
+  yes :)</div>
+  <div class="clearboth"></div>
+  <div style="float:right">~ Rishi</div>
+  <div class="clearboth"></div>
+</div>
+</div>
+</body>
+</html>
+

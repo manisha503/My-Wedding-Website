@@ -1,0 +1,396 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=us-ascii" />
+
+  <title>Surag and Alka | 6.1.13</title>
+  <link rel="stylesheet" href="${request.static_url('weddingwebsite:static/style/surag_main.css')}" type="text/css" media="screen" />
+  <script type="text/javascript" src="${request.static_url('weddingwebsite:static/style/js/jquery-1.7.1.min.js')}"></script>
+  <script type="text/javascript">
+    (function ($) {
+      $.fn.setupClick = function() {
+        return this.each(function() {
+          var $lname    = $(this).find("#last_name"),
+              $zip      = $(this).find("#zip"),
+              $submit   = $(this).find("#submit"),
+              $error    = $(this).find("#rsvp_error"),
+              $title    = $(this).find("#rsvp_title"),
+              $findDiv  = $(this).find("#find_rsvp"),
+              // for rsvp choose family
+              $chooseFamilyDiv = $(this).find("#rsvp_choose_family"),
+              $chooseSubmit    = $(this).find("#choose_submit"),
+              $chooseChoices   = $(this).find("#choose_family_choices"),
+              $chooseError     = $(this).find("#rsvp_error_2"),
+              // for retrieved rsvp info
+              $retrievedDiv = $(this).find("#retrieved_rsvp_info"),
+              $rsvpPrompt   = $(this).find("#retrieved_rsvp_prompt"),
+              $garbaDiv     = $(this).find("#garba"),
+              $numGarba     = $(this).find("#numGarba"),
+              $weddingDiv   = $(this).find("#wedding"),
+              $numWedding   = $(this).find("#numWedding"),
+              $receptionDiv = $(this).find("#reception"),
+              $numReception = $(this).find("#numReception"),
+              $rsvpError    = $(this).find("#rsvp_error_3"),
+              $rsvpSubmit   = $(this).find("#submit_2"),
+              $name         = $(this).find("#name"),
+              $accept       = $(this).find("#accept"),
+              $decline      = $(this).find("#decline"),
+              // for thanks section
+              $thanksDiv    = $(this).find("#thanks"),
+              $thanksMsg    = $(this).find("#thanks_msg"),
+              $changeRSVP   = $(this).find("#submit_3");
+
+          var user;
+          $submit.click(handleSearch);
+          $rsvpSubmit.click(handleSubmitRSVP);
+          $lname.keydown(function(e) {
+            if (e.keyCode == 13) {
+              handleSearch();
+            }
+          });
+          $zip.keydown(function(e) {
+            if (e.keyCode == 13) {
+              handleSearch();
+            }
+          });
+
+          function onSuccess(response) {
+            if (response.error_message) {
+              $error.html(response.error_message + "<br><br> <b>Having issues submitting your RSVP?  Email us instead at rsvp@rishiandmanisha.com</b>");
+              $error.show();
+            } else if (response.entries.length > 1){
+              showFamilyPicker(response);
+            } else {
+              showRetrievedRSVPInfo(response);
+            }
+          }
+
+          function onError() {
+            $error.html("An error occurred retrieving inviation for " + $lname.val() + ", " +
+                        $zip.val());
+            $error.show();
+          }
+
+          function handleSearch() {
+            $error.html("");
+            $error.hide();
+            var lname = $lname.val();
+            var zip = $zip.val();
+
+            if (lname.length == 0 || zip.length == 0) {
+              $error.html("Please enter your last name and 5-digit zip code");
+              $error.show();
+              return;
+            }
+
+            var url = "/retrieve_rsvp?last_name=" + lname + "&zip=" + zip;
+
+            $.ajax({type:    "GET",
+                    url:     url,
+                    success: onSuccess,
+                    error:   onError});
+          }
+          
+          function handleFamilyChoice() {
+            var inputs = $chooseChoices.find("input:checked");
+            if (inputs.length < 1) {
+              $chooseError.html("Please select a name in order to proceed");
+              $chooseError.show();
+              return;
+            }
+            var url = "/retrieve_rsvp?user_id=" + inputs[0].value;
+
+            $.ajax({type:    "GET",
+                    url:     url,
+                    success: onSuccess,
+                    error:   onError});
+
+          }
+
+          function showFamilyPicker(response) {
+            $chooseFamilyDiv.show();
+            $retrievedDiv.hide();
+            $findDiv.hide();
+            
+            html = ""
+            for (var i = 0; i < response.entries.length; i++) {
+              html += createRadioInput(response.entries[i]);
+            }
+
+            $chooseChoices.html(html);
+            $chooseSubmit.click(handleFamilyChoice);
+          }
+
+          function createRadioInput(entry) {
+            return '<input type="radio" name="user_id" value="' + entry.id + '"/>' +
+            entry.family_name + '<br>';
+          }
+
+          function populateNumericDropdown(select, num_invited, num_rsvp, rsvped) {
+            if (num_rsvp || num_invited) {
+              html = ""
+              for (var i = 0; i <= num_invited; i++) {
+                var selected = false;
+                if ((i == num_rsvp && rsvped) || (i == num_invited && !rsvped)) {
+                  selected = true;
+                }
+                if (selected){
+                  html += '<option value="' + i + '" selected="selected">' + i + '</option>';
+                } else {
+                  html += '<option value="' + i + '">' + i + '</option>';
+                }
+              }
+              select.html(html)
+            }
+          }
+
+          function showRetrievedRSVPInfo(response) {
+            user = response.entries[0]
+            $retrievedDiv.show();
+            $chooseFamilyDiv.hide();
+            $findDiv.hide();
+            $name.html(user.family_name);
+            var currentRSVPMsg = "Your current RSVP is shown below.  Feel free to make changes:"
+            if(user.accepted) {
+              $rsvpPrompt.html(currentRSVPMsg);
+              $accept.prop('checked', true);
+            } else {
+              $accept.prop('checked', false);
+            }
+            if(user.declined) {
+              $rsvpPrompt.html(currentRSVPMsg);
+              $decline.prop('checked', true);
+            } else {
+              $decline.prop('checked', false);
+            }
+            populateNumericDropdown($numGarba, user.num_invited_garba, user.num_rsvp_garba,
+            user.accepted || user.declined)
+            if(user.num_rsvp_garba) {
+              $garbaDiv.show();
+            } else if (user.num_invited_garba) {
+              $garbaDiv.show();
+            } else {
+              $garbaDiv.hide();
+            }
+            populateNumericDropdown($numWedding, user.num_invited_wedding,
+                user.num_rsvp_wedding, user.accepted || user.declined)
+            if(user.num_rsvp_wedding) {
+              $weddingDiv.show();
+              $numWedding.val(user.num_rsvp_wedding);
+            } else if (user.num_invited_wedding) {
+              $weddingDiv.show();
+              $numWedding.val(user.num_invited_wedding);
+            } else {
+              $weddingDiv.hide();
+            }
+            
+            populateNumericDropdown($numReception, user.num_invited_reception,
+                user.num_rsvp_reception, user.accepted || user.declined)
+            if(user.num_rsvp_reception) {
+              $receptionDiv.show();
+              $numReception.val(user.num_rsvp_reception);
+            } else if (user.num_invited_reception) {
+              $receptionDiv.show();
+              $numReception.val(user.num_invited_reception);
+            } else {
+              $receptionDiv.hide();
+            }
+          }
+
+          function handleSubmitRSVP() {
+            if (!$accept.attr('checked') && !$decline.attr('checked')) {
+              $rsvpError.html("Please choose either the accept or decline option");
+              $rsvpError.show();
+              return;
+            }
+            
+            var numRsvpGarba = $numGarba.val();
+            if (numRsvpGarba == null) {
+              numRsvpGarba = 0;
+            }
+            var numRsvpWedding = $numWedding.val();
+            if (numRsvpWedding == null) {
+              numRsvpWedding = 0;
+            }
+            var numRsvpReception = $numReception.val();
+            if (numRsvpReception == null) {
+              numRsvpReception = 0;
+            }
+
+            var accepted = 0;
+            if ($accept.attr('checked')) {
+              accepted = 1;
+            }
+             
+            var url = "/record_rsvp?family_id=" + user.family_id + "&num_garba=" + numRsvpGarba +
+            "&num_wedding=" + numRsvpWedding + "&num_reception=" + numRsvpReception + "&accepted=" +
+            accepted;
+
+            $.ajax({type:    "GET",
+                    url:     url,
+                    success: onRecordSuccess,
+                    error:   onRecordError});
+
+          }
+          
+          function onRecordSuccess(response) {
+            if (response.error_message) {
+              $rsvpError.html(response.error_message);
+              $rsvpError.show();
+            } else {
+              var msg = "Thanks for your RSVP!<br>"
+              if (!response.accepted) {
+                $thanksMsg.html(msg + "Sorry to see that you can't make it.  We will miss you!");
+              }
+              else {
+                var confirmation = "";
+                if (response.num_rsvp_garba) {
+                  confirmation += response.num_rsvp_garba + " for the Garba <br>";
+                }
+                if (response.num_rsvp_wedding) {
+                  confirmation += response.num_rsvp_wedding + " for the Wedding <br>"
+                }
+                if (response.num_rsvp_reception) {
+                  confirmation += response.num_rsvp_reception + " for the Reception <br>"
+                }
+                $thanksMsg.html(msg + confirmation + "We're thrilled you can join us!");
+              }
+
+              $thanksDiv.show();
+              $title.hide();
+              $retrievedDiv.hide();
+              $chooseFamilyDiv.hide();
+              $findDiv.hide();
+              $changeRSVP.click(handleChangeRSVP);
+            }
+          }
+
+          function onRecordError() {
+            $rsvpError.html("An error occurred recording your RSVP.  Please try again later.");
+            $rsvpError.show();
+          }
+
+          function handleChangeRSVP() {
+            location.reload();
+          }
+        
+        });
+      }
+
+    })(jQuery);
+
+    $(document).ready(function() {
+      $("div.rsvp_section").setupClick();
+    });
+  </script>
+</head>
+
+<body>
+<div metal:use-macro="main.macros['header']"></div>
+<div metal:use-macro="main.macros['feature']">
+  <h1 metal:fill-slot="feature_content" style="margin: 0px">RSVP & Book Hotel</h1>
+</div>
+<div metal:use-macro="main.macros['page']">
+  <div metal:fill-slot="page_content" style="line-height: 26px">
+    <div class="rsvp">
+      <div metal:use-macro="right_sidebar.macros['right_sidebar']">
+        <h3 metal:fill-slot="left_title">RSVP</h3>
+        <div metal:fill-slot="left_content">
+          <div class="rsvp_section">
+            <h5 class="rsvp_title" id="rsvp_title">Please RSVP by May 13,
+            2012</h5>
+            <div id="find_rsvp">
+              <h4 class="rsvp_title" id="rsvp_subtitle">To get started, please enter your last name
+              and 5-digit zip code:</h4>
+              <div class="find_rsvp_label">Last Name:</div>
+              <input class="find_rsvp_input" type="text" name="lname" id="last_name"/>
+              <div class="clearboth"></div>
+              <div class="find_rsvp_label">Zip Code:</div>
+              <input class="find_rsvp_input" type="text" name="zip" id="zip"/>
+              <div class="clearboth"></div>
+              <div class="rsvp_error" id="rsvp_error"></div>
+              <input class="rsvp_submit" type="submit" value="Find My Invite" id="submit"/>
+            </div>
+            <div id="rsvp_choose_family">
+              <h5 class="rsvp_title" id="choose_family_text">That's a popular last name and zip!  Please
+              select your name below:</h5>
+              <div id="choose_family_form">
+                <div id="choose_family_choices">
+                </div>
+                <div class="rsvp_error" id="rsvp_error_2"></div>
+                <input class="rsvp_submit" type="submit" value="Next" id="choose_submit" />
+              </div>
+            </div>
+            <div id="retrieved_rsvp_info">
+              <div style="font-size: 24px; margin-top:20px" class="rsvp_name" id="invited">You're invited!</div>
+              <div class="rsvp_name" id="name">Mr. Rishi Shah</div>
+              <h5 style="margin-top: 20px" class="rsvp_title" id="retrieved_rsvp_prompt">Please
+              choose one of the following options:</h5>
+              <input class="rsvp_input" type="radio" name="accept_decline" id="accept">
+              Gladly accept, can't wait!</input>
+              <div style="margin-left: 30px"> 
+                <div id="garba">
+                  <select class="rsvp_select" name="numGarba" id="numGarba">
+                  </select>
+                  <label class="rsvp_label" for="numGarba">will attend the Garba</label>
+                </div>
+                <div id="wedding">
+                  <select class="rsvp_select" name="numWedding" id="numWedding">
+                  </select>
+                  <label class="rsvp_label" for="numWedding">will attend the Wedding</label>
+                </div>
+                <div id="reception">
+                  <select class="rsvp_select" name="numReception" id="numReception">
+                  </select>
+                  <label class="rsvp_label" for="numReception">will attend the Reception</label>
+                </div>
+              </div><br>
+              <input class="rsvp_input" type="radio" name="accept_decline" id="decline">
+              Regretfully decline but will be there in spirit!</input> 
+              <div class="rsvp_error" id="rsvp_error_3"></div>
+              <input class="rsvp_submit" type="submit" value="Submit RSVP!" id="submit_2"/>
+            </div>
+            <div id="thanks">
+              <h4 style="margin-top:20px" class="rsvp_name" id="thanks_msg"></h4>
+              <input class="rsvp_submit" type="submit" value="Change My RSVP" id="submit_3"/>
+            </div>
+          </div>
+        </div>
+        <div metal:fill-slot="sidebar_content">
+          <h3>Book your hotel room today!</h3>
+          <h4 class="rsvp_title"> We have reserved a block of discounted hotel rooms at the
+          following two locations for Friday and Saturday night.  Reservations can be made using 
+          the links provided below.</h4>
+          <span class="rsvp_text">
+            <br>
+            Hyatt Regency Long Beach: $185/night <br>
+            *All events are in the Hyatt<br>
+            200 S. Pine Ave<br>
+            Long Beach, CA 90802<br>
+            (562) 491-1234 <br>
+            <a href="https://resweb.passkey.com/go/ParekhShahWedding" target="_blank"
+            style="font-size: 16px; text-decoration:underline">https://resweb.passkey.com/go/ParekhShahWedding</a>
+            <br>  
+            <br>
+            Renaissance Hotel Long Beach: $139/night; 5 minute walk from the Hyatt<br>
+            111 E Ocean Blvd<br>
+            Long Beach, CA 90802<br>
+            (562) 437-5900 <br>
+            <a
+            href="http://www.marriott.com/hotels/travel/lgbrn-renaissance-long-beach-hotel/?toDate=6/24/12&groupCode=pswpswa&fromDate=6/22/12&app=resvlink"
+            target="_blank" style="font-size: 16px; text-decoration:underline">http://www.marriott.com/hotels/travel/lgbrn-renaissance-long-beach-hotel</a>
+            <br>
+            <a href="http://g.co/maps/dxa4u" target="_blank"><img
+            src="${request.static_url('weddingwebsite:static/style/images/renaissance_hyatt.jpg')}"
+            /></a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

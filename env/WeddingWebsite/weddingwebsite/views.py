@@ -2,7 +2,7 @@ import datetime
 import string
 
 from pyramid.httpexceptions import HTTPFound
-from pyramid.renderers import get_renderer
+from pyramid.renderers import get_renderer, render_to_response
 
 from weddingwebsite.models import DBSession
 from weddingwebsite.models import MyModel, BlogEntry, User
@@ -13,10 +13,17 @@ def home_page(request):
   right_sidebar = get_renderer('templates/right_sidebar.pt').implementation()
   blog_entry = get_renderer('templates/blog_entry.pt').implementation()
 
-  return {'project':'WeddingWebsite',
+  main_renderer = None
+  if (request.host.startswith('localhost') or
+      request.host.startswith('suralka')):
+    main_renderer = 'templates/surag_index.pt'
+  else:
+    main_renderer = 'templates/index.pt'
+  args = {'project':'WeddingWebsite',
           'right_sidebar':right_sidebar,
           'blog_entry':blog_entry,
           'latest_entry':latest_entry.to_dict()}
+  return render_to_response(main_renderer, args, request=request)
 
 def landing(request):
   if "first_visit" in request.cookies:
@@ -28,8 +35,15 @@ def landing(request):
   return {'redirect_url': home_page_url}
 
 def our_story(request):
-  main = get_renderer('templates/index.pt').implementation()
-  return {'main': main}
+  if (request.host.startswith('localhost') or
+      request.host.startswith('suralka')):
+    story_renderer = 'templates/surag_our_story.pt'
+    main = get_renderer('templates/surag_index.pt').implementation()
+  else:
+    story_renderer = 'templates/our_story.pt'
+    main = get_renderer('templates/index.pt').implementation()
+  args = {'main': main}
+  return render_to_response(story_renderer, args, request=request)
 
 def registry(request):
   main = get_renderer('templates/index.pt').implementation()
@@ -77,21 +91,42 @@ def blog(request):
           'next_url': next_url}
 
 def events(request):
-  main = get_renderer('templates/index.pt').implementation()
   right_sidebar = get_renderer('templates/right_sidebar.pt').implementation()
-  return {'main': main,
+
+  if (request.host.startswith('localhost') or
+      request.host.startswith('suralka')):
+    events_renderer = 'templates/surag_events.pt'
+    main = get_renderer('templates/surag_index.pt').implementation()
+  else:
+    events_renderer = 'templates/events.pt'
+    main = get_renderer('templates/index.pt').implementation()
+  args = {'main': main,
           'right_sidebar': right_sidebar}
+  return render_to_response(events_renderer, args, request=request)
 
 def bridal_party(request):
-  main = get_renderer('templates/index.pt').implementation()
-  return {'main': main}
+  if (request.host.startswith('localhost') or
+      request.host.startswith('suralka')):
+    bridal_party_renderer = 'templates/surag_bridal_party.pt'
+    main = get_renderer('templates/surag_index.pt').implementation()
+  else:
+    bridal_party_renderer = 'templates/bridal_party2.pt'
+    main = get_renderer('templates/index.pt').implementation()
+  args = {'main': main}
+  return render_to_response(bridal_party_renderer, args, request=request)
 
 def rsvp(request):
-  main = get_renderer('templates/index.pt').implementation()
   right_sidebar = get_renderer('templates/right_sidebar.pt').implementation()
-  request.add_response_callback(_set_cookie)
-  return {'main': main,
+  if (request.host.startswith('localhost') or
+      request.host.startswith('suralka')):
+    rsvp_renderer = 'templates/surag_rsvp.pt'
+    main = get_renderer('templates/surag_index.pt').implementation()
+  else:
+    rsvp_renderer = 'templates/rsvp.pt'
+    main = get_renderer('templates/index.pt').implementation()
+  args = {'main': main,
           'right_sidebar': right_sidebar}
+  return render_to_response(rsvp_renderer, args, request=request)
 
 def retrieve_rsvp(request):
   dbsession = DBSession()

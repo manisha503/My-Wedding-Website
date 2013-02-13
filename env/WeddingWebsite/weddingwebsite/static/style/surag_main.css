@@ -1,0 +1,894 @@
+
+/*
+Theme Name: EXPOSLIDE - Version: 1.2
+Description: Designed by <a href="http://themeforest.net/user/josweb">josweb</a>.
+Author: <a href="http://www.spiralpixel.com">Jo</a>
+
+01. GENERAL 
+		1. Reset
+		2. Font Face
+		3. General Styling
+		4. Typography	
+		
+		
+02. SECTIONS
+		1. Name
+		2. Menu
+		3. Column Styling
+		4. Image Zoom
+		5. Revolving Quotes
+		6. Tabs
+		7. Toggle
+		8. Portfoilo
+		9. Contact Page Styling
+	
+*/
+
+
+
+/*  1. GENERAL
+    ........................................................................................................................................ */
+
+/* 1: RESET */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {margin:0; padding:0; border:0; outline:0; font-size:100%; vertical-align:baseline; background:transparent }
+
+/* 2: FONT FACE */
+@font-face {
+	font-family: 'LeagueGothicRegular';
+	src: url('fonts/League_Gothic-webfont.eot');
+	src: url('fonts/League_Gothic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/League_Gothic-webfont.woff') format('woff'),
+         url('fonts/League_Gothic-webfont.ttf') format('truetype'),
+         url('fonts/League_Gothic-webfont.svg#LeagueGothicRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'BebasNeueRegular';
+    src: url('fonts/BebasNeue-webfont.eot');
+    src: url('fonts/BebasNeue-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/BebasNeue-webfont.woff') format('woff'),
+         url('fonts/BebasNeue-webfont.ttf') format('truetype'),
+         url('fonts/BebasNeue-webfont.svg#BebasNeueRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+  font-family: 'SeganLight';
+  src: url('fonts/segan-light-webfont.eot');
+  src: url('fonts/segan-light-webfont.eot?#iefix') format('embedded-opentype'),
+       url('fonts/segan-light-webfont.woff') format('woff'),
+       url('fonts/segan-light-webfont.ttf') format('truetype'),
+       url('fonts/segan-light-webfont.svg#SeganLight') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* 3. GENERAL STYLING ++++++++++++++++++++++++++++++++++++++++++++ */
+
+/* BODY ++++++++++++++++++++++++++++++++++++++++++++ */
+/* Change your background pattern and colour here */
+html, body {
+  margin:0;
+  padding:0;
+  height:100%;
+  width: 100%;
+}
+
+body {
+	background-color: #E2E2E2;
+	background-image: url(images/bg/bright_squares.png); background-repeat: repeat;
+	margin-top: 0; padding: 0;
+	overflow-x: hidden;
+	padding: 0px 0px 40px 0px;
+  height:100%;
+	font: 13px/20px 'SeganLight', Arial;
+	color: #444444;
+}
+
+/* LINKS ++++++++++++++++++++++++++++++++++++++++++++ */
+a {
+	color: #444444;
+	text-shadow: 0px 2px 2px #ADADAD;
+  text-decoration: none;
+}
+a:hover {
+	color: #000000;
+}
+
+
+/* LISTS ++++++++++++++++++++++++++++++++++++++++++++ */
+/* Bullet List */
+ul.bullet {
+	float: left; padding-bottom: 10px;
+	display: block; overflow: hidden;
+	margin: 0px -10px 0px 0px;
+}
+
+ul.bullet li {
+	line-height: 20px; list-style: none;
+	display: block;
+	background: transparent url(images/bullet.jpg) no-repeat;
+	background-position: 0px 8px;
+	padding: 0px 0px 10px 18px;
+}
+
+/* Arrows List */
+ul.pointer {
+	padding: 0; display: block; overflow: hidden; margin: 0;
+}
+
+ul.pointer li {
+	line-height: 20px; list-style: none; display: block;
+	background: transparent url(images/pointer.png) no-repeat;
+	background-position: -4px 2px;  padding: 0px 0px 10px 18px;
+}
+
+
+/* DIVIDER ++++++++++++++++++++++++++++++++++++++++++++ */
+hr {
+	border: none 0;
+	border-top: 1px dashed #555; height: 1px;
+	width: 100%;
+	margin: 10px 0px 20px 0px;
+}
+
+/* LAYOUT STYLING ++++++++++++++++++++++++++++++++++++++++++++ */
+#header, #feature, #page {
+  min-width: 1039px;
+}
+
+#header {
+  font-family: 'SeganLight', Arial, sans-serif;
+  height: 120px;
+  position: relative;
+  z-index: 200;
+}
+
+.header-inner {
+  width:1010px;
+  margin:0 auto;
+  position:relative;
+  height:100%;
+}
+
+.inner {
+  width:960px;
+  margin:0 auto;
+  position:relative;
+  height:100%;
+}
+
+#logo_text {
+  position: absolute;
+}
+
+#logo {
+  position: relative;
+  width: 119px;
+  height: 120px;
+  float: left;
+}
+
+#site_name {
+  position: relative;
+  font-size: 40px;
+  line-height:40px;
+  display:block;
+  color: #444444;
+	text-shadow: 0px 2px 2px #ADADAD;
+  float: left;
+  margin-top: 40px;
+}
+
+#site_title {
+  width: 320px;
+  height: 40px;
+  margin-left: 5px;
+}
+
+#landing-outer {
+  position: absolute;
+  top: 50%;
+  left: 0px;
+  width: 100%;
+  margin-top:-237px;
+}
+
+#landing-wrapper {
+  height: 474px;
+  width: 960px;
+  margin: 0px auto;
+  overflow: auto;
+}
+
+.landing {
+  width: 960px;
+  height: 474px;
+  margin: auto;
+}
+
+.landing-img-1 {
+  width: 191px;
+  height: 334px;
+  position:absolute;
+  margin-left: 1px;
+  display: none;
+}
+
+.landing-img-2 {
+  width: 191px;
+  height: 334px;
+  position:absolute;
+  margin-left: 193px;
+  display: none;
+}
+
+.landing-img-3 {
+  width: 191px;
+  height: 334px;
+  position:absolute;
+  margin-left: 385px;
+  display: none;
+}
+
+.landing-img-4 {
+  width: 191px;
+  height: 334px;
+  position:absolute;
+  margin-left: 577px;
+  display: none;
+}
+
+.landing-img-5 {
+  width: 191px;
+  height: 334px;
+  position:absolute;
+  margin-left: 769px;
+  display: none;
+}
+
+.landing-ribbon {
+  width: 852px;
+  height: 72px;
+  margin-top: 354px;
+  margin-left: 54px;
+  position:absolute;
+  display: none;
+  clear: both;
+}
+
+.landing-click-wrapper {
+  margin-top: 444px;
+  width: 70px;
+  height: 30px;
+  line-height: 30px;
+  clear: both;
+  float: right;
+	font: 18px 'SeganLight', Arial, sans-serif;
+}
+
+.landing-click {
+  display: none;
+}
+
+#feature {
+  background:url(images/surag_bg_gradient.png) no-repeat scroll 50% 0 transparent;
+  /*background-color: #FFA02F;*/
+  /*background-color: #C45900;*/
+  /*background-color: #430F00;*/
+  /*background-color: #000000;*/
+  /*background-color: #006785;*/
+  /*background-color: #02ABD6; cerulean*/
+  background-color: #01A4CD;
+}
+
+
+#image_slider_wrap {
+  height: 540px;
+  width: 960px;
+  background:url(images/image_wrap_shadow.png) no-repeat scroll center bottom transparent;
+  padding: 30px 0 40px;
+  text-align: center;
+  position: relative;
+}
+
+#slider {
+  height: 540px;
+  width: 960px;
+  position: relative;
+}
+
+.nivoSlider {
+  position:relative;
+  width:960px;
+  height:540px;
+  background:url(images/loading.gif) no-repeat 50% 50%;
+}
+
+.nivoSlider img {
+  position:absolute;
+  top:0px;
+  left:0px;
+  display:none;
+}
+
+.nivoSlider a {
+  border:0;
+  display:block;
+}
+
+#feature h1 {
+  font-size:42px;
+  color: #ffffff;
+  margin-bottom: 0;
+  padding: 5px 0;
+}
+
+#feature .top_shadow {
+  background:url(images/shadow_sprites.png) repeat-x scroll 0 0 transparent;
+  height: 10px;
+  font-size:0px;
+  overflow:hidden;
+  line-height: 10px;
+}
+
+#feature .bottom_shadow {
+  background:url(images/shadow_sprites.png) repeat-x scroll 0 -10px transparent;
+  height: 9px;
+  font-size:0px;
+  line-height:9px;
+}
+
+#page {
+  position:relative;
+  background:url("images/layout_sprites.png") repeat-x scroll 0 -24256px transparent;
+}
+
+#main, #sidebar{
+  position:relative;
+}
+
+* html #page, * html #sidebar{
+  display:inline;
+}
+
+#page .inner {
+  padding: 40px 0 0;
+  font-size: 20px;
+}
+
+#page_bottom {
+  height:30px;
+  background:url("images/layout_sprites.png") repeat-x scroll 0 -19px transparent;
+}
+
+/* Right Sidebar
+---------------------------------------------------------- */
+.right_sidebar #main{
+  float:left;
+  width:630px;
+}
+
+.right_sidebar #main .content {
+  width:630px;
+  overflow: hidden;
+}
+
+.right_sidebar #sidebar {
+  float:right;
+  width:300px;
+  margin: 0 0 0.5em 30px;
+}
+
+.right_sidebar #sidebar_content {
+  background: url("images/layout_sprites.png") no-repeat scroll left -209px transparent;
+  padding-top:50px;
+  padding-left:25px;
+  min-height:350px;
+  overflow: hidden;
+}
+
+.right_sidebar #sidebar_content.lessgap {
+  padding-top:35px;
+}
+
+.right_sidebar #sidebar_bottom {
+  clear:both;
+  background: url("images/layout_sprites.png") no-repeat scroll left -159px transparent;
+  height:50px;
+}
+
+.right_sidebar #date_counter {
+  text-align: center
+}
+
+.events .right_sidebar #main{
+  width:465px;
+}
+
+.events .right_sidebar #main .content {
+  width:465px;
+}
+
+.events .right_sidebar #sidebar {
+  width:465px;
+}
+
+.events .right_sidebar #sidebar_content.lessgap {
+  padding-top:0px;
+}
+
+.family_container {
+  height: 200px;
+  padding-top:20px;
+  padding-bottom:20px;
+}
+
+.family {
+  width: 474px;
+  height: 316px;
+  margin-left: 3px;
+  float: left;
+}
+
+.family_text {
+  width: 460px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.family_title {
+  color: #1E94B1;
+}
+
+.family_details {
+  line-height: 22px;
+  margin-bottom: 5px;
+}
+
+.bridesmaids_groomsmen_container {
+  margin: 30px 0px 0px 0px;
+  width: 960px;
+}
+
+.bridal_party_title {
+  width: 500px;
+  text-align: center;
+  margin: 0px auto;
+  color: #1E94B1;
+  padding-bottom: 15px;
+}
+
+.bridal_party_text {
+  margin: 0px auto;
+  width: 800px;
+  line-height: 26px;
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+.image_pair {
+  width: 187px;
+  height: 304px;
+  float: left;
+  margin: 5px 0 0 5px;
+}
+
+#img1 {
+  position: absolute;
+  cursor:pointer;
+  width: 187px;
+}
+
+#img2 {
+  display: none;
+  position: absolute;
+  cursor:pointer;
+}
+
+.popup {
+  width: 600px;
+  margin: 0px auto;
+  display: none;
+  background-color: #1E94B1;
+}
+
+.popup_image {
+  width: 187px;
+  height: 304px;
+  float: left;
+  margin-right: 10px;
+}
+
+.popup_text {
+  font-size: 16px;
+}
+
+.bridal_image_row {
+  margin: 0px auto;
+}
+
+.rsvp .right_sidebar #main{
+  width:465px;
+}
+
+.rsvp .right_sidebar #main .content {
+  width:465px;
+}
+
+.rsvp .right_sidebar #sidebar {
+  width:465px;
+}
+
+.rsvp .right_sidebar #sidebar_content.lessgap {
+  padding-top:0px;
+}
+
+.rsvp_title {
+  color: #1E94B1;
+  line-height: 24px;
+  margin-bottom: 8px;
+}
+
+.rsvp_name {
+  color: #1E94B1;
+  line-height: 24px;
+  margin-bottom: 8px;
+  width: 400px;
+  text-align: center;
+}
+
+.rsvp_text {
+  line-height:22px;
+}
+
+.find_rsvp_input {
+  line-height:22px;
+  font-size: 14px;
+  padding-left: 2px;
+  margin-bottom: 8px;
+  float: left;
+}
+
+.find_rsvp_label {
+  width: 100px;
+  float:left;
+  line-height: 32px;
+}
+
+.rsvp_error {
+  color: #EA5D4E;
+  line-height: 20px;
+  font-size: 15px;
+  display: none;
+  margin-bottom: 5px;
+}
+
+.rsvp_submit {
+  width: auto;
+  padding: 7px 15px;
+  margin-top: 15px;
+  border: 0;
+  font-size: 14px;
+  color: #FFFFFF;
+  background: #01A4CD;
+	text-shadow: 0px 1px 1px #ADADAD;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+	border-radius: 5px;
+}
+
+.rsvp_input {
+  width: 20px;
+  height: 20px;
+  clear: left;
+  float: left;
+  font-size: 14px;
+  text-align: center;
+}
+
+.rsvp_select {
+  width: 50px;
+  line-height: 32px;
+  clear: left;
+  float: left;
+  font-size: 16px;
+}
+
+#rsvp_choose_family {
+  display: none;
+}
+
+#retrieved_rsvp_info {
+  display: none;
+}
+
+#thanks {
+  display: none;
+}
+
+.test {
+  width: 20px;
+  font-size: 14px;
+  padding-left: 2px;
+  margin-bottom: 8px;
+  float:left;
+}
+
+.rsvp_label {
+  margin-left: 5px;
+  line-height: 32px;
+}
+
+.clearboth{
+  clear: both;
+  display: block;
+  font-size: 0px;
+  height: 0px;
+  line-height: 0;
+  width: 100%;
+  overflow:hidden;
+}
+
+.story_heading{
+  margin: 10px 0px;
+}
+
+.story_spacer {
+  height: 20px;
+}
+
+.entry {
+  margin-bottom: 80px;
+  clear: both;
+  overflow:hidden;
+}
+
+.image_styled {
+  width: 628px;
+  display: block;
+  margin: 0px auto;
+}
+
+.entry_image {
+  margin: 0px auto;
+}
+
+.entry_image .image_shadow {
+  width:628px;
+}
+
+.entry .entry_title {
+  margin-bottom:10px;
+}
+
+.entry_title {
+  line-height: 30px;
+  font-size: 30px;
+}
+
+.image_frame {
+  display: block;
+  width: 628px;
+  height: 250px;
+  background-color:#f9f9f9;
+  background:url('images/loading.gif') #f9f9f9 no-repeat 50% 50%;
+  position: relative;
+  border:1px solid #C3C2C3;
+}
+
+.entry .entry_meta {
+  border-top:1px solid #C3C2C3;
+  border-bottom:1px solid #C3C2C3;
+  line-height:28px;
+  margin-bottom:10px;
+  position:relative;
+  overflow:hidden;
+  font-size:13px;
+}
+
+.entry_content {
+  position:relative;
+  padding-bottom: 10px;
+  line-height:28px;
+}
+
+.event_title {
+  color: #1E94B1;
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+
+.event_location {
+  font-style: italic;
+  line-height:26px;
+  margin-bottom: 5px;
+  font-size: 16px;
+}
+
+.event_text {
+  line-height: 26px;
+  margin-bottom: 10px;
+}
+
+.blog_nav {
+  clear: both;
+  height: 40px;
+  width: 200px;
+  text-align: center;
+  margin: 0px auto;
+}
+
+.blog_prev {
+  width: 50px;
+}
+
+.blog_nav a {
+  text-decoration: underline;
+}
+
+.blog_next {
+  width: 50px;
+  padding-left: 70px
+}
+
+.left_events {
+  width: 400px;
+}
+
+#section {
+	height: 100%;
+	width: 100%;
+	background: #21180d;
+	-moz-border-radius: 10px; -webkit-border-radius:10px;
+	border-radius: 10px;
+	-moz-box-shadow: 0 1px 3px #222;
+	-webkit-box-shadow: 0 1px 3px #222;
+	padding-top: 10px;
+	padding-bottom: 10px;
+  position: relative;
+}
+
+/* Slider Section Styling */
+.section .slider-inner {
+	height: 380px;
+	background: #21180d;
+	padding-top: 0px;
+	margin-top:-10px;
+	padding-left: 0px;
+	position: absolute;
+}
+
+
+/* IMAGE STYLES ++++++++++++++++++++++++++++++++++++++++++++ */
+img.left {
+	border: 1px solid #fff; padding: 5px;
+	-moz-box-shadow: 0 1px 3px #222;
+	-webkit-box-shadow: 0 1px 3px #222;
+	-moz-border-radius: 5px; -webkit-border-radius:5px;
+	border-radius: 5px;
+	background-color: #eee;
+	float: left; margin: 5px 15px 5px 0px;
+}
+
+img.right, img.right-me {
+	border: 1px solid #fff; padding:5px;
+	-moz-box-shadow: 0 1px 3px #222;
+	-webkit-box-shadow: 0 1px 3px #222;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	background-color: #eee;
+ 	float: right; margin: 5px 0px 5px 15px;
+}
+
+img.right-me {
+	margin: 5px 0px 5px 0px;
+}
+
+/* Icon Styling */
+.icon {
+	margin: 0px 0px 5px 0px;
+	text-align: left;
+	position: relative;
+}
+
+/* Google Chart */
+.chart	{
+	background-color: #fff;
+	width: 410px;
+	padding: 11px 0px 0px 15px;
+	margin: 5px 0px 22px 0px;
+	border: 2px solid #888;
+}
+
+
+/* 4. TYPOGRAPHY ++++++++++++++++++++++++++++++++++++++++++++ */
+
+h1 {
+	font: 68px/65px 'SeganLight', Arial, sans-serif;
+	color: #444444;
+	text-shadow: 0px 2px 2px #ADADAD;
+	margin: 20px;
+}
+
+h2 {font: 40px/35px 'SeganLight', Arial, sans-serif;
+	color: #444444;
+	text-shadow: 0px 2px 2px #ADADAD;
+	margin: 20px 0px 10px 0px;
+}
+
+h3 {font: 25px/22px 'SeganLight', Arial, sans-serif;
+	color: #444444;
+	margin: 10px 0px 10px 0px;
+}
+
+h4, h5, h6 {
+	color: #444444;
+}
+
+h4 {
+  font: 22px/19px 'SeganLight', Arial, sans-serif;
+}
+
+h5 {
+  font: 20px/17px 'SeganLight', Arial, sans-serif;
+}
+
+h6 {
+  font: 18px/15px 'SeganLight', Arial, sans-serif;
+}
+
+/* Pargaraph ++++++++++++++++++++++++++++++++++++++++++++ */
+p {
+	margin-bottom:20px;
+}	
+
+.clear {
+	clear: both;
+}
+
+
+/*  2. SECTIONS
+    ........................................................................................................................................ */
+
+
+/* 2. MENU ++++++++++++++++++++++++++++++++++++++++++++ */
+#nav {
+	font: 18px 'SeganLight', Arial, sans-serif;
+	color: #444444;
+	right: -5px;
+  bottom: 46px;
+  position: absolute;
+  height: 28px;
+  line-height: 28px;
+  z-index: 200;
+}
+
+#nav ul, #name ul {
+	padding: 0;
+}
+#nav li, #name li {
+	list-style-type: none;
+	float: left;
+	margin: 0 15px 0 15px;
+}
+
+#nav li a, #name li a {
+	color: #444444;
+	text-shadow: 0px 2px 2px #ADADAD;
+}
+
+#nav li a:hover, #name li a:hover, #site_title:hover {
+	color: #000000;
+}
+
+#footer {
+  margin: -2px 0px 0px 75px;
+  color: #333;
+  font-size: 11px;
+  text-align: left;
+}
