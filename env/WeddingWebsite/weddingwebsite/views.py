@@ -16,7 +16,7 @@ def home_page(request):
   main_renderer = None
   if (request.host.startswith('localhost') or
       request.host.startswith('suralka')):
-    main_renderer = 'templates/surag_index.pt'
+    main_renderer = 'templates/surag_index2.pt'
   else:
     main_renderer = 'templates/index.pt'
   args = {'project':'WeddingWebsite',
